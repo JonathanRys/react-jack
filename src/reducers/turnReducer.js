@@ -1,12 +1,20 @@
 const initialState = {
     isPlaying: false,
-    playersTurn: 0
+    numPlayers: 1,
+    playersTurn: 0,
+    error: false,
+    errMsg: "",
 }
 
 export default function turnReducer(state = initialState, action) {
     switch (action.type) {
         case "PLAY":
-            return
+            return { isPlaying: true }
+        case "ADD_PLAYER":
+            return { numPlayers: state.numPlayers < 9 ? state.numPlayers + 1 : 9 }
+        case "NEXT_PLAYER":
+            return { playersTurn: (state.playersTurn + 1) % state.numPlayers }
+        /** Move to controller */
         case "HIT":
             return
         case "STAND":

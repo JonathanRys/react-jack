@@ -6,9 +6,9 @@ import Card from '../Card/Card'
 import { connect } from 'react-redux'
 
 const mapStateToProps = function (state) {
+    console.log(state)
     return {
-        cards: state.cards[state.playerIndex],
-        faceUp: state.faceUp,
+        cards: state.player.cards[state.player.playerIndex]
     }
 }
 

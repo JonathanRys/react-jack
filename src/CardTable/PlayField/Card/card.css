@@ -1,6 +1,6 @@
 .PlayField__Card__card-face {
     background-color: #666;
-    background: url(../images/card-back.png);
+    background: url(./images/card-back.jpg);
     width: 90px;
     height: 180px;
 }
@@ -9,266 +9,266 @@
 
 .PlayField__Card__card-face .SA {
     background-color: #777;
-    background-image: "../images/SA.png";
+    background-image: "./images/SA.png";
 }
 
 .PlayField__Card__card-face .S2 {
     background-color: #777;
-    background-image: "../images/S2.png";
+    background-image: "./images/S2.png";
 }
 
 .PlayField__Card__card-face .S3 {
     background-color: #777;
-    background-image: "../images/S3.png";
+    background-image: "./images/S3.png";
 }
 
 .PlayField__Card__card-face .S4 {
     background-color: #777;
-    background-image: "../images/S4.png";
+    background-image: "./images/S4.png";
 }
 
 .PlayField__Card__card-face .S5 {
     background-color: #777;
-    background-image: "../images/S5.png";
+    background-image: "./images/S5.png";
 }
 
 .PlayField__Card__card-face .S6 {
     background-color: #777;
-    background-image: "../images/S6.png";
+    background-image: "./images/S6.png";
 }
 
 .PlayField__Card__card-face .S7 {
     background-color: #777;
-    background-image: "../images/S7.png";
+    background-image: "./images/S7.png";
 }
 
 .PlayField__Card__card-face .S8 {
     background-color: #777;
-    background-image: "../images/S8.png";
+    background-image: "./images/S8.png";
 }
 
 .PlayField__Card__card-face .S9 {
     background-color: #777;
-    background-image: "../images/S9.png";
+    background-image: "./images/S9.png";
 }
 
 .PlayField__Card__card-face .S10 {
     background-color: #777;
-    background-image: "../images/S10.png";
+    background-image: "./images/S10.png";
 }
 
 .PlayField__Card__card-face .SJ {
     background-color: #777;
-    background-image: "../images/SJ.png";
+    background-image: "./images/SJ.png";
 }
 
 .PlayField__Card__card-face .SQ {
     background-color: #777;
-    background-image: "../images/SQ.png";
+    background-image: "./images/SQ.png";
 }
 
 .PlayField__Card__card-face .SK {
     background-color: #777;
-    background-image: "../images/SK.png";
+    background-image: "./images/SK.png";
 }
 
 /* Hearts */
 
 .PlayField__Card__card-face .HA {
     background-color: #777;
-    background-image: "../images/HA.png";
+    background-image: "./images/HA.png";
 }
 
 .PlayField__Card__card-face .H2 {
     background-color: #777;
-    background-image: "../images/H2.png";
+    background-image: "./images/H2.png";
 }
 
 .PlayField__Card__card-face .H3 {
     background-color: #777;
-    background-image: "../images/H3.png";
+    background-image: "./images/H3.png";
 }
 
 .PlayField__Card__card-face .H4 {
     background-color: #777;
-    background-image: "../images/H4.png";
+    background-image: "./images/H4.png";
 }
 
 .PlayField__Card__card-face .H5 {
     background-color: #777;
-    background-image: "../images/H5.png";
+    background-image: "./images/H5.png";
 }
 
 .PlayField__Card__card-face .H6 {
     background-color: #777;
-    background-image: "../images/H6.png";
+    background-image: "./images/H6.png";
 }
 
 .PlayField__Card__card-face .H7 {
     background-color: #777;
-    background-image: "../images/H7.png";
+    background-image: "./images/H7.png";
 }
 
 .PlayField__Card__card-face .H8 {
     background-color: #777;
-    background-image: "../images/H8.png";
+    background-image: "./images/H8.png";
 }
 
 .PlayField__Card__card-face .H9 {
     background-color: #777;
-    background-image: "../images/H9.png";
+    background-image: "./images/H9.png";
 }
 
 .PlayField__Card__card-face .H10 {
     background-color: #777;
-    background-image: "../images/H10.png";
+    background-image: "./images/H10.png";
 }
 
 .PlayField__Card__card-face .HJ {
     background-color: #777;
-    background-image: "../images/HJ.png";
+    background-image: "./images/HJ.png";
 }
 
 .PlayField__Card__card-face .HQ {
     background-color: #777;
-    background-image: "../images/HQ.png";
+    background-image: "./images/HQ.png";
 }
 
 .PlayField__Card__card-face .HK {
     background-color: #777;
-    background-image: "../images/HK.png";
+    background-image: "./images/HK.png";
 }
 
 /* Diamonds */
 
 .PlayField__Card__card-face .DA {
     background-color: #777;
-    background-image: "../images/DA.png";
+    background-image: "./images/DA.png";
 }
 
 .PlayField__Card__card-face .D2 {
     background-color: #777;
-    background-image: "../images/D2.png";
+    background-image: "./images/D2.png";
 }
 
 .PlayField__Card__card-face .D3 {
     background-color: #777;
-    background-image: "../images/D3.png";
+    background-image: "./images/D3.png";
 }
 
 .PlayField__Card__card-face .D4 {
     background-color: #777;
-    background-image: "../images/D4.png";
+    background-image: "./images/D4.png";
 }
 
 .PlayField__Card__card-face .D5 {
     background-color: #777;
-    background-image: "../images/D5.png";
+    background-image: "./images/D5.png";
 }
 
 .PlayField__Card__card-face .D6 {
     background-color: #777;
-    background-image: "../images/D6.png";
+    background-image: "./images/D6.png";
 }
 
 .PlayField__Card__card-face .D7 {
     background-color: #777;
-    background-image: "../images/D7.png";
+    background-image: "./images/D7.png";
 }
 
 .PlayField__Card__card-face .D8 {
     background-color: #777;
-    background-image: "../images/D8.png";
+    background-image: "./images/D8.png";
 }
 
 .PlayField__Card__card-face .D9 {
     background-color: #777;
-    background-image: "../images/D9.png";
+    background-image: "./images/D9.png";
 }
 
 .PlayField__Card__card-face .D10 {
     background-color: #777;
-    background-image: "../images/D10.png";
+    background-image: "./images/D10.png";
 }
 
 .PlayField__Card__card-face .DJ {
     background-color: #777;
-    background-image: "../images/DJ.png";
+    background-image: "./images/DJ.png";
 }
 
 .PlayField__Card__card-face .DQ {
     background-color: #777;
-    background-image: "../images/DQ.png";
+    background-image: "./images/DQ.png";
 }
 
 .PlayField__Card__card-face .DK {
     background-color: #777;
-    background-image: "../images/DK.png";
+    background-image: "./images/DK.png";
 }
 
 /* Clubs */
 
 .PlayField__Card__card-face .CA {
     background-color: #777;
-    background-image: "../images/CA.png";
+    background-image: "./images/CA.png";
 }
 
 .PlayField__Card__card-face .C2 {
     background-color: #777;
-    background-image: "../images/C2.png";
+    background-image: "./images/C2.png";
 }
 
 .PlayField__Card__card-face .C3 {
     background-color: #777;
-    background-image: "../images/C3.png";
+    background-image: "./images/C3.png";
 }
 
 .PlayField__Card__card-face .C4 {
     background-color: #777;
-    background-image: "../images/C4.png";
+    background-image: "./images/C4.png";
 }
 
 .PlayField__Card__card-face .C5 {
     background-color: #777;
-    background-image: "../images/C5.png";
+    background-image: "./images/C5.png";
 }
 
 .PlayField__Card__card-face .C6 {
     background-color: #777;
-    background-image: "../images/C6.png";
+    background-image: "./images/C6.png";
 }
 
 .PlayField__Card__card-face .C7 {
     background-color: #777;
-    background-image: "../images/C7.png";
+    background-image: "./images/C7.png";
 }
 
 .PlayField__Card__card-face .C8 {
     background-color: #777;
-    background-image: "../images/C8.png";
+    background-image: "./images/C8.png";
 }
 
 .PlayField__Card__card-face .C9 {
     background-color: #777;
-    background-image: "../images/C9.png";
+    background-image: "./images/C9.png";
 }
 
 .PlayField__Card__card-face .C10 {
     background-color: #777;
-    background-image: "../images/C10.png";
+    background-image: "./images/C10.png";
 }
 
 .PlayField__Card__card-face .CJ {
     background-color: #777;
-    background-image: "../images/CJ.png";
+    background-image: "./images/CJ.png";
 }
 
 .PlayField__Card__card-face .CQ {
     background-color: #777;
-    background-image: "../images/CQ.png";
+    background-image: "./images/CQ.png";
 }
 
 .PlayField__Card__card-face .CK {
     background-color: #777;
-    background-image: "../images/CK.png";
+    background-image: "./images/CK.png";
 }

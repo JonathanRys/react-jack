@@ -1,5 +1,3 @@
-import _ from 'lodash'
-
 const initialState = {
     name: "Player1",
     avatar: "./images/default.png",
