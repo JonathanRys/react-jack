@@ -3,10 +3,6 @@ export function play(payload) {
     return { type: "PLAY", payload: payload }
 }
 
-export function draw(payload) {
-    return { type: "DRAW", payload: payload }
-}
-
 export function hit(payload) {
     return { type: "HIT", payload: payload }
 }
@@ -15,24 +11,16 @@ export function stand(payload) {
     return { type: "STAND", payload: payload }
 }
 
-export function call(payload) {
-    return { type: "CALL", payload: payload }
-}
-
-export function raise(payload) {
-    return { type: "RAISE", payload: payload }
-}
-
-export function fold(payload) {
-    return { type: "FOLD", payload: payload }
-}
-
 export function split(payload) {
     return { type: "SPLIT", payload: payload }
 }
 
 export function doubleDown(payload) {
     return { type: "DOUBLE_DOWN", payload: payload }
+}
+
+export function buyInsurance(payload) {
+    return { type: "BUY_INSURANCE", payload: payload }
 }
 
 /* Bank Actions */
@@ -92,8 +80,8 @@ export function winBet(payload) {
     return { type: "WIN_BET", payload: payload }
 }
 
-export function buyInsurance() {
-    return { type: "BUY_INSURANCE" }
+export function setInsured() {
+    return { type: "SET_INSURED" }
 }
 
 export function reset() {

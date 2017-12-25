@@ -9,11 +9,6 @@ describe("Test action creators", () => {
             expect(result).toEqual({ type: "PLAY", payload: "test" })
         })
 
-        it("tests draw action creator", () => {
-            const result = actions.draw("test")
-            expect(result).toEqual({ type: "DRAW", payload: "test" })
-        })
-
         it("tests hit action creator", () => {
             const result = actions.hit("test")
             expect(result).toEqual({ type: "HIT", payload: "test" })
@@ -24,21 +19,6 @@ describe("Test action creators", () => {
             expect(result).toEqual({ type: "STAND", payload: "test" })
         })
 
-        it("tests call action creator", () => {
-            const result = actions.call("test")
-            expect(result).toEqual({ type: "CALL", payload: "test" })
-        })
-
-        it("tests raise action creator", () => {
-            const result = actions.raise("test")
-            expect(result).toEqual({ type: "RAISE", payload: "test" })
-        })
-
-        it("tests fold action creator", () => {
-            const result = actions.fold("test")
-            expect(result).toEqual({ type: "FOLD", payload: "test" })
-        })
-
         it("tests split action creator", () => {
             const result = actions.split("test")
             expect(result).toEqual({ type: "SPLIT", payload: "test" })
@@ -47,6 +27,11 @@ describe("Test action creators", () => {
         it("tests doubleDown action creator", () => {
             const result = actions.doubleDown("test")
             expect(result).toEqual({ type: "DOUBLE_DOWN", payload: "test" })
+        })
+
+        it("tests buyInsurance action creator", () => {
+            const result = actions.buyInsurance("test")
+            expect(result).toEqual({ type: "BUY_INSURANCE", payload: "test" })
         })
     })
 
@@ -118,9 +103,9 @@ describe("Test action creators", () => {
             expect(result).toEqual({ type: "WIN_BET", payload: "test" })
         })
 
-        it("tests buyInsurance action creator", () => {
-            const result = actions.buyInsurance("test")
-            expect(result).toEqual({ type: "BUY_INSURANCE" })
+        it("tests setInsured action creator", () => {
+            const result = actions.setInsured("test")
+            expect(result).toEqual({ type: "SET_INSURED" })
         })
 
         it("tests reset action creator", () => {

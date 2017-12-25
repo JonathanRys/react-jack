@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 
-export default class CardTable extends Component {
-    constructor(props) {
-        super(props);
+import PlayField from './PlayField/PlayField'
 
-        this.state = {}
-    }
+export default class CardTable extends Component {
     render() {
         return (
             <div>
-                CardTable
+                <PlayField />
             </div>
         )
     }

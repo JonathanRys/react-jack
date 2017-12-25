@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `
+exports[`Test the App component renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(App)
+  Symbol(enzyme.__unrendered__): <App
     store={
       Object {
         "dispatch": [Function],
@@ -25,39 +25,197 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "dispatch": [Function],
-      "store": Object {
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-        Symbol(observable): [Function],
-      },
+      "children": Array [
+        <header
+          className="App-header"
+        >
+          <img
+            alt="logo"
+            className="App-logo"
+            src="logo.svg"
+          />
+          <h1
+            className="App-title"
+          >
+            Welcome to our Casino
+          </h1>
+        </header>,
+        <CardTable />,
+        <Profile />,
+      ],
+      "className": "App",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="logo"
+              className="App-logo"
+              src="logo.svg"
+            />,
+            <h1
+              className="App-title"
+            >
+              Welcome to our Casino
+            </h1>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "className": "App-logo",
+              "src": "logo.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to our Casino",
+              "className": "App-title",
+            },
+            "ref": null,
+            "rendered": "Welcome to our Casino",
+            "type": "h1",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "dispatch": [Function],
-        "store": Object {
-          "dispatch": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-          Symbol(observable): [Function],
-        },
+        "children": Array [
+          <header
+            className="App-header"
+          >
+            <img
+              alt="logo"
+              className="App-logo"
+              src="logo.svg"
+            />
+            <h1
+              className="App-title"
+            >
+              Welcome to our Casino
+            </h1>
+          </header>,
+          <CardTable />,
+          <Profile />,
+        ],
+        "className": "App",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="logo"
+                className="App-logo"
+                src="logo.svg"
+              />,
+              <h1
+                className="App-title"
+              >
+                Welcome to our Casino
+              </h1>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "logo",
+                "className": "App-logo",
+                "src": "logo.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome to our Casino",
+                "className": "App-title",
+              },
+              "ref": null,
+              "rendered": "Welcome to our Casino",
+              "type": "h1",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

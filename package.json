@@ -69,6 +69,10 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
+    "coveragePathIgnorePatterns": [
+      "src/index.js",
+      "src/registerServiceWorker.js"
+    ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],

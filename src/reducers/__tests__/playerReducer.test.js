@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import playerReducer from '../playerReducer'
-import { setName, setAvatar, takeCard, buyChips, setBet, loseBet, winBet, buyInsurance, reset } from '../../actions/actions.js'
+import { setName, setAvatar, takeCard, buyChips, setBet, loseBet, winBet, buyInsurance, reset, setInsured } from '../../actions/actions.js'
 import { createStore } from 'redux'
 
 describe("Test playerReducer reducer", () => {
@@ -93,7 +93,7 @@ describe("Test playerReducer reducer", () => {
 
     it("is able to purchase insurance", () => {
         const store = createStore(playerReducer)
-        store.dispatch(buyInsurance())
+        store.dispatch(setInsured())
         expect(store.getState().hasInsurance[store.getState().handIndex]).toEqual([true])
     })
 })

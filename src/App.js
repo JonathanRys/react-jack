@@ -7,7 +7,7 @@ import './App.css';
 import CardTable from './CardTable/CardTable'
 import Profile from './Profile/Profile'
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="App">

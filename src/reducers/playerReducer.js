@@ -103,7 +103,7 @@ export default function playerReducer(state = initialState, action) {
         case "WIN_BET":
             const multiplier = action.payload ? action.payload.multiplier : 1
             return { ...state, balance: state.balance + state.currentBet * multiplier }
-        case "BUY_INSURANCE":
+        case "SET_INSURED":
             return {
                 ...state,
                 balance: state.balance - (state.currentBet * INSURANCE_RATE),
