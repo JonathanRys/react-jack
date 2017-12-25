@@ -12,7 +12,7 @@ export default class Card extends Component {
 
     render() {
         return (
-            <div className={`PlayField__Card__card-face ${this.props.faceUp ? this.props.card : ""}`}></div>
+            <div className={`PlayField__Card__card-face ${this.props.faceUp ? this.props.card : ""}`}>{this.props.card}</div>
         )
     }
 }

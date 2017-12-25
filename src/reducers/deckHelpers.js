@@ -12,7 +12,6 @@ export const buildDeck = () => {
             ++counter;
         }
     }
-
     return deck;
 };
 
@@ -41,5 +40,6 @@ export const shuffle = (cards) => {
         shuffledCards[numCards] = shuffledCards[index];
         shuffledCards[index] = tmp;
     }
+    // Cast to new array for compiler optimization
     return [...shuffledCards];
 };

@@ -24,6 +24,6 @@ export default class Hand extends Component {
 }
 
 Hand.propTypes = {
-    hand: PropTypes.array.isRequired,
     faceUp: PropTypes.number.isRequired,
+    hand: PropTypes.array.isRequired,
 }

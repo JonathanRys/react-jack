@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import playerReducer from '../playerReducer'
-import { setName, setAvatar, takeCard, buyChips, setBet, loseBet, winBet, buyInsurance, reset, setInsured } from '../../actions/actions.js'
+import { setName, setAvatar, takeCard, buyChips, setBet, loseBet, winBet, buyInsurance, reset, setInsured, credit, debit } from '../../actions/actions.js'
 import { createStore } from 'redux'
 
 describe("Test playerReducer reducer", () => {
@@ -94,5 +94,18 @@ describe("Test playerReducer reducer", () => {
         const store = createStore(playerReducer)
         store.dispatch(setInsured())
         expect(store.getState().hasInsurance[store.getState().playerIndex]).toEqual([true])
+    })
+
+    it("credits the account", () => {
+        const store = createStore(playerReducer)
+        store.dispatch(credit({ delta: 50 }))
+        expect(store.getState().balance).toEqual(50)
+    })
+
+    it("debits the account", () => {
+        const store = createStore(playerReducer)
+        store.dispatch(credit({ delta: 50 }))
+        store.dispatch(debit({ delta: 25 }))
+        expect(store.getState().balance).toEqual(25)
     })
 })

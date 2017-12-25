@@ -31,7 +31,68 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        Array [
+        <Hand
+          faceUp={0}
+          hand={
+            Array [
+              "SA",
+              "CK",
+            ]
+          }
+        />,
+        <Hand
+          faceUp={1}
+          hand={
+            Array [
+              "D2",
+              "HJ",
+            ]
+          }
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "hand-0",
+        "nodeType": "class",
+        "props": Object {
+          "faceUp": 0,
+          "hand": Array [
+            "SA",
+            "CK",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "hand-1",
+        "nodeType": "class",
+        "props": Object {
+          "faceUp": 1,
+          "hand": Array [
+            "D2",
+            "HJ",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
           <Hand
             faceUp={0}
             hand={
@@ -51,80 +112,12 @@ ShallowWrapper {
             }
           />,
         ],
-        "PlayField should consist of two hands, dealer and player",
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "faceUp": 0,
-          "hand": Array [
-            "SA",
-            "CK",
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "faceUp": 1,
-          "hand": Array [
-            "D2",
-            "HJ",
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "PlayField should consist of two hands, dealer and player",
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          Array [
-            <Hand
-              faceUp={0}
-              hand={
-                Array [
-                  "SA",
-                  "CK",
-                ]
-              }
-            />,
-            <Hand
-              faceUp={1}
-              hand={
-                Array [
-                  "D2",
-                  "HJ",
-                ]
-              }
-            />,
-          ],
-          "PlayField should consist of two hands, dealer and player",
-        ],
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "hand-0",
           "nodeType": "class",
           "props": Object {
             "faceUp": 0,
@@ -139,7 +132,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "hand-1",
           "nodeType": "class",
           "props": Object {
             "faceUp": 1,
@@ -152,7 +145,6 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        "PlayField should consist of two hands, dealer and player",
       ],
       "type": "div",
     },

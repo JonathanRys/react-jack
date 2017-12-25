@@ -110,6 +110,10 @@ export default function playerReducer(state = initialState, action) {
                     ...state.hasInsurance.slice(index + 1)
                 ]
             }
+        case "CREDIT":
+            return { balance: state.balance + action.payload.delta }
+        case "DEBIT":
+            return { balance: state.balance - action.payload.delta }
         case "RESET":
         default:
             return initialState

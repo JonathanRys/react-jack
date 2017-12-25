@@ -32,7 +32,6 @@ export function buyInsurance(payload) {
     return { type: "BUY_INSURANCE", payload: payload }
 }
 
-/* Bank Actions */
 export function credit(payload) {
     return { type: "CREDIT", payload: payload }
 }
