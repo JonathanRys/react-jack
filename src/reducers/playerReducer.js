@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 const initialState = {
     name: "Player1",
     avatar: "./images/default.png",
@@ -7,13 +9,15 @@ const initialState = {
     currentBet: 0,
 
     handIndex: 0,
-    cards: [],
-    score: [0],
-    busted: [false],
-    hasBlackjack: [false],
-    hasInsurance: [false],
+    cards: [[]],
+    score: [[0]],
+    busted: [[false]],
+    hasBlackjack: [[false]],
+    hasInsurance: [[false]],
     splitHand: false,
 }
+
+const INSURANCE_RATE = 0.5
 
 const getScore = function (state) {
     // Define scoring enum
@@ -46,58 +50,70 @@ const getScore = function (state) {
     }
 
     // Score the current hand
-    const score = scoreHand(state.cards[state.handIndex])
+    const index = state.handIndex
+    const score = scoreHand(state.cards[index])
 
     // Return a new object with the updated score
     return {
         score: [
-            ...state.score.slice(0, state.handIndex),
-            score,
-            ...state.score.slice(state.handIndex + 1)
+            ...state.score.slice(0, index),
+            [score],
+            ...state.score.slice(index + 1)
         ],
         busted: [
-            ...state.busted.slice(0, state.handIndex),
-            score > 21,
-            ...state.busted.slice(state.handIndex + 1)
+            ...state.busted.slice(0, index),
+            [score > 21],
+            ...state.busted.slice(index + 1)
         ],
         hasBlackjack: [
-            ...state.hasBlackjack.slice(0, state.handIndex),
-            score === 21 && state.cards.length === 2,
-            ...state.hasBlackjack.slice(state.handIndex + 1)
-        ],
+            ...state.hasBlackjack.slice(0, index),
+            [score === 21 && state.cards[index].length === 2],
+            ...state.hasBlackjack.slice(index + 1)
+        ]
     }
 };
 
 export default function playerReducer(state = initialState, action) {
+    const index = state.handIndex
     switch (action.type) {
         case "SET_NAME":
             return { ...state, name: action.payload.name }
         case "SET_AVATAR":
             return { ...state, avatar: action.payload.avatar }
         case "TAKE_CARD":
-            const index = state.handIndex
-            console.log("index:", index)
-            const newHand = [...state.cards, action.payload.card]
+            const newHand = [...state.cards[index], action.payload.card]
             const newCards = {
-                cards: [...state.cards.slice(0, index),
+                cards: [
+                    ...state.cards.slice(0, index),
                     newHand,
-                ...state.cards.slice(index + 1)]
+                    ...state.cards.slice(index + 1)
+                ]
             }
-            console.log("newHand:", newHand)
-            console.log("newCards:", newCards)
             return {
                 ...state, ...getScore({
                     ...state, ...newCards
-                })
+                }), ...newCards
             }
         case "BUY_CHIPS":
             return { ...state, balance: state.balance + action.payload.newChips }
         case "SET_BET":
             return { ...state, currentBet: action.payload.newBet }
-        case "DEDUCT_BET":
+        case "LOSE_BET":
             return { ...state, balance: state.balance - state.currentBet }
-        case "COLLECT_CHIPS":
-            return { ...state, balance: state.balance + state.currentBet * action.payload.multiplier || 1 }
+        case "WIN_BET":
+            const multiplier = action.payload ? action.payload.multiplier : 1
+            return { ...state, balance: state.balance + state.currentBet * multiplier }
+        case "BUY_INSURANCE":
+            return {
+                ...state,
+                balance: state.balance - (state.currentBet * INSURANCE_RATE),
+                hasInsurance: [
+                    ...state.hasInsurance.slice(0, index),
+                    [true],
+                    ...state.hasInsurance.slice(index + 1)
+                ]
+            }
+        case "RESET":
         default:
             return initialState
     }

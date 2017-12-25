@@ -1,25 +1,28 @@
 const initialState = {
-
+    isPlaying: false,
+    playersTurn: 0
 }
 
 export default function turnReducer(state = initialState, action) {
     switch (action.type) {
+        case "PLAY":
+            return
         case "DRAW":
-            break;
+            return
         case "HIT":
-            break;
+            return
         case "STAND":
-            break;
+            return
         case "CALL":
-            break;
+            return
         case "RAISE":
-            break;
+            return
         case "FOLD":
-            break;
+            return
         case "SPLIT":
-            break;
+            return
         case "DOUBLE_DOWN":
-            break;
+            return
         default:
             return initialState
     }
