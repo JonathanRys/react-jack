@@ -17,7 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <PlayField />,
+      "children": <Connect(PlayField) />,
     },
     "ref": null,
     "rendered": Object {
@@ -37,7 +37,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <PlayField />,
+        "children": <Connect(PlayField) />,
       },
       "ref": null,
       "rendered": Object {

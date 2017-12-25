@@ -5,13 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Hand
-    cards={
+    faceUp={1}
+    hand={
       Array [
         "SA",
         "SJ",
       ]
     }
-    faceUp={true}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -28,11 +28,11 @@ ShallowWrapper {
       "children": Array [
         <Card
           card="SA"
-          faceUp={true}
+          faceUp={1}
         />,
         <Card
           card="SJ"
-          faceUp={true}
+          faceUp={2}
         />,
       ],
     },
@@ -44,7 +44,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "card": "SA",
-          "faceUp": true,
+          "faceUp": 1,
         },
         "ref": null,
         "rendered": null,
@@ -56,7 +56,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "card": "SJ",
-          "faceUp": true,
+          "faceUp": 2,
         },
         "ref": null,
         "rendered": null,
@@ -74,11 +74,11 @@ ShallowWrapper {
         "children": Array [
           <Card
             card="SA"
-            faceUp={true}
+            faceUp={1}
           />,
           <Card
             card="SJ"
-            faceUp={true}
+            faceUp={2}
           />,
         ],
       },
@@ -90,7 +90,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "card": "SA",
-            "faceUp": true,
+            "faceUp": 1,
           },
           "ref": null,
           "rendered": null,
@@ -102,7 +102,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "card": "SJ",
-            "faceUp": true,
+            "faceUp": 2,
           },
           "ref": null,
           "rendered": null,

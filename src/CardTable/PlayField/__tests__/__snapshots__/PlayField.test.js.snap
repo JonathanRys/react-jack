@@ -4,7 +4,20 @@ exports[`Test PlayField component matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PlayField />,
+  Symbol(enzyme.__unrendered__): <PlayField
+    hands={
+      Array [
+        Array [
+          "SA",
+          "CK",
+        ],
+        Array [
+          "D2",
+          "HJ",
+        ],
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +31,26 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Hand) />,
+        Array [
+          <Hand
+            faceUp={0}
+            hand={
+              Array [
+                "SA",
+                "CK",
+              ]
+            }
+          />,
+          <Hand
+            faceUp={1}
+            hand={
+              Array [
+                "D2",
+                "HJ",
+              ]
+            }
+          />,
+        ],
         "PlayField should consist of two hands, dealer and player",
       ],
     },
@@ -28,7 +60,28 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "faceUp": 0,
+          "hand": Array [
+            "SA",
+            "CK",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "faceUp": 1,
+          "hand": Array [
+            "D2",
+            "HJ",
+          ],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -44,7 +97,26 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Hand) />,
+          Array [
+            <Hand
+              faceUp={0}
+              hand={
+                Array [
+                  "SA",
+                  "CK",
+                ]
+              }
+            />,
+            <Hand
+              faceUp={1}
+              hand={
+                Array [
+                  "D2",
+                  "HJ",
+                ]
+              }
+            />,
+          ],
           "PlayField should consist of two hands, dealer and player",
         ],
       },
@@ -54,7 +126,28 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "faceUp": 0,
+            "hand": Array [
+              "SA",
+              "CK",
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "faceUp": 1,
+            "hand": Array [
+              "D2",
+              "HJ",
+            ],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

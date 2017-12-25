@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Card from '../Card'
 
-const mockProps = { card: "SA", faceUp: false }
+const mockProps = { card: "SA", faceUp: 0 }
 
 describe("Test Card component", () => {
     it("should display the correct card", () => {
@@ -11,7 +11,7 @@ describe("Test Card component", () => {
         expect(component).toMatchSnapshot()
 
         // test with faceUp = true
-        mockProps.faceUp = true
+        mockProps.faceUp = 1
         component = shallow(<Card {...mockProps} />)
         expect(component).toMatchSnapshot()
 
@@ -25,7 +25,7 @@ describe("Test Card component", () => {
         const shouldntUpdate = component.instance().shouldComponentUpdate({ ...mockProps })
         expect(shouldntUpdate).toBe(false)
         // negative test
-        mockProps.faceUp = false
+        mockProps.faceUp = 0
         const shouldUpdate = component.instance().shouldComponentUpdate({ ...mockProps })
         expect(shouldUpdate).toBe(true)
     })

@@ -20,25 +20,25 @@ describe("Test playerReducer reducer", () => {
     it("takes a new card and calculates the new score", () => {
         const store = createStore(playerReducer)
         store.dispatch(takeCard({ card: "SA" }))
-        expect(store.getState().cards[store.getState().handIndex]).toEqual(["SA"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([11])
+        expect(store.getState().hands[store.getState().playerIndex]).toEqual(["SA"])
+        expect(store.getState().score[store.getState().playerIndex]).toEqual([11])
     })
 
     it("takes multiple cards and calculates the new score correctly with aces", () => {
         const store = createStore(playerReducer)
         store.dispatch(takeCard({ card: "SA" }))
         store.dispatch(takeCard({ card: "CA" }))
-        expect(store.getState().cards[store.getState().handIndex]).toEqual(["SA", "CA"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([12])
+        expect(store.getState().hands[store.getState().playerIndex]).toEqual(["SA", "CA"])
+        expect(store.getState().score[store.getState().playerIndex]).toEqual([12])
     })
 
     it("takes multiple cards and calculates the new score correctly with blackjack", () => {
         const store = createStore(playerReducer)
         store.dispatch(takeCard({ card: "SA" }))
         store.dispatch(takeCard({ card: "CQ" }))
-        expect(store.getState().cards[store.getState().handIndex]).toEqual(["SA", "CQ"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([21])
-        expect(store.getState().hasBlackjack[store.getState().handIndex]).toEqual([true])
+        expect(store.getState().hands[store.getState().playerIndex]).toEqual(["SA", "CQ"])
+        expect(store.getState().score[store.getState().playerIndex]).toEqual([21])
+        expect(store.getState().hasBlackjack[store.getState().playerIndex]).toEqual([true])
     })
 
     it("credit given amount to player's balance", () => {
@@ -81,8 +81,7 @@ describe("Test playerReducer reducer", () => {
             balance: 0,
             currentBet: 0,
 
-            handIndex: 0,
-            cards: [[]],
+            hands: [[]],
             score: [[0]],
             busted: [[false]],
             hasBlackjack: [[false]],
@@ -94,6 +93,6 @@ describe("Test playerReducer reducer", () => {
     it("is able to purchase insurance", () => {
         const store = createStore(playerReducer)
         store.dispatch(setInsured())
-        expect(store.getState().hasInsurance[store.getState().handIndex]).toEqual([true])
+        expect(store.getState().hasInsurance[store.getState().playerIndex]).toEqual([true])
     })
 })

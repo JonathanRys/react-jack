@@ -3,22 +3,19 @@ import PropTypes from 'prop-types'
 
 import Card from '../Card/Card'
 
-import { connect } from 'react-redux'
-
-const mapStateToProps = function (state) {
-    console.log(state)
-    return {
-        cards: state.player.cards[state.player.playerIndex]
+export default class Hand extends Component {
+    shouldComponentUpdate(nextProps) {
+        if (this.props.faceUp === nextProps.faceUp &&
+            this.props.hand === nextProps.hand) return false;
+        return true;
     }
-}
 
-export class Hand extends Component {
     render() {
         return (
             <div>
                 {
-                    this.props.cards.map((card, key) => {
-                        return <Card key={`card-face-${key}`} card={card} faceUp={this.props.faceUp} />
+                    this.props.hand.map((card, key) => {
+                        return <Card key={`card-face-${key}`} card={card} faceUp={this.props.faceUp + key} />
                     })
                 }
             </div>
@@ -27,8 +24,6 @@ export class Hand extends Component {
 }
 
 Hand.propTypes = {
-    cards: PropTypes.array.isRequired,
-    faceUp: PropTypes.bool.isRequired,
+    hand: PropTypes.array.isRequired,
+    faceUp: PropTypes.number.isRequired,
 }
-
-export default connect(mapStateToProps)(Hand)

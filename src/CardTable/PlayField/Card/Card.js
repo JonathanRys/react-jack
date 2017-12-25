@@ -19,5 +19,5 @@ export default class Card extends Component {
 
 Card.propTypes = {
     card: PropTypes.string.isRequired,
-    faceUp: PropTypes.bool.isRequired,
+    faceUp: PropTypes.number.isRequired,
 }

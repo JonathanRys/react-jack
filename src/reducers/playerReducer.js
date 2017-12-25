@@ -6,8 +6,7 @@ const initialState = {
     balance: 0,
     currentBet: 0,
 
-    handIndex: 0,
-    cards: [[]],
+    hands: [[]],
     score: [[0]],
     busted: [[false]],
     hasBlackjack: [[false]],
@@ -48,8 +47,8 @@ const getScore = function (state) {
     }
 
     // Score the current hand
-    const index = state.handIndex
-    const score = scoreHand(state.cards[index])
+    const index = state.playerIndex
+    const score = scoreHand(state.hands[index])
 
     // Return a new object with the updated score
     return {
@@ -65,26 +64,26 @@ const getScore = function (state) {
         ],
         hasBlackjack: [
             ...state.hasBlackjack.slice(0, index),
-            [score === 21 && state.cards[index].length === 2],
+            [score === 21 && state.hands[index].length === 2],
             ...state.hasBlackjack.slice(index + 1)
         ]
     }
 };
 
 export default function playerReducer(state = initialState, action) {
-    const index = state.handIndex
+    const index = state.playerIndex
     switch (action.type) {
         case "SET_NAME":
             return { ...state, name: action.payload.name }
         case "SET_AVATAR":
             return { ...state, avatar: action.payload.avatar }
         case "TAKE_CARD":
-            const newHand = [...state.cards[index], action.payload.card]
+            const newHand = [...state.hands[index], action.payload.card]
             const newCards = {
-                cards: [
-                    ...state.cards.slice(0, index),
+                hands: [
+                    ...state.hands.slice(0, index),
                     newHand,
-                    ...state.cards.slice(index + 1)
+                    ...state.hands.slice(index + 1)
                 ]
             }
             return {
