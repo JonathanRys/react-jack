@@ -10,9 +10,23 @@ describe("Test Card component", () => {
         let component = shallow(<Card {...mockProps} />)
         expect(component).toMatchSnapshot()
 
-        mockProps.faceup = true
-
+        // test with faceUp = true
+        mockProps.faceUp = true
         component = shallow(<Card {...mockProps} />)
         expect(component).toMatchSnapshot()
+
+        // test shouldComponentUpdate
+        component = shallow(<Card {...mockProps} />)
+        expect(component).toMatchSnapshot()
+    })
+
+    it("should only render when the props have changed", () => {
+        const component = shallow(<Card {...mockProps} />)
+        const shouldntUpdate = component.instance().shouldComponentUpdate({ ...mockProps })
+        expect(shouldntUpdate).toBe(false)
+        // negative test
+        mockProps.faceUp = false
+        const shouldUpdate = component.instance().shouldComponentUpdate({ ...mockProps })
+        expect(shouldUpdate).toBe(true)
     })
 })

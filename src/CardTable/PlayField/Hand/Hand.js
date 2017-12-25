@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'proptypes'
 
+import Card from '../Card/Card'
+
 class Hand extends Component {
     render() {
         return (

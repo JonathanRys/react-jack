@@ -1,4 +1,8 @@
 /* Turn-based Actions */
+export function play(payload) {
+    return { type: "PLAY", payload: payload }
+}
+
 export function draw(payload) {
     return { type: "DRAW", payload: payload }
 }
@@ -23,6 +27,13 @@ export function fold(payload) {
     return { type: "FOLD", payload: payload }
 }
 
+export function split(payload) {
+    return { type: "SPLIT", payload: payload }
+}
+
+export function doubleDown(payload) {
+    return { type: "DOUBLE_DOWN", payload: payload }
+}
 
 /* Bank Actions */
 export function credit(payload) {
@@ -31,20 +42,6 @@ export function credit(payload) {
 
 export function debit(payload) {
     return { type: "DEBIT", payload: payload }
-}
-
-
-/* Game Actions */
-export function increaseBet(payload) {
-    return { type: "INCREASE_BET", payload: payload }
-}
-
-export function decreaseBet(payload) {
-    return { type: "DECREASE_BET", payload: payload }
-}
-
-export function play(payload) {
-    return { type: "PLAY", payload: payload }
 }
 
 

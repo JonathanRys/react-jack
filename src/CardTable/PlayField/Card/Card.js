@@ -5,7 +5,9 @@ import "./card.css"
 
 export default class Card extends Component {
     shouldComponentUpdate(nextProps) {
-        if (this.props === nextProps) return false;
+        if (this.props.faceUp === nextProps.faceUp &&
+            this.props.card === nextProps.card) return false;
+        return true;
     }
 
     render() {
