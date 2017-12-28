@@ -45,18 +45,6 @@ describe("Test action creators", () => {
         })
     })
 
-    describe("Test bank-based actions", () => {
-        it("tests credit action creator", () => {
-            const result = actions.credit("test")
-            expect(result).toEqual({ type: "CREDIT", payload: "test" })
-        })
-
-        it("tests debit action creator", () => {
-            const result = actions.debit("test")
-            expect(result).toEqual({ type: "DEBIT", payload: "test" })
-        })
-    })
-
     describe("Test deck-based actions", () => {
         it("tests newDeck action creator", () => {
             const result = actions.newDeck()

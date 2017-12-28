@@ -12,7 +12,7 @@ export const buildDeck = () => {
             ++counter;
         }
     }
-    return deck;
+    return [...deck];
 };
 
 export const cloneDeck = (deck, numClones) => {
@@ -20,8 +20,10 @@ export const cloneDeck = (deck, numClones) => {
     let decks = []
 
     for (let i = 0; i < numClones; i++) {
+        // concat and flatten
         decks = [...decks, ...deck]
     }
+
     return decks
 }
 

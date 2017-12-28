@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": "Profile",
+      "className": "Profile_main",
     },
     "ref": null,
     "rendered": "Profile",
@@ -30,6 +31,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Profile",
+        "className": "Profile_main",
       },
       "ref": null,
       "rendered": "Profile",

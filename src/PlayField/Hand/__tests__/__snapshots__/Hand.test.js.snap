@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Hand component matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Hand
+    dealer={false}
+    hand={
+      Array [
+        "SA",
+        "SJ",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Array [
+    <Card
+      card="SA"
+      faceUp={false}
+    />,
+    <Card
+      card="SJ"
+      faceUp={false}
+    />,
+  ],
+  Symbol(enzyme.__nodes__): Array [
+    Array [
+      <Card
+        card="SA"
+        faceUp={false}
+      />,
+      <Card
+        card="SJ"
+        faceUp={false}
+      />,
+    ],
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Test Hand component matches the snapshot 2`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Hand
+    dealer={true}
+    hand={
+      Array [
+        "SA",
+        "SJ",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Array [
+    <Card
+      card="SA"
+      faceUp={true}
+    />,
+    <Card
+      card="SJ"
+      faceUp={false}
+    />,
+  ],
+  Symbol(enzyme.__nodes__): Array [
+    Array [
+      <Card
+        card="SA"
+        faceUp={true}
+      />,
+      <Card
+        card="SJ"
+        faceUp={false}
+      />,
+    ],
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { connect } from 'react-redux'
 
 import './App.css';
 
-import CardTable from './CardTable/CardTable'
+import PlayField from './PlayField/PlayField'
 import Profile from './Profile/Profile'
 import ControlPanel from './ControlPanel/ControlPanel'
 
@@ -13,10 +12,9 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Our Blackjack Table</h1>
+          <h1 className="App-title">React-Jack</h1>
         </header>
-        <CardTable />
+        <PlayField />
         <Profile />
         <ControlPanel />
       </div>

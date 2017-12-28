@@ -3,7 +3,6 @@ import { buildDeck, shuffle, cloneDeck } from './deckHelpers'
 const initialState = {
     drawnCard: null,
     deck: []
-
 }
 
 export default function bankReducer(state = initialState, action) {

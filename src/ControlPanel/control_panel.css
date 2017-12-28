@@ -1,0 +1,16 @@
+.ControlPanel_main {
+    min-width: 220px;
+    width: 20%;
+    right: 0;
+    margin: 15px;
+    padding: 25px;
+    padding-top: 20px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.ControlPanel_main_panel-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}

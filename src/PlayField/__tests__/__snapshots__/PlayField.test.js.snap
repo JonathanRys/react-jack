@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test PlayField component matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PlayField
+    hands={
+      Array [
+        Array [
+          "SA",
+          "CK",
+        ],
+        Array [
+          "D2",
+          "HJ",
+        ],
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Connect(Dealer) />,
+        <Deck />,
+        Array [
+          <Connect(Player)
+            faceUp={0}
+            hand={
+              Array [
+                "SA",
+                "CK",
+              ]
+            }
+          />,
+          <Connect(Player)
+            faceUp={1}
+            hand={
+              Array [
+                "D2",
+                "HJ",
+              ]
+            }
+          />,
+        ],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "hand-0",
+        "nodeType": "class",
+        "props": Object {
+          "faceUp": 0,
+          "hand": Array [
+            "SA",
+            "CK",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "hand-1",
+        "nodeType": "class",
+        "props": Object {
+          "faceUp": 1,
+          "hand": Array [
+            "D2",
+            "HJ",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(Dealer) />,
+          <Deck />,
+          Array [
+            <Connect(Player)
+              faceUp={0}
+              hand={
+                Array [
+                  "SA",
+                  "CK",
+                ]
+              }
+            />,
+            <Connect(Player)
+              faceUp={1}
+              hand={
+                Array [
+                  "D2",
+                  "HJ",
+                ]
+              }
+            />,
+          ],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "hand-0",
+          "nodeType": "class",
+          "props": Object {
+            "faceUp": 0,
+            "hand": Array [
+              "SA",
+              "CK",
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "hand-1",
+          "nodeType": "class",
+          "props": Object {
+            "faceUp": 1,
+            "hand": Array [
+              "D2",
+              "HJ",
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
