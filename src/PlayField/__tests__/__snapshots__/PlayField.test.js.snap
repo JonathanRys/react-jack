@@ -96,7 +96,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Card
+        <Row
           tag="div"
         >
           <Dealer
@@ -111,14 +111,14 @@ ShallowWrapper {
             playersTurn={0}
             takeCard={undefined}
           />
-        </Card>,
-        <Card
+        </Row>,
+        <Row
           tag="div"
         >
           <Deck />
            
-        </Card>,
-        <Card
+        </Row>,
+        <Row
           tag="div"
         >
           <Player
@@ -139,7 +139,7 @@ ShallowWrapper {
             playersTurn={0}
             takeCard={[MockFunction]}
           />
-        </Card>,
+        </Row>,
       ],
       "className": "PlayField_main",
       "tag": "div",
@@ -274,7 +274,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Card
+          <Row
             tag="div"
           >
             <Dealer
@@ -289,14 +289,14 @@ ShallowWrapper {
               playersTurn={0}
               takeCard={undefined}
             />
-          </Card>,
-          <Card
+          </Row>,
+          <Row
             tag="div"
           >
             <Deck />
              
-          </Card>,
-          <Card
+          </Row>,
+          <Row
             tag="div"
           >
             <Player
@@ -317,7 +317,7 @@ ShallowWrapper {
               playersTurn={0}
               takeCard={[MockFunction]}
             />
-          </Card>,
+          </Row>,
         ],
         "className": "PlayField_main",
         "tag": "div",

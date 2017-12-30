@@ -51,6 +51,7 @@ ShallowWrapper {
       "drawOne": [Function],
       "giveCard": [Function],
       "giveDealerCard": [Function],
+      "hitOnClick": [Function],
       "keepDealing": [Function],
       "player": Object {
         "avatar": "./images/default.png",
@@ -151,6 +152,7 @@ ShallowWrapper {
         "drawOne": [Function],
         "giveCard": [Function],
         "giveDealerCard": [Function],
+        "hitOnClick": [Function],
         "keepDealing": [Function],
         "player": Object {
           "avatar": "./images/default.png",

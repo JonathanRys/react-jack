@@ -31,9 +31,9 @@ const dispatchAll = (dispatch, actions) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // hitOnClick: () => {
-    //   dispatch(drawOne())
-    // },
+    hitOnClick: () => {
+      dispatch(drawOne())
+    },
     // standOnClick: () => { },
     // splitOnClick: () => { },
     // doubleDownOnClick: () => { },
