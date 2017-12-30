@@ -9,7 +9,9 @@ const initialState = {
 export default function turnReducer(state = initialState, action) {
     switch (action.type) {
         case "PLAY":
-            return { ...state, isPlaying: true }
+            return { ...initialState, isPlaying: true, }
+        case "DEALER_TURN":
+            return { ...state, isPlaying: false, playersTurn: 0 }
         case "ADD_PLAYER":
             return { ...state, numPlayers: state.numPlayers < 9 ? state.numPlayers + 1 : 9 }
         case "NEXT_PLAYER":

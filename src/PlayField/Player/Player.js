@@ -21,5 +21,6 @@ export default class Player extends Component {
 Player.propTypes = {
     hands: PropTypes.array.isRequired,
     drawnCard: PropTypes.string,
+    takeCard: PropTypes.func.isRequired,
     clearCard: PropTypes.func.isRequired,
 }

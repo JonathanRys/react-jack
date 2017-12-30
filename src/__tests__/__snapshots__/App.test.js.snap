@@ -27,6 +27,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "buyInsuranceOnClick": [Function],
       "clearCard": [Function],
       "dealOnClick": [Function],
       "dealer": Object {
@@ -44,15 +45,18 @@ ShallowWrapper {
           0,
         ],
       },
+      "dealerTurn": [Function],
       "deck": Object {
         "deck": Array [],
         "drawnCard": null,
       },
+      "doubleDownOnClick": [Function],
       "drawOne": [Function],
       "giveCard": [Function],
       "giveDealerCard": [Function],
       "hitOnClick": [Function],
       "keepDealing": [Function],
+      "loseBet": [Function],
       "nextPlayer": [Function],
       "player": Object {
         "avatar": "./images/default.png",
@@ -81,6 +85,8 @@ ShallowWrapper {
         ],
         "splitHand": false,
       },
+      "reset": [Function],
+      "splitOnClick": [Function],
       "standOnClick": [Function],
       "store": Object {
         "dispatch": [Function],
@@ -114,6 +120,7 @@ ShallowWrapper {
         "numPlayers": 2,
         "playersTurn": 0,
       },
+      "winBet": [Function],
     },
     "ref": null,
     "rendered": null,
@@ -125,6 +132,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "buyInsuranceOnClick": [Function],
         "clearCard": [Function],
         "dealOnClick": [Function],
         "dealer": Object {
@@ -142,15 +150,18 @@ ShallowWrapper {
             0,
           ],
         },
+        "dealerTurn": [Function],
         "deck": Object {
           "deck": Array [],
           "drawnCard": null,
         },
+        "doubleDownOnClick": [Function],
         "drawOne": [Function],
         "giveCard": [Function],
         "giveDealerCard": [Function],
         "hitOnClick": [Function],
         "keepDealing": [Function],
+        "loseBet": [Function],
         "nextPlayer": [Function],
         "player": Object {
           "avatar": "./images/default.png",
@@ -179,6 +190,8 @@ ShallowWrapper {
           ],
           "splitHand": false,
         },
+        "reset": [Function],
+        "splitOnClick": [Function],
         "standOnClick": [Function],
         "store": Object {
           "dispatch": [Function],
@@ -212,6 +225,7 @@ ShallowWrapper {
           "numPlayers": 2,
           "playersTurn": 0,
         },
+        "winBet": [Function],
       },
       "ref": null,
       "rendered": null,

@@ -8,6 +8,7 @@ import mockStore from "../../mockStore"
 const mockProps = {
     ...mockStore,
     giveCard: jest.fn(),
+    giveDealerCard: jest.fn(),
     clearCard: jest.fn()
 }
 

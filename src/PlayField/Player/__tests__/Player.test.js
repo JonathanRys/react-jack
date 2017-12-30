@@ -6,7 +6,7 @@ import Player from '../Player'
 const mockProps = {
     hands: [["SA", "SJ"]],
     drawnCard: null,
-    giveCard: jest.fn(),
+    takeCard: jest.fn(),
     clearCard: jest.fn(),
 }
 
@@ -15,8 +15,6 @@ describe("Test Hand component", () => {
         const testProps = { ...mockProps }
         const component = shallow(<Player {...testProps} />)
         expect(component).toMatchSnapshot()
-        // expect(testProps.giveCard).not.toHaveBeenCalled()
-        // expect(testProps.clearCard).not.toHaveBeenCalled()
     })
 
     it("matches the snapshot after drawing a card", () => {

@@ -9,8 +9,9 @@ import Profile from './Profile/Profile'
 import ControlPanel from './ControlPanel/ControlPanel'
 
 import { newDeck, shuffle, drawOne } from './actions/deckActions'
-import { play, nextPlayer } from './actions/turnActions'
-import { takeCard, dealerTakeCard, stand } from './actions/playerActions'
+import { play, nextPlayer, dealerTurn } from './actions/turnActions'
+import { flipHand } from './actions/playerActions'
+import { takeCard, dealerTakeCard, stand, winBet, loseBet, setInsured, reset } from './actions/playerActions'
 import { clearCard } from './actions/deckActions'
 
 import { connect } from 'react-redux'
@@ -33,11 +34,31 @@ const mapDispatchToProps = (dispatch) => {
     hitOnClick: () => {
       dispatch(drawOne())
     },
-    standOnClick: () => { dispatch(stand()) },
-    // splitOnClick: () => { },
-    // doubleDownOnClick: () => { },
-    // buyInsuranceOnClick: () => { },
+    standOnClick: () => {
+      dispatch(stand())
+    },
+    splitOnClick: () => {
+      // Not sure what to do here yet
+    },
+    doubleDownOnClick: () => {
+      dispatch(drawOne())
+      dispatch(flipHand())
+      dispatch(dealerTurn())
+    },
+    buyInsuranceOnClick: () => {
+      dispatch(setInsured())
+    },
 
+    winBet: (xBlackjack) => {
+      dispatch(winBet(xBlackjack))
+    },
+    loseBet: () => {
+      dispatch(loseBet())
+    },
+    dealerTurn: () => {
+      dispatch(dealerTurn())
+      dispatch(flipHand())
+    },
     drawOne: () => {
       dispatch(drawOne())
     },
@@ -45,14 +66,23 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(nextPlayer())
     },
     dealOnClick: () => {
-      dispatchAll(dispatch, [play, newDeck, shuffle])
+      dispatchAll(dispatch, [reset, play, newDeck, shuffle])
     },
     keepDealing: () => {
       dispatchAll(dispatch, [drawOne, nextPlayer])
     },
-    giveCard: (card) => { dispatch(takeCard(card)) },
-    giveDealerCard: (card) => { dispatch(dealerTakeCard(card)) },
-    clearCard: () => { dispatch(clearCard()) },
+    giveCard: (card) => {
+      dispatch(takeCard(card))
+    },
+    giveDealerCard: (card) => {
+      dispatch(dealerTakeCard(card))
+    },
+    clearCard: () => {
+      dispatch(clearCard())
+    },
+    reset: () => {
+      dispatch(reset())
+    },
   }
 }
 

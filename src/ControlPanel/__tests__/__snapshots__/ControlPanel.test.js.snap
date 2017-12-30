@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ControlPanel
+    buyInsuranceOnClick={[MockFunction]}
+    dealOnClick={[MockFunction]}
     dealer={
       Object {
         "avatar": "./images/dealer.png",
@@ -31,6 +33,9 @@ ShallowWrapper {
         "drawnCard": null,
       }
     }
+    doubleDownOnClick={[MockFunction]}
+    hitOnClick={[MockFunction]}
+    loseBet={[MockFunction]}
     player={
       Object {
         "avatar": "./images/default.png",
@@ -66,6 +71,9 @@ ShallowWrapper {
         "splitHand": false,
       }
     }
+    reset={[MockFunction]}
+    splitOnClick={[MockFunction]}
+    standOnClick={[MockFunction]}
     turn={
       Object {
         "errMsg": "",
@@ -75,6 +83,7 @@ ShallowWrapper {
         "playersTurn": 0,
       }
     }
+    winBet={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -108,7 +117,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={false}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -118,7 +127,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={false}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -128,7 +137,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={true}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -138,7 +147,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={false}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -148,7 +157,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={true}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -158,7 +167,7 @@ ShallowWrapper {
           block={true}
           color="primary"
           disabled={true}
-          onClick={undefined}
+          onClick={[MockFunction]}
           size="md"
           tag="button"
         >
@@ -203,7 +212,7 @@ ShallowWrapper {
           "children": "Hit",
           "color": "secondary",
           "disabled": false,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -220,7 +229,7 @@ ShallowWrapper {
           "children": "Stand",
           "color": "secondary",
           "disabled": false,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -237,7 +246,7 @@ ShallowWrapper {
           "children": "Split",
           "color": "secondary",
           "disabled": true,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -254,7 +263,7 @@ ShallowWrapper {
           "children": "Double Down",
           "color": "secondary",
           "disabled": false,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -271,7 +280,7 @@ ShallowWrapper {
           "children": "Buy Insurance",
           "color": "secondary",
           "disabled": true,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -288,7 +297,7 @@ ShallowWrapper {
           "children": "Deal",
           "color": "primary",
           "disabled": true,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
@@ -325,7 +334,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={false}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -335,7 +344,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={false}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -345,7 +354,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={true}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -355,7 +364,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={false}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -365,7 +374,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={true}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -375,7 +384,7 @@ ShallowWrapper {
             block={true}
             color="primary"
             disabled={true}
-            onClick={undefined}
+            onClick={[MockFunction]}
             size="md"
             tag="button"
           >
@@ -420,7 +429,7 @@ ShallowWrapper {
             "children": "Hit",
             "color": "secondary",
             "disabled": false,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
@@ -437,7 +446,7 @@ ShallowWrapper {
             "children": "Stand",
             "color": "secondary",
             "disabled": false,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
@@ -454,7 +463,7 @@ ShallowWrapper {
             "children": "Split",
             "color": "secondary",
             "disabled": true,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
@@ -471,7 +480,7 @@ ShallowWrapper {
             "children": "Double Down",
             "color": "secondary",
             "disabled": false,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
@@ -488,7 +497,7 @@ ShallowWrapper {
             "children": "Buy Insurance",
             "color": "secondary",
             "disabled": true,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
@@ -505,7 +514,7 @@ ShallowWrapper {
             "children": "Deal",
             "color": "primary",
             "disabled": true,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },

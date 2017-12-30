@@ -33,6 +33,7 @@ ShallowWrapper {
       }
     }
     giveCard={[MockFunction]}
+    giveDealerCard={[MockFunction]}
     player={
       Object {
         "avatar": "./images/default.png",
@@ -104,7 +105,7 @@ ShallowWrapper {
               ]
             }
             playersTurn={0}
-            takeCard={undefined}
+            takeCard={[MockFunction]}
           />
         </Row>,
         <Row
@@ -156,7 +157,7 @@ ShallowWrapper {
               ]
             }
             playersTurn={0}
-            takeCard={undefined}
+            takeCard={[MockFunction]}
           />,
           "tag": "div",
         },
@@ -173,7 +174,7 @@ ShallowWrapper {
               "C5",
             ],
             "playersTurn": 0,
-            "takeCard": undefined,
+            "takeCard": [MockFunction],
           },
           "ref": null,
           "rendered": null,
@@ -282,7 +283,7 @@ ShallowWrapper {
                 ]
               }
               playersTurn={0}
-              takeCard={undefined}
+              takeCard={[MockFunction]}
             />
           </Row>,
           <Row
@@ -334,7 +335,7 @@ ShallowWrapper {
                 ]
               }
               playersTurn={0}
-              takeCard={undefined}
+              takeCard={[MockFunction]}
             />,
             "tag": "div",
           },
@@ -351,7 +352,7 @@ ShallowWrapper {
                 "C5",
               ],
               "playersTurn": 0,
-              "takeCard": undefined,
+              "takeCard": [MockFunction],
             },
             "ref": null,
             "rendered": null,

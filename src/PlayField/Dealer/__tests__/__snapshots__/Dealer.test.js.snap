@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dealer
+    clearCard={[MockFunction]}
+    drawnCard={null}
     hand={
       Array [
         Array [
@@ -13,6 +15,7 @@ ShallowWrapper {
         ],
       ]
     }
+    takeCard={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

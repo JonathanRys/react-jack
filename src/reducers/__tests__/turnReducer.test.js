@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import turnReducer from '../turnReducer'
-import { play, addPlayer, nextPlayer } from '../../actions/turnActions.js'
+import { play, addPlayer, nextPlayer, dealerTurn } from '../../actions/turnActions.js'
 import { createStore } from 'redux'
 
 describe("Test turnReducer reducer", () => {
@@ -9,6 +9,13 @@ describe("Test turnReducer reducer", () => {
         const store = createStore(turnReducer)
         store.dispatch(play())
         expect(store.getState().isPlaying).toEqual(true)
+    })
+
+    it("dispatches DEALER_TURN action", () => {
+        const store = createStore(turnReducer)
+        store.dispatch(dealerTurn())
+        expect(store.getState().isPlaying).toEqual(false)
+        expect(store.getState().playersTurn).toEqual(0)
     })
 
     it("dispatches ADD_PLAYER action", () => {

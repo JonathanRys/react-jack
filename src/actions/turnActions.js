@@ -3,6 +3,10 @@ export function play() {
     return { type: "PLAY" }
 }
 
+export function dealerTurn() {
+    return { type: "DEALER_TURN" }
+}
+
 export function addPlayer() {
     return { type: "ADD_PLAYER" }
 }

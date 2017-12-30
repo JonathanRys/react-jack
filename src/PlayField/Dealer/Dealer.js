@@ -19,5 +19,8 @@ export default class Dealer extends Component {
 }
 
 Dealer.propTypes = {
-    hand: PropTypes.array.isRequired
+    hand: PropTypes.array.isRequired,
+    drawnCard: PropTypes.string,
+    takeCard: PropTypes.func.isRequired,
+    clearCard: PropTypes.func.isRequired,
 }

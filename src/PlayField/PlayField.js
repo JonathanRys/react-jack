@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import { Container, Row } from 'reactstrap';
 
+import "./play-field.css"
+
 import Dealer from './Dealer/Dealer'
 import Deck from './Deck/Deck'
 import Player from './Player/Player'

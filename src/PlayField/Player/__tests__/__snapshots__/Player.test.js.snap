@@ -7,7 +7,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Player
     clearCard={[MockFunction]}
     drawnCard={null}
-    giveCard={[MockFunction]}
     hands={
       Array [
         Array [
@@ -16,6 +15,7 @@ ShallowWrapper {
         ],
       ]
     }
+    takeCard={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -65,7 +65,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Player
     clearCard={[MockFunction]}
     drawnCard="S7"
-    giveCard={[MockFunction]}
     hands={
       Array [
         Array [
@@ -74,6 +73,7 @@ ShallowWrapper {
         ],
       ]
     }
+    takeCard={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
