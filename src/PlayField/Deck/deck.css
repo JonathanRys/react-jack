@@ -1,0 +1,8 @@
+.PlayField_Deck_main {
+    background: url("../Hand/Card/images/card-back.png");
+    background-color: #666;
+    background-size: cover;
+    width: 72px;
+    height: 98px;
+    margin: 8px;
+}

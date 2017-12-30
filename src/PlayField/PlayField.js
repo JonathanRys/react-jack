@@ -17,7 +17,7 @@ export default class PlayField extends Component {
                     takeCard={this.props.giveDealerCard}
                     clearCard={this.props.clearCard}
                 />
-                <Deck /> {/* Really just an image */}
+                <Deck /> {/* Really just an image I guess.  Maybe add some animation... */}
                 <Player
                     playersTurn={this.props.turn.playersTurn}
                     hands={this.props.player.hands}

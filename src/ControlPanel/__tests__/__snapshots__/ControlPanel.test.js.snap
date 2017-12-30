@@ -163,7 +163,7 @@ ShallowWrapper {
           block={true}
           color="primary"
           disabled={true}
-          onClick={[Function]}
+          onClick={undefined}
           size="md"
           tag="button"
         >
@@ -171,11 +171,11 @@ ShallowWrapper {
         </Button>,
       ],
       "className": "ControlPanel_main",
-      "lg": "3",
-      "md": "6",
-      "sm": "8",
+      "lg": "12",
+      "md": "8",
+      "sm": "6",
       "tag": "form",
-      "xs": "10",
+      "xs": "4",
     },
     "ref": null,
     "rendered": Array [
@@ -293,7 +293,7 @@ ShallowWrapper {
           "children": "Deal",
           "color": "primary",
           "disabled": true,
-          "onClick": [Function],
+          "onClick": undefined,
           "size": "md",
           "tag": "button",
         },
@@ -380,7 +380,7 @@ ShallowWrapper {
             block={true}
             color="primary"
             disabled={true}
-            onClick={[Function]}
+            onClick={undefined}
             size="md"
             tag="button"
           >
@@ -388,11 +388,11 @@ ShallowWrapper {
           </Button>,
         ],
         "className": "ControlPanel_main",
-        "lg": "3",
-        "md": "6",
-        "sm": "8",
+        "lg": "12",
+        "md": "8",
+        "sm": "6",
         "tag": "form",
-        "xs": "10",
+        "xs": "4",
       },
       "ref": null,
       "rendered": Array [
@@ -510,7 +510,7 @@ ShallowWrapper {
             "children": "Deal",
             "color": "primary",
             "disabled": true,
-            "onClick": [Function],
+            "onClick": undefined,
             "size": "md",
             "tag": "button",
           },

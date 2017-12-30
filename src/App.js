@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Container, Row, Col } from 'reactstrap';
+
 import './App.css';
 
 import PlayField from './PlayField/PlayField'
@@ -29,12 +31,18 @@ const dispatchAll = (dispatch, actions) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    // hitOnClick: () => {
+    //   dispatch(drawOne())
+    // },
+    // standOnClick: () => { },
+    // splitOnClick: () => { },
+    // doubleDownOnClick: () => { },
+    // buyInsuranceOnClick: () => { },
+    // 
     drawOne: () => {
-      console.log("Drawing one")
       dispatch(drawOne())
     },
     dealOnClick: () => {
-      console.log("DEAL clicked")
       dispatchAll(dispatch, [play, newDeck, shuffle])
     },
     keepDealing: () => {
@@ -49,33 +57,26 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
           <h1 className="App-title">React-Jack</h1>
         </header>
-        <Profile { ...this.props.player} />
-        <PlayField { ...this.props} />
-        <ControlPanel { ...this.props} />
+        <Container className="App">
+          <Row>
+            <Col xs="2" lg="3">
+              <Profile { ...this.props.player} />
+            </Col>
+            <Col xs="8" lg="6">
+              <PlayField className { ...this.props} />
+            </Col>
+            <Col xs="2" lg="3">
+              <ControlPanel { ...this.props} />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
-
-
-// hitOnClick: () => {
-//   dispatch(drawOne())
-// },
-// standOnClick: () => { },
-// splitOnClick: () => { },
-// doubleDownOnClick: () => { },
-// buyInsuranceOnClick: () => { },
-// dealOnClick: () => {
-//   console.log("DEAL clicked")
-//   dispatchAll(dispatch, [play, newDeck, shuffle])
-// },
-// keepDealing: () => {
-//   dispatchAll(dispatch, [drawOne, nextPlayer])
-// }
-// 

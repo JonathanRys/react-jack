@@ -42,4 +42,3 @@ export default function getScore(state) {
 export function dealeraddCard(hand, card) {
     return { hand: [...hand, card] }
 }
-

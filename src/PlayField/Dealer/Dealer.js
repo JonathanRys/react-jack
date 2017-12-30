@@ -5,7 +5,6 @@ import Hand from '../Hand/Hand'
 
 export default class Dealer extends Component {
     componentWillReceiveProps(nextProps) {
-        console.log("Ooh, here come the dealer props... ", nextProps)
         if (!nextProps.playersTurn && nextProps.drawnCard) {
             nextProps.takeCard({ card: nextProps.drawnCard })
             nextProps.clearCard()

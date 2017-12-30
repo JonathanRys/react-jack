@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Deck extends Component {
-    render() {
-        return <div>Deck</div>
-    }
+import "./deck.css"
+
+export default function Deck() {
+    return <div className="PlayField_Deck_main"></div>
 }

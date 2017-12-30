@@ -17,10 +17,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Deck",
+      "className": "PlayField_Deck_main",
     },
     "ref": null,
-    "rendered": "Deck",
+    "rendered": null,
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +29,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Deck",
+        "className": "PlayField_Deck_main",
       },
       "ref": null,
-      "rendered": "Deck",
+      "rendered": null,
       "type": "div",
     },
   ],
