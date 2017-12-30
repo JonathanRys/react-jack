@@ -36,6 +36,7 @@ ShallowWrapper {
           faceUp={true}
         />,
       ],
+      "className": "PlayField_Hand",
       "style": Object {
         "display": "inline-block",
         "margin": "auto",
@@ -86,6 +87,7 @@ ShallowWrapper {
             faceUp={true}
           />,
         ],
+        "className": "PlayField_Hand",
         "style": Object {
           "display": "inline-block",
           "margin": "auto",
@@ -167,6 +169,7 @@ ShallowWrapper {
           faceUp={false}
         />,
       ],
+      "className": "PlayField_Hand",
       "style": Object {
         "display": "inline-block",
         "margin": "auto",
@@ -217,6 +220,7 @@ ShallowWrapper {
             faceUp={false}
           />,
         ],
+        "className": "PlayField_Hand",
         "style": Object {
           "display": "inline-block",
           "margin": "auto",
@@ -298,6 +302,7 @@ ShallowWrapper {
           faceUp={true}
         />,
       ],
+      "className": "PlayField_Hand",
       "style": Object {
         "display": "inline-block",
         "margin": "auto",
@@ -348,6 +353,7 @@ ShallowWrapper {
             faceUp={true}
           />,
         ],
+        "className": "PlayField_Hand",
         "style": Object {
           "display": "inline-block",
           "margin": "auto",
