@@ -8,7 +8,7 @@ import PlayField from './PlayField/PlayField'
 import Profile from './Profile/Profile'
 import ControlPanel from './ControlPanel/ControlPanel'
 
-import { newDeck, shuffle, drawOne } from './actions/deckActions'
+import { newDeck, shuffle, drawOne, playerDrawOne } from './actions/deckActions'
 import { play, nextPlayer } from './actions/turnActions'
 import { takeCard, dealerTakeCard } from './actions/playerActions'
 import { clearCard } from './actions/deckActions'
@@ -38,9 +38,12 @@ const mapDispatchToProps = (dispatch) => {
     // splitOnClick: () => { },
     // doubleDownOnClick: () => { },
     // buyInsuranceOnClick: () => { },
-    // 
+
     drawOne: () => {
       dispatch(drawOne())
+    },
+    nextPlayer: () => {
+      dispatch(nextPlayer())
     },
     dealOnClick: () => {
       dispatchAll(dispatch, [play, newDeck, shuffle])

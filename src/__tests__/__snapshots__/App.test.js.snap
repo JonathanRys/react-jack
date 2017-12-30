@@ -53,6 +53,7 @@ ShallowWrapper {
       "giveDealerCard": [Function],
       "hitOnClick": [Function],
       "keepDealing": [Function],
+      "nextPlayer": [Function],
       "player": Object {
         "avatar": "./images/default.png",
         "balance": 0,
@@ -154,6 +155,7 @@ ShallowWrapper {
         "giveDealerCard": [Function],
         "hitOnClick": [Function],
         "keepDealing": [Function],
+        "nextPlayer": [Function],
         "player": Object {
           "avatar": "./images/default.png",
           "balance": 0,

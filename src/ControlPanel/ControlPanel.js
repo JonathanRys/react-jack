@@ -9,6 +9,9 @@ export default class ControlPanel extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.dealer.hand.length < 1 || nextProps.player.hands[0].length < 2) {
             nextProps.keepDealing()
+        } else if (!nextProps.turn.playersTurn) {
+            //is it the dealer's turn?
+            nextProps.nextPlayer()
         }
     }
 
