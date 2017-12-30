@@ -18,11 +18,12 @@ export default {
         currentBet: 0,
 
         hands: [["SA", "CK"], ["D2", "HJ"]],
-        score: [[0]],
-        busted: [[false]],
-        hasBlackjack: [[false]],
-        hasInsurance: [[false]],
+        score: [0],
+        busted: [false],
+        hasBlackjack: [false],
+        hasInsurance: [false],
         splitHand: false,
+        playerStands: [false],
     },
     turn: {
         isPlaying: true,

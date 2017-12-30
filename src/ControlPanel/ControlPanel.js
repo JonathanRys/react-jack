@@ -11,7 +11,12 @@ export default class ControlPanel extends Component {
             nextProps.keepDealing()
         } else if (!nextProps.turn.playersTurn) {
             //is it the dealer's turn?
-            nextProps.nextPlayer()
+            if (nextProps.player.playerStands || nextProps.player.busted || nextProps.player.hasBlackJack) {
+                //Take dealer's turn
+            }
+            else {
+                nextProps.nextPlayer()
+            }
         }
     }
 

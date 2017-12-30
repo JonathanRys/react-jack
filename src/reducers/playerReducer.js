@@ -1,4 +1,4 @@
-import getScore from './playerHelpers'
+import getScore, { addCard } from './playerHelpers'
 
 const initialState = {
     name: "Player1",
@@ -10,11 +10,12 @@ const initialState = {
     currentBet: 0,
 
     hands: [[]],
-    score: [[0]],
-    busted: [[false]],
-    hasBlackjack: [[false]],
-    hasInsurance: [[false]],
+    score: [0],
+    busted: [false],
+    hasBlackjack: [false],
+    hasInsurance: [false],
     splitHand: false,
+    playerStands: [false],
 }
 
 const INSURANCE_RATE = 0.5
@@ -27,20 +28,21 @@ export default function playerReducer(state = initialState, action) {
         case "SET_AVATAR":
             return { ...state, avatar: action.payload.avatar }
         case "TAKE_CARD":
-            const newHand = [...state.hands[index], action.payload.card]
-            const newCards = {
-                hands: [
-                    ...state.hands.slice(0, index),
-                    newHand,
-                    ...state.hands.slice(index + 1)
-                ]
-            }
+            const newCards = addCard(state.hands, action.payload.card, index)
             return {
                 ...state,
                 ...getScore({
                     ...state, ...newCards
                 }),
                 ...newCards
+            }
+        case "STAND":
+            return {
+                ...state, playerStands: [
+                    ...state.playerStands.slice(0, index),
+                    true,
+                    ...state.playerStands.slice(index + 1)
+                ]
             }
         case "BUY_CHIPS":
             return { ...state, balance: state.balance + action.payload.newChips }
@@ -66,7 +68,13 @@ export default function playerReducer(state = initialState, action) {
         case "DEBIT":
             return { ...state, balance: state.balance - action.payload.delta }
         case "RESET":
-            return initialState
+            return {
+                ...initialState,
+                name: state.name,
+                avatar: state.avatar,
+                balance: state.balance,
+                currentBet: state.currentBet,
+            }
         default:
             return state
     }

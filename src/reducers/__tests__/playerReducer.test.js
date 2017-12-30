@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import playerReducer from '../playerReducer'
-import { setName, setAvatar, takeCard, buyChips, setBet, loseBet, winBet, reset, setInsured, credit, debit } from '../../actions/playerActions.js'
+import { setName, setAvatar, takeCard, stand, buyChips, setBet, loseBet, winBet, reset, setInsured, credit, debit } from '../../actions/playerActions.js'
 import { createStore } from 'redux'
 
 describe("Test playerReducer reducer", () => {
@@ -39,6 +39,14 @@ describe("Test playerReducer reducer", () => {
         expect(store.getState().hands[store.getState().handIndex]).toEqual(["SA", "CQ"])
         expect(store.getState().score[store.getState().handIndex]).toEqual([21])
         expect(store.getState().hasBlackjack[store.getState().handIndex]).toEqual([true])
+    })
+
+    it("sets playerStands correctly", () => {
+        const store = createStore(playerReducer)
+        store.dispatch(stand())
+        expect(store.getState().playerStands).toEqual([true])
+        store.dispatch(reset())
+        expect(store.getState().playerStands).toEqual([false])
     })
 
     it("credit given amount to player's balance", () => {
@@ -79,15 +87,16 @@ describe("Test playerReducer reducer", () => {
             playerIndex: 1,
             handIndex: 0,
 
-            balance: 0,
-            currentBet: 0,
+            balance: 512.5,
+            currentBet: 5,
 
             hands: [[]],
-            score: [[0]],
-            busted: [[false]],
-            hasBlackjack: [[false]],
-            hasInsurance: [[false]],
+            score: [0],
+            busted: [false],
+            hasBlackjack: [false],
+            hasInsurance: [false],
             splitHand: false,
+            playerStands: [false],
         })
     })
 

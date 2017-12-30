@@ -36,9 +36,7 @@ ShallowWrapper {
         "avatar": "./images/default.png",
         "balance": 0,
         "busted": Array [
-          Array [
-            false,
-          ],
+          false,
         ],
         "currentBet": 0,
         "hands": Array [
@@ -52,21 +50,18 @@ ShallowWrapper {
           ],
         ],
         "hasBlackjack": Array [
-          Array [
-            false,
-          ],
+          false,
         ],
         "hasInsurance": Array [
-          Array [
-            false,
-          ],
+          false,
         ],
         "name": "Player1",
         "playerIndex": 1,
+        "playerStands": Array [
+          false,
+        ],
         "score": Array [
-          Array [
-            0,
-          ],
+          0,
         ],
         "splitHand": false,
       }
