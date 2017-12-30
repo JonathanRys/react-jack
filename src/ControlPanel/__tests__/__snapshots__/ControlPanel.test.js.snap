@@ -4,7 +4,83 @@ exports[`Test PlayField component matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ControlPanel />,
+  Symbol(enzyme.__unrendered__): <ControlPanel
+    dealer={
+      Object {
+        "avatar": "./images/dealer.png",
+        "busted": Array [
+          false,
+        ],
+        "hand": Array [
+          "HA",
+          "C5",
+        ],
+        "handFlipped": false,
+        "hasBlackjack": Array [
+          false,
+        ],
+        "name": "Dealer",
+        "score": Array [
+          0,
+        ],
+      }
+    }
+    deck={
+      Object {
+        "deck": Array [],
+        "drawnCard": null,
+      }
+    }
+    player={
+      Object {
+        "avatar": "./images/default.png",
+        "balance": 0,
+        "busted": Array [
+          Array [
+            false,
+          ],
+        ],
+        "currentBet": 0,
+        "hands": Array [
+          Array [
+            "SA",
+            "CK",
+          ],
+          Array [
+            "D2",
+            "HJ",
+          ],
+        ],
+        "hasBlackjack": Array [
+          Array [
+            false,
+          ],
+        ],
+        "hasInsurance": Array [
+          Array [
+            false,
+          ],
+        ],
+        "name": "Player1",
+        "playerIndex": 1,
+        "score": Array [
+          Array [
+            0,
+          ],
+        ],
+        "splitHand": false,
+      }
+    }
+    turn={
+      Object {
+        "errMsg": "",
+        "error": false,
+        "isPlaying": true,
+        "numPlayers": 2,
+        "playersTurn": 0,
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,12 +93,215 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "drawnCard": undefined,
-      "events": Object {},
-      "giveCard": [Function],
+      "children": Array [
+        <Label
+          className="ControlPanel_main_panel-header"
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Control Panel
+        </Label>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={undefined}
+          size="md"
+          tag="button"
+        >
+          Hit
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={undefined}
+          size="md"
+          tag="button"
+        >
+          Stand
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={true}
+          onClick={undefined}
+          size="md"
+          tag="button"
+        >
+          Split
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={undefined}
+          size="md"
+          tag="button"
+        >
+          Double Down
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={true}
+          onClick={undefined}
+          size="md"
+          tag="button"
+        >
+          Buy Insurance
+        </Button>,
+        <Button
+          block={true}
+          color="primary"
+          disabled={true}
+          onClick={[Function]}
+          size="md"
+          tag="button"
+        >
+          Deal
+        </Button>,
+      ],
+      "className": "ControlPanel_main",
+      "lg": "3",
+      "md": "6",
+      "sm": "8",
+      "tag": "form",
+      "xs": "10",
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Control Panel",
+          "className": "ControlPanel_main_panel-header",
+          "tag": "label",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "ref": null,
+        "rendered": "Control Panel",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Hit",
+          "color": "secondary",
+          "disabled": false,
+          "onClick": undefined,
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Hit",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Stand",
+          "color": "secondary",
+          "disabled": false,
+          "onClick": undefined,
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Stand",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Split",
+          "color": "secondary",
+          "disabled": true,
+          "onClick": undefined,
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Split",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Double Down",
+          "color": "secondary",
+          "disabled": false,
+          "onClick": undefined,
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Double Down",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Buy Insurance",
+          "color": "secondary",
+          "disabled": true,
+          "onClick": undefined,
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Buy Insurance",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": "Deal",
+          "color": "primary",
+          "disabled": true,
+          "onClick": [Function],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Deal",
+        "type": [Function],
+      },
+    ],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -31,12 +310,215 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "drawnCard": undefined,
-        "events": Object {},
-        "giveCard": [Function],
+        "children": Array [
+          <Label
+            className="ControlPanel_main_panel-header"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Control Panel
+          </Label>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={undefined}
+            size="md"
+            tag="button"
+          >
+            Hit
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={undefined}
+            size="md"
+            tag="button"
+          >
+            Stand
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={true}
+            onClick={undefined}
+            size="md"
+            tag="button"
+          >
+            Split
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={undefined}
+            size="md"
+            tag="button"
+          >
+            Double Down
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={true}
+            onClick={undefined}
+            size="md"
+            tag="button"
+          >
+            Buy Insurance
+          </Button>,
+          <Button
+            block={true}
+            color="primary"
+            disabled={true}
+            onClick={[Function]}
+            size="md"
+            tag="button"
+          >
+            Deal
+          </Button>,
+        ],
+        "className": "ControlPanel_main",
+        "lg": "3",
+        "md": "6",
+        "sm": "8",
+        "tag": "form",
+        "xs": "10",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Control Panel",
+            "className": "ControlPanel_main_panel-header",
+            "tag": "label",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+          },
+          "ref": null,
+          "rendered": "Control Panel",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Hit",
+            "color": "secondary",
+            "disabled": false,
+            "onClick": undefined,
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Hit",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Stand",
+            "color": "secondary",
+            "disabled": false,
+            "onClick": undefined,
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Stand",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Split",
+            "color": "secondary",
+            "disabled": true,
+            "onClick": undefined,
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Split",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Double Down",
+            "color": "secondary",
+            "disabled": false,
+            "onClick": undefined,
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Double Down",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Buy Insurance",
+            "color": "secondary",
+            "disabled": true,
+            "onClick": undefined,
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Buy Insurance",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": "Deal",
+            "color": "primary",
+            "disabled": true,
+            "onClick": [Function],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Deal",
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],

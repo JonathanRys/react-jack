@@ -1,98 +1,57 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 import './control_panel.css'
 
-import { drawOne, takeCard, newDeck, shuffle, play } from '../actions/actions.js'
-import { hit, stand, split, doubleDown, buyInsurance } from '../actions/actions.js'
-
-import { dealStory } from '../stories/controllerStories'
-
 import { Button, Form, Label } from 'reactstrap'
 
-import { connect } from 'react-redux'
+export default class ControlPanel extends Component {
+    constructor(props) {
+        super(props)
 
-const mapStateToProps = (state) => {
-    console.log("state:", state)
-    return {
-        drawnCard: state.deck.drawnCard,
-        isPlaying: state.turn.isPlaying
-    }
-}
-
-const dispatchAll = (dispatch, actions) => {
-    actions.map((action) => { return dispatch(action()) })
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        giveCard: (card) => {
-            dispatch(takeCard({ card: card }))
-        },
-        hitOnClick: () => {
-            dispatch(drawOne())
-            // Draw a card from the deck
-            // Pass drawn card to player
-            dispatch(takeCard({ card: "SA" }))
-            dispatch(hit())
-        },
-        standOnClick: () => { dispatch(stand()) },
-        splitOnClick: () => { dispatch(split()) },
-        doubleDownOnClick: () => { dispatch(doubleDown()) },
-        buyInsuranceOnClick: () => { dispatch(buyInsurance()) },
-        dealOnClick: () => {
-            console.log("DEAL clicked")
-            dispatchAll(dispatch, dealStory)
-            dispatch(takeCard({ card: "SA" }))
-            // take card
-            // repeat
-
-            // activate buttons
-        },
-    }
-}
-
-const Controls = ({ events, giveCard, drawnCard }) => {
-    const dealStory = () => {
-        events.dealOnClick()
-        giveCard(drawnCard)
+        this.state = {
+            dealHandler: () => {
+                props.dealOnClick()
+                if (props.dealer.hand.length < 2 || props.player.hands[0].length < 2) {
+                    console.log("Give them cards:")
+                    props.keepDealing()
+                }
+            }
+        }
+        console.log("props in the CP", props)
     }
 
-    return (
-        <Form xs="10" sm="8" md="6" lg="3" className="ControlPanel_main">
-            <Label className="ControlPanel_main_panel-header">Control Panel</Label>
-            <Button size="md" color="secondary" block disabled onClick={events.hitOnClick}>Hit</Button>
-            <Button size="md" color="secondary" block disabled onClick={events.standOnClick}>Stand</Button>
-            <Button size="md" color="secondary" block disabled onClick={events.splitOnClick}>Split</Button>
-            <Button size="md" color="secondary" block disabled onClick={events.doubleDownOnClick}>Double Down</Button>
-            <Button size="md" color="secondary" block disabled onClick={events.buyInsuranceOnClick}>Buy Insurance</Button>
-            <Button size="md" color="primary" block onClick={events.dealOnClick}>Deal</Button>
-        </Form>
-    )
-}
-
-export class ControlPanel extends Component {
-    giveCard() {
-        const card = this.state.drawnCard
-        console.log("card:", card)
-        this.state.giveCard(card)
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.dealer.hand.length < 1 || nextProps.player.hands[0].length < 2) {
+            console.log("They still need cards:", nextProps.dealer.hand.length, nextProps.player.hands[0].length)
+            nextProps.keepDealing()
+        }
     }
 
     render() {
-        console.log("this.props:", this.props)
-        const props = {
-            events: { ...this.props },
-            giveCard: this.giveCard,
-            drawnCard: this.props.drawnCard
+        const canSplit = this.props.player.hands[0] && this.props.player.hands[0].length === 2 && this.props.player.hands[0][0].slice(1) === this.props.player.hands[0][1].slice(1)
+        const canBuyInsurance = () => {
+            if (!this.props.turn.isPlaying) return false
+            if (!this.props.dealer.hand[0]) return false
+            if (this.props.dealer.hand[0].slice(1) !== "A") return false
+            if (this.props.player.hasInsurance[this.props.player.handIndex]) return false
         }
         return (
-            <Controls {...props} />
+            <Form xs="10" sm="8" md="6" lg="3" className="ControlPanel_main">
+                <Label className="ControlPanel_main_panel-header">Control Panel</Label>
+                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.hitOnClick}>Hit</Button>
+                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.standOnClick}>Stand</Button>
+                <Button size="md" color="secondary" block disabled={!canSplit} onClick={this.props.splitOnClick}>Split</Button>
+                <Button size="md" color="secondary" block disabled={this.props.player.hands[0].length !== 2} onClick={this.props.doubleDownOnClick}>Double Down</Button>
+                <Button size="md" color="secondary" block disabled={!canBuyInsurance()} onClick={this.props.buyInsuranceOnClick}>Buy Insurance</Button>
+                <Button size="md" color="primary" block disabled={this.props.turn.isPlaying} onClick={this.state.dealHandler}>Deal</Button>
+            </Form>
         )
     }
 }
+// Write deep prop type checks here
+ControlPanel.propTypes = {
+    drawnCard: PropTypes.string,
+    isPlaying: PropTypes.bool,
 
-// ControlPanel.propTypes = {
-
-// }
-
-export default connect(mapStateToProps, mapDispatchToProps)(ControlPanel)
+}

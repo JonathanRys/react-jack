@@ -5,6 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Player
+    clearCard={[MockFunction]}
+    drawnCard={null}
+    giveCard={[MockFunction]}
     hands={
       Array [
         Array [
@@ -23,7 +26,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Array [
     <Hand
-      faceUp={true}
+      dealer={false}
       hand={
         Array [
           "SA",
@@ -35,7 +38,65 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Array [
       <Hand
-        faceUp={true}
+        dealer={false}
+        hand={
+          Array [
+            "SA",
+            "SJ",
+          ]
+        }
+      />,
+    ],
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Test Hand component matches the snapshot after drawing a card 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    clearCard={[MockFunction]}
+    drawnCard="S7"
+    giveCard={[MockFunction]}
+    hands={
+      Array [
+        Array [
+          "SA",
+          "SJ",
+        ],
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Array [
+    <Hand
+      dealer={false}
+      hand={
+        Array [
+          "SA",
+          "SJ",
+        ]
+      }
+    />,
+  ],
+  Symbol(enzyme.__nodes__): Array [
+    Array [
+      <Hand
+        dealer={false}
         hand={
           Array [
             "SA",

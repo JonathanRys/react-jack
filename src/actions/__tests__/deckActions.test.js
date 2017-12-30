@@ -19,4 +19,9 @@ describe("Test deck-based actions", () => {
         const result = actions.drawOne()
         expect(result).toEqual({ type: "DRAW_ONE" })
     })
+
+    it("tests drawOne action creator", () => {
+        const result = actions.clearCard()
+        expect(result).toEqual({ type: "CLEAR_CARD" })
+    })
 })

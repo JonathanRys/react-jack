@@ -4,7 +4,7 @@ exports[`Test the App component renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App
+  Symbol(enzyme.__unrendered__): <Connect(App)
     store={
       Object {
         "dispatch": [Function],
@@ -25,163 +25,201 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [
-        <header
-          className="App-header"
-        >
-          <h1
-            className="App-title"
-          >
-            React-Jack
-          </h1>
-        </header>,
-        <Connect(PlayField) />,
-        <Profile />,
-        <Connect(ControlPanel) />,
-      ],
-      "className": "App",
+      "clearCard": [Function],
+      "dealOnClick": [Function],
+      "dealer": Object {
+        "avatar": "./images/dealer.png",
+        "busted": Array [
+          false,
+        ],
+        "hand": Array [],
+        "handFlipped": false,
+        "hasBlackjack": Array [
+          false,
+        ],
+        "name": "Dealer",
+        "score": Array [
+          0,
+        ],
+      },
+      "deck": Object {
+        "deck": Array [],
+        "drawnCard": null,
+      },
+      "drawOne": [Function],
+      "giveCard": [Function],
+      "giveDealerCard": [Function],
+      "keepDealing": [Function],
+      "player": Object {
+        "avatar": "./images/default.png",
+        "balance": 0,
+        "busted": Array [
+          Array [
+            false,
+          ],
+        ],
+        "currentBet": 0,
+        "handIndex": 0,
+        "hands": Array [
+          Array [],
+        ],
+        "hasBlackjack": Array [
+          Array [
+            false,
+          ],
+        ],
+        "hasInsurance": Array [
+          Array [
+            false,
+          ],
+        ],
+        "name": "Player1",
+        "playerIndex": 1,
+        "score": Array [
+          Array [
+            0,
+          ],
+        ],
+        "splitHand": false,
+      },
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
+      "turn": Object {
+        "errMsg": "",
+        "error": false,
+        "isPlaying": false,
+        "numPlayers": 2,
+        "playersTurn": 0,
+      },
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <h1
-            className="App-title"
-          >
-            React-Jack
-          </h1>,
-          "className": "App-header",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "React-Jack",
-            "className": "App-title",
-          },
-          "ref": null,
-          "rendered": "React-Jack",
-          "type": "h1",
-        },
-        "type": "header",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "children": Array [
-          <header
-            className="App-header"
-          >
-            <h1
-              className="App-title"
-            >
-              React-Jack
-            </h1>
-          </header>,
-          <Connect(PlayField) />,
-          <Profile />,
-          <Connect(ControlPanel) />,
-        ],
-        "className": "App",
+        "clearCard": [Function],
+        "dealOnClick": [Function],
+        "dealer": Object {
+          "avatar": "./images/dealer.png",
+          "busted": Array [
+            false,
+          ],
+          "hand": Array [],
+          "handFlipped": false,
+          "hasBlackjack": Array [
+            false,
+          ],
+          "name": "Dealer",
+          "score": Array [
+            0,
+          ],
+        },
+        "deck": Object {
+          "deck": Array [],
+          "drawnCard": null,
+        },
+        "drawOne": [Function],
+        "giveCard": [Function],
+        "giveDealerCard": [Function],
+        "keepDealing": [Function],
+        "player": Object {
+          "avatar": "./images/default.png",
+          "balance": 0,
+          "busted": Array [
+            Array [
+              false,
+            ],
+          ],
+          "currentBet": 0,
+          "handIndex": 0,
+          "hands": Array [
+            Array [],
+          ],
+          "hasBlackjack": Array [
+            Array [
+              false,
+            ],
+          ],
+          "hasInsurance": Array [
+            Array [
+              false,
+            ],
+          ],
+          "name": "Player1",
+          "playerIndex": 1,
+          "score": Array [
+            Array [
+              0,
+            ],
+          ],
+          "splitHand": false,
+        },
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          },
+          "unsubscribe": [Function],
+        },
+        "turn": Object {
+          "errMsg": "",
+          "error": false,
+          "isPlaying": false,
+          "numPlayers": 2,
+          "playersTurn": 0,
+        },
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <h1
-              className="App-title"
-            >
-              React-Jack
-            </h1>,
-            "className": "App-header",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "React-Jack",
-              "className": "App-title",
-            },
-            "ref": null,
-            "rendered": "React-Jack",
-            "type": "h1",
-          },
-          "type": "header",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

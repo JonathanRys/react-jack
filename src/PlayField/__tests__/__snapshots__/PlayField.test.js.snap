@@ -5,17 +5,82 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PlayField
-    hands={
-      Array [
-        Array [
-          "SA",
-          "CK",
+    clearCard={[MockFunction]}
+    dealer={
+      Object {
+        "avatar": "./images/dealer.png",
+        "busted": Array [
+          false,
         ],
-        Array [
-          "D2",
-          "HJ",
+        "hand": Array [
+          "HA",
+          "C5",
         ],
-      ]
+        "handFlipped": false,
+        "hasBlackjack": Array [
+          false,
+        ],
+        "name": "Dealer",
+        "score": Array [
+          0,
+        ],
+      }
+    }
+    deck={
+      Object {
+        "deck": Array [],
+        "drawnCard": null,
+      }
+    }
+    giveCard={[MockFunction]}
+    player={
+      Object {
+        "avatar": "./images/default.png",
+        "balance": 0,
+        "busted": Array [
+          Array [
+            false,
+          ],
+        ],
+        "currentBet": 0,
+        "hands": Array [
+          Array [
+            "SA",
+            "CK",
+          ],
+          Array [
+            "D2",
+            "HJ",
+          ],
+        ],
+        "hasBlackjack": Array [
+          Array [
+            false,
+          ],
+        ],
+        "hasInsurance": Array [
+          Array [
+            false,
+          ],
+        ],
+        "name": "Player1",
+        "playerIndex": 1,
+        "score": Array [
+          Array [
+            0,
+          ],
+        ],
+        "splitHand": false,
+      }
+    }
+    turn={
+      Object {
+        "errMsg": "",
+        "error": false,
+        "isPlaying": true,
+        "numPlayers": 2,
+        "playersTurn": 0,
+      }
     }
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -31,29 +96,40 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Dealer) />,
+        <Dealer
+          clearCard={[MockFunction]}
+          drawnCard={null}
+          hand={
+            Array [
+              "HA",
+              "C5",
+            ]
+          }
+          playersTurn={0}
+          takeCard={undefined}
+        />,
         <Deck />,
-        Array [
-          <Connect(Player)
-            faceUp={0}
-            hand={
+        " ",
+        <Player
+          clearCard={[MockFunction]}
+          drawnCard={null}
+          hands={
+            Array [
               Array [
                 "SA",
                 "CK",
-              ]
-            }
-          />,
-          <Connect(Player)
-            faceUp={1}
-            hand={
+              ],
               Array [
                 "D2",
                 "HJ",
-              ]
-            }
-          />,
-        ],
+              ],
+            ]
+          }
+          playersTurn={0}
+          takeCard={[MockFunction]}
+        />,
       ],
+      "className": "PlayField_main",
     },
     "ref": null,
     "rendered": Array [
@@ -61,7 +137,16 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "clearCard": [MockFunction],
+          "drawnCard": null,
+          "hand": Array [
+            "HA",
+            "C5",
+          ],
+          "playersTurn": 0,
+          "takeCard": undefined,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -75,31 +160,26 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      " ",
       Object {
         "instance": null,
-        "key": "hand-0",
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "faceUp": 0,
-          "hand": Array [
-            "SA",
-            "CK",
+          "clearCard": [MockFunction],
+          "drawnCard": null,
+          "hands": Array [
+            Array [
+              "SA",
+              "CK",
+            ],
+            Array [
+              "D2",
+              "HJ",
+            ],
           ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "hand-1",
-        "nodeType": "class",
-        "props": Object {
-          "faceUp": 1,
-          "hand": Array [
-            "D2",
-            "HJ",
-          ],
+          "playersTurn": 0,
+          "takeCard": [MockFunction],
         },
         "ref": null,
         "rendered": null,
@@ -115,29 +195,40 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Dealer) />,
+          <Dealer
+            clearCard={[MockFunction]}
+            drawnCard={null}
+            hand={
+              Array [
+                "HA",
+                "C5",
+              ]
+            }
+            playersTurn={0}
+            takeCard={undefined}
+          />,
           <Deck />,
-          Array [
-            <Connect(Player)
-              faceUp={0}
-              hand={
+          " ",
+          <Player
+            clearCard={[MockFunction]}
+            drawnCard={null}
+            hands={
+              Array [
                 Array [
                   "SA",
                   "CK",
-                ]
-              }
-            />,
-            <Connect(Player)
-              faceUp={1}
-              hand={
+                ],
                 Array [
                   "D2",
                   "HJ",
-                ]
-              }
-            />,
-          ],
+                ],
+              ]
+            }
+            playersTurn={0}
+            takeCard={[MockFunction]}
+          />,
         ],
+        "className": "PlayField_main",
       },
       "ref": null,
       "rendered": Array [
@@ -145,7 +236,16 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "clearCard": [MockFunction],
+            "drawnCard": null,
+            "hand": Array [
+              "HA",
+              "C5",
+            ],
+            "playersTurn": 0,
+            "takeCard": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -159,31 +259,26 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        " ",
         Object {
           "instance": null,
-          "key": "hand-0",
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "faceUp": 0,
-            "hand": Array [
-              "SA",
-              "CK",
+            "clearCard": [MockFunction],
+            "drawnCard": null,
+            "hands": Array [
+              Array [
+                "SA",
+                "CK",
+              ],
+              Array [
+                "D2",
+                "HJ",
+              ],
             ],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "hand-1",
-          "nodeType": "class",
-          "props": Object {
-            "faceUp": 1,
-            "hand": Array [
-              "D2",
-              "HJ",
-            ],
+            "playersTurn": 0,
+            "takeCard": [MockFunction],
           },
           "ref": null,
           "rendered": null,

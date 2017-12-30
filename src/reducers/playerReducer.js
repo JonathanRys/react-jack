@@ -3,7 +3,8 @@ import getScore from './playerHelpers'
 const initialState = {
     name: "Player1",
     avatar: "./images/default.png",
-    playerIndex: 0,
+    playerIndex: 1,
+    handIndex: 0,
 
     balance: 0,
     currentBet: 0,
@@ -19,7 +20,7 @@ const initialState = {
 const INSURANCE_RATE = 0.5
 
 export default function playerReducer(state = initialState, action) {
-    const index = state.playerIndex
+    const index = state.handIndex
     switch (action.type) {
         case "SET_NAME":
             return { ...state, name: action.payload.name }
@@ -35,9 +36,11 @@ export default function playerReducer(state = initialState, action) {
                 ]
             }
             return {
-                ...state, ...getScore({
+                ...state,
+                ...getScore({
                     ...state, ...newCards
-                }), ...newCards
+                }),
+                ...newCards
             }
         case "BUY_CHIPS":
             return { ...state, balance: state.balance + action.payload.newChips }
@@ -59,11 +62,12 @@ export default function playerReducer(state = initialState, action) {
                 ]
             }
         case "CREDIT":
-            return { balance: state.balance + action.payload.delta }
+            return { ...state, balance: state.balance + action.payload.delta }
         case "DEBIT":
-            return { balance: state.balance - action.payload.delta }
+            return { ...state, balance: state.balance - action.payload.delta }
         case "RESET":
-        default:
             return initialState
+        default:
+            return state
     }
 }

@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dealer
-    hands={
+    hand={
       Array [
         Array [
           "SA",
@@ -27,7 +27,13 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "dealer": true,
-      "hand": undefined,
+      "hand": Array [
+        Array [
+          "SA",
+          "SJ",
+        ],
+      ],
+      "handFlipped": false,
     },
     "ref": null,
     "rendered": null,
@@ -40,7 +46,13 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "dealer": true,
-        "hand": undefined,
+        "hand": Array [
+          Array [
+            "SA",
+            "SJ",
+          ],
+        ],
+        "handFlipped": false,
       },
       "ref": null,
       "rendered": null,

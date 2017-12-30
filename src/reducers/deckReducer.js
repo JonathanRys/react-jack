@@ -27,7 +27,12 @@ export default function bankReducer(state = initialState, action) {
                 drawnCard: state.deck[0],
                 deck: state.deck.slice(1)
             }
+        case "CLEAR_CARD":
+            return {
+                ...state,
+                drawnCard: null
+            }
         default:
-            return initialState
+            return state
     }
 }

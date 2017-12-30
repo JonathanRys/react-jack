@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import deckReducer from '../deckReducer'
-import { newDeck, cloneDeck, shuffle, drawOne } from '../../actions/actions.js'
+import { newDeck, cloneDeck, shuffle, drawOne } from '../../actions/deckActions.js'
 import { createStore } from 'redux'
 
 describe("Test deckReducer reducer", () => {
@@ -50,5 +50,16 @@ describe("Test deckReducer reducer", () => {
         // Draw a card
         store.dispatch(drawOne())
         expect(store.getState().drawnCard).not.toEqual(null)
+    })
+
+    it("clears the drawn card", () => {
+        // Create the store
+        const store = createStore(deckReducer)
+        // Build a new deck
+        store.dispatch(newDeck())
+        // Draw a card
+        store.dispatch(drawOne())
+        store.dispatch({ type: "CLEAR_CARD" })
+        expect(store.getState().drawnCard).toEqual(null)
     })
 })

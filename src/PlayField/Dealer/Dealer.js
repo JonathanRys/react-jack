@@ -3,24 +3,22 @@ import PropTypes from 'prop-types'
 
 import Hand from '../Hand/Hand'
 
-import { connect } from 'react-redux'
-
-const mapStateToProps = (state) => {
-    return {
-        hand: state.dealer.hand
+export default class Dealer extends Component {
+    componentWillReceiveProps(nextProps) {
+        console.log("Ooh, here come the dealer props... ", nextProps)
+        if (!nextProps.playersTurn && nextProps.drawnCard) {
+            nextProps.takeCard({ card: nextProps.drawnCard })
+            nextProps.clearCard()
+        }
     }
-}
 
-export class Dealer extends Component {
     render() {
         return (
-            <Hand hand={this.props.hand} dealer={true} />
+            <Hand hand={this.props.hand} dealer={true} handFlipped={false} />
         )
     }
 }
 
 Dealer.propTypes = {
-    hands: PropTypes.array.isRequired
+    hand: PropTypes.array.isRequired
 }
-
-export default connect(mapStateToProps)(Dealer)

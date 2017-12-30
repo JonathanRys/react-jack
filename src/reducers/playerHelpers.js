@@ -29,7 +29,7 @@ export default function getScore(state) {
     }
 
     // Score the current hand
-    const index = state.playerIndex
+    const index = state.handIndex
     const newScore = scoreHand(state.hands[index])
 
     // Return a new object with the updated score
@@ -51,3 +51,15 @@ export default function getScore(state) {
         ]
     }
 };
+
+export function addCard(hands, card, index = 0) {
+    const newHand = [...hands[index], card]
+
+    return {
+        hands: [
+            ...hands.slice(0, index),
+            newHand,
+            ...hands.slice(index + 1)
+        ]
+    }
+}

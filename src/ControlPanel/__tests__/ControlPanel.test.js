@@ -1,9 +1,13 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { ControlPanel } from "../ControlPanel"
+import ControlPanel from "../ControlPanel"
 
-const mockProps = {}
+import mockStore from "../../mockStore"
+
+const mockProps = {
+    ...mockStore
+}
 
 describe("Test PlayField component", () => {
     it("matches the snapshot", () => {

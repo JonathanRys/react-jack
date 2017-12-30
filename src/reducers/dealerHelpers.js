@@ -15,7 +15,7 @@ export default function getScore(state) {
 
         // Calculate score based on points enum
         score = cards.map((card) => {
-            if (card.slice(1) === "A")++numberOfAces;
+            if (card.slice(1) === "A") numberOfAces++;
             return points[card.slice(1)]
         }).reduce((a, b) => a + b)
 
@@ -38,3 +38,8 @@ export default function getScore(state) {
         hasBlackjack: newScore === 21 && state.hand.length === 2
     }
 };
+
+export function dealeraddCard(hand, card) {
+    return { hand: [...hand, card] }
+}
+

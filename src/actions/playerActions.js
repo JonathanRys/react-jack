@@ -11,6 +11,14 @@ export function takeCard(payload) {
     return { type: "TAKE_CARD", payload: payload }
 }
 
+export function flipHand() {
+    return { type: "FLIP_HAND" }
+}
+
+export function dealerTakeCard(payload) {
+    return { type: "DEALER_TAKE_CARD", payload: payload }
+}
+
 export function buyChips(payload) {
     return { type: "BUY_CHIPS", payload: payload }
 }

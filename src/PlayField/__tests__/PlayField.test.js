@@ -1,9 +1,15 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { PlayField } from '../PlayField'
+import PlayField from '../PlayField'
 
-const mockProps = { hands: [["SA", "CK"], ["D2", "HJ"]] }
+import mockStore from "../../mockStore"
+
+const mockProps = {
+    ...mockStore,
+    giveCard: jest.fn(),
+    clearCard: jest.fn()
+}
 
 describe("Test PlayField component", () => {
     it("matches the snapshot", () => {

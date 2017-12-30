@@ -14,3 +14,7 @@ export function shuffle() {
 export function drawOne() {
     return { type: "DRAW_ONE" }
 }
+
+export function clearCard() {
+    return { type: "CLEAR_CARD" }
+}
