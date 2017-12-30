@@ -57,11 +57,11 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <header className="App-header">
-          <h1 className="App-title">React-Jack</h1>
+          <h1 className="App-title"><div className="App-logo"></div>React-Jack</h1>
         </header>
-        <Container className="App">
+        <Container>
           <Row>
             <Col xs="2" lg="3">
               <Profile { ...this.props.player} />
