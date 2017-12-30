@@ -81,6 +81,7 @@ ShallowWrapper {
         ],
         "splitHand": false,
       },
+      "standOnClick": [Function],
       "store": Object {
         "dispatch": [Function],
         "getState": [Function],
@@ -178,6 +179,7 @@ ShallowWrapper {
           ],
           "splitHand": false,
         },
+        "standOnClick": [Function],
         "store": Object {
           "dispatch": [Function],
           "getState": [Function],

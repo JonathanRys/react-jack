@@ -36,17 +36,17 @@ export default function getScore(state) {
     return {
         score: [
             ...state.score.slice(0, index),
-            [newScore],
+            newScore,
             ...state.score.slice(index + 1)
         ],
         busted: [
             ...state.busted.slice(0, index),
-            [newScore > 21],
+            newScore > 21,
             ...state.busted.slice(index + 1)
         ],
         hasBlackjack: [
             ...state.hasBlackjack.slice(0, index),
-            [newScore === 21 && state.hands[index].length === 2],
+            newScore === 21 && state.hands[index].length === 2,
             ...state.hasBlackjack.slice(index + 1)
         ]
     }

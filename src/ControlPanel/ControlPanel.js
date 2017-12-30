@@ -11,8 +11,14 @@ export default class ControlPanel extends Component {
             nextProps.keepDealing()
         } else if (!nextProps.turn.playersTurn) {
             //is it the dealer's turn?
+            console.log("Not the player's turn.")
+            console.log("stands?", nextProps.player.playerStands)
+            console.log("busted?", nextProps.player.busted)
+            console.log("hasBlackJack?", nextProps.player.hasBlackJack)
             if (nextProps.player.playerStands || nextProps.player.busted || nextProps.player.hasBlackJack) {
                 //Take dealer's turn
+                console.log("Looks like the dealer's turn:")
+
             }
             else {
                 nextProps.nextPlayer()

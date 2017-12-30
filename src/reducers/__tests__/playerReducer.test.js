@@ -21,7 +21,7 @@ describe("Test playerReducer reducer", () => {
         const store = createStore(playerReducer)
         store.dispatch(takeCard({ card: "SA" }))
         expect(store.getState().hands[store.getState().handIndex]).toEqual(["SA"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([11])
+        expect(store.getState().score[store.getState().handIndex]).toEqual(11)
     })
 
     it("takes multiple cards and calculates the new score correctly with aces", () => {
@@ -29,7 +29,7 @@ describe("Test playerReducer reducer", () => {
         store.dispatch(takeCard({ card: "SA" }))
         store.dispatch(takeCard({ card: "CA" }))
         expect(store.getState().hands[store.getState().handIndex]).toEqual(["SA", "CA"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([12])
+        expect(store.getState().score[store.getState().handIndex]).toEqual(12)
     })
 
     it("takes multiple cards and calculates the new score correctly with blackjack", () => {
@@ -37,16 +37,16 @@ describe("Test playerReducer reducer", () => {
         store.dispatch(takeCard({ card: "SA" }))
         store.dispatch(takeCard({ card: "CQ" }))
         expect(store.getState().hands[store.getState().handIndex]).toEqual(["SA", "CQ"])
-        expect(store.getState().score[store.getState().handIndex]).toEqual([21])
-        expect(store.getState().hasBlackjack[store.getState().handIndex]).toEqual([true])
+        expect(store.getState().score[store.getState().handIndex]).toEqual(21)
+        expect(store.getState().hasBlackjack[store.getState().handIndex]).toEqual(true)
     })
 
     it("sets playerStands correctly", () => {
         const store = createStore(playerReducer)
         store.dispatch(stand())
-        expect(store.getState().playerStands).toEqual([true])
+        expect(store.getState().playerStands[store.getState().handIndex]).toEqual(true)
         store.dispatch(reset())
-        expect(store.getState().playerStands).toEqual([false])
+        expect(store.getState().playerStands[store.getState().handIndex]).toEqual(false)
     })
 
     it("credit given amount to player's balance", () => {

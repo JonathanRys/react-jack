@@ -8,15 +8,14 @@ import PlayField from './PlayField/PlayField'
 import Profile from './Profile/Profile'
 import ControlPanel from './ControlPanel/ControlPanel'
 
-import { newDeck, shuffle, drawOne, playerDrawOne } from './actions/deckActions'
+import { newDeck, shuffle, drawOne } from './actions/deckActions'
 import { play, nextPlayer } from './actions/turnActions'
-import { takeCard, dealerTakeCard } from './actions/playerActions'
+import { takeCard, dealerTakeCard, stand } from './actions/playerActions'
 import { clearCard } from './actions/deckActions'
 
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
-  console.log("state:", state)
   return {
     deck: state.deck,
     turn: state.turn,
@@ -34,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
     hitOnClick: () => {
       dispatch(drawOne())
     },
-    // standOnClick: () => { },
+    standOnClick: () => { dispatch(stand()) },
     // splitOnClick: () => { },
     // doubleDownOnClick: () => { },
     // buyInsuranceOnClick: () => { },
