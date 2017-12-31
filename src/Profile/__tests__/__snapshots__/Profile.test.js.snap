@@ -15,27 +15,521 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": "Profile",
+      "children": Array [
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            for="playerName"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Player name
+          </Label>
+          <Input
+            id="playerName"
+            name="playerName"
+            onChange={[Function]}
+            tag="p"
+            type="text"
+            value={undefined}
+          />
+        </FormGroup>,
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            for="avatar"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Avatar
+          </Label>
+          <Input
+            id="playerAvatar"
+            name="playerAvatar"
+            onChange={[Function]}
+            tag="p"
+            type="text"
+            value={undefined}
+          />
+          <img
+            alt="avatar"
+            className="avatar"
+            src={undefined}
+          />
+        </FormGroup>,
+        <Button
+          color="secondary"
+          onClick={[Function]}
+          tag="button"
+        >
+          Change
+        </Button>,
+      ],
       "className": "Profile_main",
+      "tag": "form",
     },
     "ref": null,
-    "rendered": "Profile",
-    "type": "div",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Label
+              for="playerName"
+              tag="label"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              Player name
+            </Label>,
+            <Input
+              id="playerName"
+              name="playerName"
+              onChange={[Function]}
+              tag="p"
+              type="text"
+              value={undefined}
+            />,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Player name",
+              "for": "playerName",
+              "tag": "label",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+            },
+            "ref": null,
+            "rendered": "Player name",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "playerName",
+              "name": "playerName",
+              "onChange": [Function],
+              "tag": "p",
+              "type": "text",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Label
+              for="avatar"
+              tag="label"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              Avatar
+            </Label>,
+            <Input
+              id="playerAvatar"
+              name="playerAvatar"
+              onChange={[Function]}
+              tag="p"
+              type="text"
+              value={undefined}
+            />,
+            <img
+              alt="avatar"
+              className="avatar"
+              src={undefined}
+            />,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Avatar",
+              "for": "avatar",
+              "tag": "label",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+            },
+            "ref": null,
+            "rendered": "Avatar",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "playerAvatar",
+              "name": "playerAvatar",
+              "onChange": [Function],
+              "tag": "p",
+              "type": "text",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "avatar",
+              "className": "avatar",
+              "src": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Change",
+          "color": "secondary",
+          "onClick": [Function],
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": "Change",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": "Profile",
+        "children": Array [
+          <FormGroup
+            tag="div"
+          >
+            <Label
+              for="playerName"
+              tag="label"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              Player name
+            </Label>
+            <Input
+              id="playerName"
+              name="playerName"
+              onChange={[Function]}
+              tag="p"
+              type="text"
+              value={undefined}
+            />
+          </FormGroup>,
+          <FormGroup
+            tag="div"
+          >
+            <Label
+              for="avatar"
+              tag="label"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              Avatar
+            </Label>
+            <Input
+              id="playerAvatar"
+              name="playerAvatar"
+              onChange={[Function]}
+              tag="p"
+              type="text"
+              value={undefined}
+            />
+            <img
+              alt="avatar"
+              className="avatar"
+              src={undefined}
+            />
+          </FormGroup>,
+          <Button
+            color="secondary"
+            onClick={[Function]}
+            tag="button"
+          >
+            Change
+          </Button>,
+        ],
         "className": "Profile_main",
+        "tag": "form",
       },
       "ref": null,
-      "rendered": "Profile",
-      "type": "div",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Label
+                for="playerName"
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                Player name
+              </Label>,
+              <Input
+                id="playerName"
+                name="playerName"
+                onChange={[Function]}
+                tag="p"
+                type="text"
+                value={undefined}
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Player name",
+                "for": "playerName",
+                "tag": "label",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+              },
+              "ref": null,
+              "rendered": "Player name",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "playerName",
+                "name": "playerName",
+                "onChange": [Function],
+                "tag": "p",
+                "type": "text",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Label
+                for="avatar"
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                Avatar
+              </Label>,
+              <Input
+                id="playerAvatar"
+                name="playerAvatar"
+                onChange={[Function]}
+                tag="p"
+                type="text"
+                value={undefined}
+              />,
+              <img
+                alt="avatar"
+                className="avatar"
+                src={undefined}
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Avatar",
+                "for": "avatar",
+                "tag": "label",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+              },
+              "ref": null,
+              "rendered": "Avatar",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "playerAvatar",
+                "name": "playerAvatar",
+                "onChange": [Function],
+                "tag": "p",
+                "type": "text",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "avatar",
+                "className": "avatar",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Change",
+            "color": "secondary",
+            "onClick": [Function],
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": "Change",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

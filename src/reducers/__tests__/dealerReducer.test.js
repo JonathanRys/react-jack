@@ -32,8 +32,6 @@ describe("Test dealerReducer reducer", () => {
         store.dispatch(dealerTakeCard({ card: "SA" }))
         store.dispatch(dealerTakeCard({ card: "CQ" }))
         expect(store.getState().hand).toEqual(["SA", "CQ"])
-        store.dispatch(reset())
-        expect(store.getState().hand).toEqual([])
     })
 
     it("flips the dealers hand", () => {

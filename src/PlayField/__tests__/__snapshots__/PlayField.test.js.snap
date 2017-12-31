@@ -95,6 +95,12 @@ ShallowWrapper {
         <Row
           tag="div"
         >
+          <Badge
+            avatar="./images/dealer.png"
+            dealer={true}
+            name="Dealer"
+            score={0}
+          />
           <Dealer
             clearCard={[MockFunction]}
             drawnCard={null}
@@ -135,6 +141,14 @@ ShallowWrapper {
             playersTurn={0}
             takeCard={[MockFunction]}
           />
+          <Badge
+            avatar="./images/default.png"
+            balance={0}
+            currentBet={0}
+            dealer={false}
+            name="Player1"
+            score={undefined}
+          />
         </Row>,
       ],
       "className": "PlayField_main",
@@ -147,39 +161,63 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Dealer
-            clearCard={[MockFunction]}
-            drawnCard={null}
-            hand={
-              Array [
-                "HA",
-                "C5",
-              ]
-            }
-            playersTurn={0}
-            takeCard={[MockFunction]}
-          />,
+          "children": Array [
+            <Badge
+              avatar="./images/dealer.png"
+              dealer={true}
+              name="Dealer"
+              score={0}
+            />,
+            <Dealer
+              clearCard={[MockFunction]}
+              drawnCard={null}
+              hand={
+                Array [
+                  "HA",
+                  "C5",
+                ]
+              }
+              playersTurn={0}
+              takeCard={[MockFunction]}
+            />,
+          ],
           "tag": "div",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "clearCard": [MockFunction],
-            "drawnCard": null,
-            "hand": Array [
-              "HA",
-              "C5",
-            ],
-            "playersTurn": 0,
-            "takeCard": [MockFunction],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "avatar": "./images/dealer.png",
+              "dealer": true,
+              "name": "Dealer",
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "clearCard": [MockFunction],
+              "drawnCard": null,
+              "hand": Array [
+                "HA",
+                "C5",
+              ],
+              "playersTurn": 0,
+              "takeCard": [MockFunction],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -213,11 +251,46 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Player
-            clearCard={[MockFunction]}
-            drawnCard={null}
-            hands={
-              Array [
+          "children": Array [
+            <Player
+              clearCard={[MockFunction]}
+              drawnCard={null}
+              hands={
+                Array [
+                  Array [
+                    "SA",
+                    "CK",
+                  ],
+                  Array [
+                    "D2",
+                    "HJ",
+                  ],
+                ]
+              }
+              playersTurn={0}
+              takeCard={[MockFunction]}
+            />,
+            <Badge
+              avatar="./images/default.png"
+              balance={0}
+              currentBet={0}
+              dealer={false}
+              name="Player1"
+              score={undefined}
+            />,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "clearCard": [MockFunction],
+              "drawnCard": null,
+              "hands": Array [
                 Array [
                   "SA",
                   "CK",
@@ -226,38 +299,31 @@ ShallowWrapper {
                   "D2",
                   "HJ",
                 ],
-              ]
-            }
-            playersTurn={0}
-            takeCard={[MockFunction]}
-          />,
-          "tag": "div",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "clearCard": [MockFunction],
-            "drawnCard": null,
-            "hands": Array [
-              Array [
-                "SA",
-                "CK",
               ],
-              Array [
-                "D2",
-                "HJ",
-              ],
-            ],
-            "playersTurn": 0,
-            "takeCard": [MockFunction],
+              "playersTurn": 0,
+              "takeCard": [MockFunction],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "avatar": "./images/default.png",
+              "balance": 0,
+              "currentBet": 0,
+              "dealer": false,
+              "name": "Player1",
+              "score": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -273,6 +339,12 @@ ShallowWrapper {
           <Row
             tag="div"
           >
+            <Badge
+              avatar="./images/dealer.png"
+              dealer={true}
+              name="Dealer"
+              score={0}
+            />
             <Dealer
               clearCard={[MockFunction]}
               drawnCard={null}
@@ -313,6 +385,14 @@ ShallowWrapper {
               playersTurn={0}
               takeCard={[MockFunction]}
             />
+            <Badge
+              avatar="./images/default.png"
+              balance={0}
+              currentBet={0}
+              dealer={false}
+              name="Player1"
+              score={undefined}
+            />
           </Row>,
         ],
         "className": "PlayField_main",
@@ -325,39 +405,63 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Dealer
-              clearCard={[MockFunction]}
-              drawnCard={null}
-              hand={
-                Array [
-                  "HA",
-                  "C5",
-                ]
-              }
-              playersTurn={0}
-              takeCard={[MockFunction]}
-            />,
+            "children": Array [
+              <Badge
+                avatar="./images/dealer.png"
+                dealer={true}
+                name="Dealer"
+                score={0}
+              />,
+              <Dealer
+                clearCard={[MockFunction]}
+                drawnCard={null}
+                hand={
+                  Array [
+                    "HA",
+                    "C5",
+                  ]
+                }
+                playersTurn={0}
+                takeCard={[MockFunction]}
+              />,
+            ],
             "tag": "div",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "clearCard": [MockFunction],
-              "drawnCard": null,
-              "hand": Array [
-                "HA",
-                "C5",
-              ],
-              "playersTurn": 0,
-              "takeCard": [MockFunction],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "avatar": "./images/dealer.png",
+                "dealer": true,
+                "name": "Dealer",
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "clearCard": [MockFunction],
+                "drawnCard": null,
+                "hand": Array [
+                  "HA",
+                  "C5",
+                ],
+                "playersTurn": 0,
+                "takeCard": [MockFunction],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
@@ -391,11 +495,46 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Player
-              clearCard={[MockFunction]}
-              drawnCard={null}
-              hands={
-                Array [
+            "children": Array [
+              <Player
+                clearCard={[MockFunction]}
+                drawnCard={null}
+                hands={
+                  Array [
+                    Array [
+                      "SA",
+                      "CK",
+                    ],
+                    Array [
+                      "D2",
+                      "HJ",
+                    ],
+                  ]
+                }
+                playersTurn={0}
+                takeCard={[MockFunction]}
+              />,
+              <Badge
+                avatar="./images/default.png"
+                balance={0}
+                currentBet={0}
+                dealer={false}
+                name="Player1"
+                score={undefined}
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "clearCard": [MockFunction],
+                "drawnCard": null,
+                "hands": Array [
                   Array [
                     "SA",
                     "CK",
@@ -404,38 +543,31 @@ ShallowWrapper {
                     "D2",
                     "HJ",
                   ],
-                ]
-              }
-              playersTurn={0}
-              takeCard={[MockFunction]}
-            />,
-            "tag": "div",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "clearCard": [MockFunction],
-              "drawnCard": null,
-              "hands": Array [
-                Array [
-                  "SA",
-                  "CK",
                 ],
-                Array [
-                  "D2",
-                  "HJ",
-                ],
-              ],
-              "playersTurn": 0,
-              "takeCard": [MockFunction],
+                "playersTurn": 0,
+                "takeCard": [MockFunction],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "avatar": "./images/default.png",
+                "balance": 0,
+                "currentBet": 0,
+                "dealer": false,
+                "name": "Player1",
+                "score": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],

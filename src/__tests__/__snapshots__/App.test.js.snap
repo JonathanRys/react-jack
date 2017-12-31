@@ -86,6 +86,8 @@ ShallowWrapper {
         "splitHand": false,
       },
       "reset": [Function],
+      "setAvatar": [Function],
+      "setName": [Function],
       "splitOnClick": [Function],
       "standOnClick": [Function],
       "store": Object {
@@ -191,6 +193,8 @@ ShallowWrapper {
           "splitHand": false,
         },
         "reset": [Function],
+        "setAvatar": [Function],
+        "setName": [Function],
         "splitOnClick": [Function],
         "standOnClick": [Function],
         "store": Object {

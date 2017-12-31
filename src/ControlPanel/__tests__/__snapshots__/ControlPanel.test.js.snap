@@ -98,21 +98,6 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Label
-          className="ControlPanel_main_panel-header"
-          tag="label"
-          widths={
-            Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ]
-          }
-        >
-          Control Panel
-        </Label>,
         <Button
           block={true}
           color="secondary"
@@ -122,9 +107,9 @@ ShallowWrapper {
           tag="button"
         >
           <FontAwesome
-            name="hand-point-down"
+            name="hand-o-down"
           />
-          Hit
+           Hit
         </Button>,
         <Button
           block={true}
@@ -135,9 +120,9 @@ ShallowWrapper {
           tag="button"
         >
           <FontAwesome
-            name="hand-paper"
+            name="hand-paper-o"
           />
-          Stand
+           Stand
         </Button>,
         <Button
           block={true}
@@ -148,9 +133,9 @@ ShallowWrapper {
           tag="button"
         >
           <FontAwesome
-            name="hand-scissors"
+            name="hand-scissors-o"
           />
-          Split
+           Split
         </Button>,
         <Button
           block={true}
@@ -161,19 +146,22 @@ ShallowWrapper {
           tag="button"
         >
           <FontAwesome
-            name="hand-peace"
+            name="align-justify "
           />
-          Double Down
+           Double Down
         </Button>,
         <Button
           block={true}
           color="secondary"
-          disabled={true}
+          disabled={false}
           onClick={[MockFunction]}
           size="md"
           tag="button"
         >
-          Buy Insurance
+          <FontAwesome
+            name="dollar"
+          />
+           Buy Insurance
         </Button>,
         <Button
           block={true}
@@ -183,7 +171,10 @@ ShallowWrapper {
           size="md"
           tag="button"
         >
-          Deal
+          <FontAwesome
+            name="handshake-o"
+          />
+           Deal
         </Button>,
       ],
       "className": "ControlPanel_main",
@@ -198,34 +189,14 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": "Control Panel",
-          "className": "ControlPanel_main_panel-header",
-          "tag": "label",
-          "widths": Array [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-          ],
-        },
-        "ref": null,
-        "rendered": "Control Panel",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "block": true,
           "children": Array [
             <FontAwesome
-              name="hand-point-down"
+              name="hand-o-down"
             />,
-            "Hit",
+            " Hit",
           ],
           "color": "secondary",
           "disabled": false,
@@ -240,13 +211,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "name": "hand-point-down",
+              "name": "hand-o-down",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "Hit",
+          " Hit",
         ],
         "type": [Function],
       },
@@ -258,9 +229,9 @@ ShallowWrapper {
           "block": true,
           "children": Array [
             <FontAwesome
-              name="hand-paper"
+              name="hand-paper-o"
             />,
-            "Stand",
+            " Stand",
           ],
           "color": "secondary",
           "disabled": false,
@@ -275,13 +246,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "name": "hand-paper",
+              "name": "hand-paper-o",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "Stand",
+          " Stand",
         ],
         "type": [Function],
       },
@@ -293,9 +264,9 @@ ShallowWrapper {
           "block": true,
           "children": Array [
             <FontAwesome
-              name="hand-scissors"
+              name="hand-scissors-o"
             />,
-            "Split",
+            " Split",
           ],
           "color": "secondary",
           "disabled": true,
@@ -310,13 +281,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "name": "hand-scissors",
+              "name": "hand-scissors-o",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "Split",
+          " Split",
         ],
         "type": [Function],
       },
@@ -328,9 +299,9 @@ ShallowWrapper {
           "block": true,
           "children": Array [
             <FontAwesome
-              name="hand-peace"
+              name="align-justify "
             />,
-            "Double Down",
+            " Double Down",
           ],
           "color": "secondary",
           "disabled": false,
@@ -345,13 +316,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "name": "hand-peace",
+              "name": "align-justify ",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "Double Down",
+          " Double Down",
         ],
         "type": [Function],
       },
@@ -361,15 +332,33 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Buy Insurance",
+          "children": Array [
+            <FontAwesome
+              name="dollar"
+            />,
+            " Buy Insurance",
+          ],
           "color": "secondary",
-          "disabled": true,
+          "disabled": false,
           "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Buy Insurance",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "dollar",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Buy Insurance",
+        ],
         "type": [Function],
       },
       Object {
@@ -378,7 +367,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Deal",
+          "children": Array [
+            <FontAwesome
+              name="handshake-o"
+            />,
+            " Deal",
+          ],
           "color": "primary",
           "disabled": true,
           "onClick": [MockFunction],
@@ -386,7 +380,20 @@ ShallowWrapper {
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Deal",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "handshake-o",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Deal",
+        ],
         "type": [Function],
       },
     ],
@@ -399,21 +406,6 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Label
-            className="ControlPanel_main_panel-header"
-            tag="label"
-            widths={
-              Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ]
-            }
-          >
-            Control Panel
-          </Label>,
           <Button
             block={true}
             color="secondary"
@@ -423,9 +415,9 @@ ShallowWrapper {
             tag="button"
           >
             <FontAwesome
-              name="hand-point-down"
+              name="hand-o-down"
             />
-            Hit
+             Hit
           </Button>,
           <Button
             block={true}
@@ -436,9 +428,9 @@ ShallowWrapper {
             tag="button"
           >
             <FontAwesome
-              name="hand-paper"
+              name="hand-paper-o"
             />
-            Stand
+             Stand
           </Button>,
           <Button
             block={true}
@@ -449,9 +441,9 @@ ShallowWrapper {
             tag="button"
           >
             <FontAwesome
-              name="hand-scissors"
+              name="hand-scissors-o"
             />
-            Split
+             Split
           </Button>,
           <Button
             block={true}
@@ -462,19 +454,22 @@ ShallowWrapper {
             tag="button"
           >
             <FontAwesome
-              name="hand-peace"
+              name="align-justify "
             />
-            Double Down
+             Double Down
           </Button>,
           <Button
             block={true}
             color="secondary"
-            disabled={true}
+            disabled={false}
             onClick={[MockFunction]}
             size="md"
             tag="button"
           >
-            Buy Insurance
+            <FontAwesome
+              name="dollar"
+            />
+             Buy Insurance
           </Button>,
           <Button
             block={true}
@@ -484,7 +479,10 @@ ShallowWrapper {
             size="md"
             tag="button"
           >
-            Deal
+            <FontAwesome
+              name="handshake-o"
+            />
+             Deal
           </Button>,
         ],
         "className": "ControlPanel_main",
@@ -499,34 +497,14 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Control Panel",
-            "className": "ControlPanel_main_panel-header",
-            "tag": "label",
-            "widths": Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ],
-          },
-          "ref": null,
-          "rendered": "Control Panel",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "block": true,
             "children": Array [
               <FontAwesome
-                name="hand-point-down"
+                name="hand-o-down"
               />,
-              "Hit",
+              " Hit",
             ],
             "color": "secondary",
             "disabled": false,
@@ -541,13 +519,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "name": "hand-point-down",
+                "name": "hand-o-down",
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "Hit",
+            " Hit",
           ],
           "type": [Function],
         },
@@ -559,9 +537,9 @@ ShallowWrapper {
             "block": true,
             "children": Array [
               <FontAwesome
-                name="hand-paper"
+                name="hand-paper-o"
               />,
-              "Stand",
+              " Stand",
             ],
             "color": "secondary",
             "disabled": false,
@@ -576,13 +554,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "name": "hand-paper",
+                "name": "hand-paper-o",
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "Stand",
+            " Stand",
           ],
           "type": [Function],
         },
@@ -594,9 +572,9 @@ ShallowWrapper {
             "block": true,
             "children": Array [
               <FontAwesome
-                name="hand-scissors"
+                name="hand-scissors-o"
               />,
-              "Split",
+              " Split",
             ],
             "color": "secondary",
             "disabled": true,
@@ -611,13 +589,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "name": "hand-scissors",
+                "name": "hand-scissors-o",
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "Split",
+            " Split",
           ],
           "type": [Function],
         },
@@ -629,9 +607,9 @@ ShallowWrapper {
             "block": true,
             "children": Array [
               <FontAwesome
-                name="hand-peace"
+                name="align-justify "
               />,
-              "Double Down",
+              " Double Down",
             ],
             "color": "secondary",
             "disabled": false,
@@ -646,13 +624,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "name": "hand-peace",
+                "name": "align-justify ",
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "Double Down",
+            " Double Down",
           ],
           "type": [Function],
         },
@@ -662,15 +640,33 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Buy Insurance",
+            "children": Array [
+              <FontAwesome
+                name="dollar"
+              />,
+              " Buy Insurance",
+            ],
             "color": "secondary",
-            "disabled": true,
+            "disabled": false,
             "onClick": [MockFunction],
             "size": "md",
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Buy Insurance",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "dollar",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Buy Insurance",
+          ],
           "type": [Function],
         },
         Object {
@@ -679,7 +675,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Deal",
+            "children": Array [
+              <FontAwesome
+                name="handshake-o"
+              />,
+              " Deal",
+            ],
             "color": "primary",
             "disabled": true,
             "onClick": [MockFunction],
@@ -687,7 +688,20 @@ ShallowWrapper {
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Deal",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "handshake-o",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Deal",
+          ],
           "type": [Function],
         },
       ],
