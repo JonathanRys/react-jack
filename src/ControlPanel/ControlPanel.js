@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 import './control_panel.css'
 
-import { Button, Form, Label } from 'reactstrap'
+import { Button, Form } from 'reactstrap'
+import FontAwesome from 'react-fontawesome'
 
 function solveForBlackjack(hasBlackjack, dealerHasBlackjack, hasInsurance, winBet, loseBet) {
     console.log("args:", hasBlackjack, dealerHasBlackjack, hasInsurance, winBet, loseBet)
@@ -22,9 +23,9 @@ function solveForBlackjack(hasBlackjack, dealerHasBlackjack, hasInsurance, winBe
     }
 }
 
-
 export default class ControlPanel extends Component {
     componentWillReceiveProps(nextProps) {
+        // Game Logic
         console.log("nextProps", nextProps)
         const index = nextProps.player.handIndex
         const dealersTurn = (
@@ -36,26 +37,28 @@ export default class ControlPanel extends Component {
         if (nextProps.turn.isPlaying && (nextProps.dealer.hand.length < 1 || nextProps.player.hands[0].length < 2)) {
             nextProps.keepDealing()
         } else if (nextProps.turn.playersTurn) {
-            // It's the player's turn, check if that should change
+            // It's the player's turn, but check if that should change
             if (dealersTurn) {
+                // I like this... it scales to multiple players
                 nextProps.nextPlayer()
             }
         } else {
             if (dealersTurn) {
                 //Take dealer's turn
-                console.log("Looks like the dealer's turn:")
+                console.log("Looks like it's the dealer's turn:")
                 nextProps.dealerTurn()
 
                 // It's still the dealer's turn - hit until 17
                 if (nextProps.dealer.score < 17) {
+                    // Don't bother drawing if the player is busted
                     if (nextProps.player.busted[index]) {
                         nextProps.loseBet()
-                        nextProps.reset()
+                        return
                     }
                     nextProps.drawOne()
                     return
                 } else {
-
+                    console.log("Draw loop over, comparing scores:", nextProps.dealer.score, nextProps.player.score[index])
                     // Compare scores and debit/credit player
                     if (nextProps.player.busted[index]) {
                         nextProps.loseBet()
@@ -84,7 +87,7 @@ export default class ControlPanel extends Component {
             }
             // If returning above, unwrap this
             else {
-                nextProps.nextPlayer()
+                // nextProps.nextPlayer()
             }
         }
     }
@@ -95,23 +98,21 @@ export default class ControlPanel extends Component {
             this.props.player.hands[0].length === 2 &&
             this.props.player.hands[0][0].slice(1) === this.props.player.hands[0][1].slice(1))
 
-        const canBuyInsurance = () => {
-            if (!this.props.turn.isPlaying) return false
-            if (!this.props.dealer.hand[0]) return false
-            if (this.props.dealer.hand[0].slice(1) !== "A") return false
-            if (!this.props.player.hasInsurance[this.props.player.handIndex]) return false
-            return true;
-        }
+        const canDouble = (this.props.turn.isPlaying && (this.props.player.hands[0].length === 2))
+
+        const canBuyInsurance = (this.props.turn.isPlaying &&
+            this.props.dealer.hand[0] &&
+            this.props.dealer.hand[0].slice(1) === "A" &&
+            !this.props.player.hasInsurance[this.props.player.handIndex])
 
         return (
             <Form xs="4" sm="6" md="8" lg="12" className="ControlPanel_main">
-                <Label className="ControlPanel_main_panel-header">Control Panel</Label>
-                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.hitOnClick}>Hit</Button>
-                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.standOnClick}>Stand</Button>
-                <Button size="md" color="secondary" block disabled={!canSplit} onClick={this.props.splitOnClick}>Split</Button>
-                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying && (this.props.player.hands[0].length !== 2)} onClick={this.props.doubleDownOnClick}>Double Down</Button>
-                <Button size="md" color="secondary" block disabled={!canBuyInsurance()} onClick={this.props.buyInsuranceOnClick}>Buy Insurance</Button>
-                <Button size="md" color="primary" block disabled={this.props.turn.isPlaying} onClick={this.props.dealOnClick}>Deal</Button>
+                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.hitOnClick}><FontAwesome name="hand-o-down" /> Hit</Button>
+                <Button size="md" color="secondary" block disabled={!this.props.turn.isPlaying} onClick={this.props.standOnClick}><FontAwesome name="hand-paper-o" /> Stand</Button>
+                <Button size="md" color="secondary" block disabled={!canSplit} onClick={this.props.splitOnClick}><FontAwesome name="hand-scissors-o" /> Split</Button>
+                <Button size="md" color="secondary" block disabled={!canDouble} onClick={this.props.doubleDownOnClick}><FontAwesome name="align-justify " /> Double Down</Button>
+                <Button size="md" color="secondary" block disabled={!canBuyInsurance} onClick={this.props.buyInsuranceOnClick}><FontAwesome name="dollar" /> Buy Insurance</Button>
+                <Button size="md" color="primary" block disabled={this.props.turn.isPlaying} onClick={this.props.dealOnClick}><FontAwesome name="handshake-o" /> Deal</Button>
             </Form>
         )
     }

@@ -1,4 +1,17 @@
 .Profile_main {
-    position: absolute;
+    background: #eee;
+    border: 1px solid black;
+    border-radius: 10px;
+    min-width: 220px;
     margin: 15px;
+    padding: 25px;
+    padding-top: 20px;
+}
+
+.avatar {
+    margin: 15px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 52px;
+    width: 52px;
 }

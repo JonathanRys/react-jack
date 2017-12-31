@@ -26,7 +26,10 @@ export default function dealerReducer(state = initialState, action) {
                 handFlipped: true
             }
         case "RESET":
-            return initialState
+            return {
+                ...initialState,
+                hand: state.hand
+            }
         default:
             return state
 

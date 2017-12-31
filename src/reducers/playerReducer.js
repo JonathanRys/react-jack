@@ -72,6 +72,7 @@ export default function playerReducer(state = initialState, action) {
                 ...initialState,
                 name: state.name,
                 avatar: state.avatar,
+                hands: state.hands,
                 balance: state.balance,
                 currentBet: state.currentBet,
             }

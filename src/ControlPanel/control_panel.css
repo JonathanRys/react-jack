@@ -1,10 +1,10 @@
 .ControlPanel_main {
+    background: #eee;
+    border: 1px solid black;
+    border-radius: 10px;
     min-width: 220px;
     margin: 15px;
     padding: 25px;
-    padding-top: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
 }
 
 .ControlPanel_main_panel-header {

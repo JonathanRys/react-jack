@@ -121,6 +121,9 @@ ShallowWrapper {
           size="md"
           tag="button"
         >
+          <FontAwesome
+            name="hand-point-down"
+          />
           Hit
         </Button>,
         <Button
@@ -131,6 +134,9 @@ ShallowWrapper {
           size="md"
           tag="button"
         >
+          <FontAwesome
+            name="hand-paper"
+          />
           Stand
         </Button>,
         <Button
@@ -141,6 +147,9 @@ ShallowWrapper {
           size="md"
           tag="button"
         >
+          <FontAwesome
+            name="hand-scissors"
+          />
           Split
         </Button>,
         <Button
@@ -151,6 +160,9 @@ ShallowWrapper {
           size="md"
           tag="button"
         >
+          <FontAwesome
+            name="hand-peace"
+          />
           Double Down
         </Button>,
         <Button
@@ -209,7 +221,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Hit",
+          "children": Array [
+            <FontAwesome
+              name="hand-point-down"
+            />,
+            "Hit",
+          ],
           "color": "secondary",
           "disabled": false,
           "onClick": [MockFunction],
@@ -217,7 +234,20 @@ ShallowWrapper {
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Hit",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-point-down",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "Hit",
+        ],
         "type": [Function],
       },
       Object {
@@ -226,7 +256,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Stand",
+          "children": Array [
+            <FontAwesome
+              name="hand-paper"
+            />,
+            "Stand",
+          ],
           "color": "secondary",
           "disabled": false,
           "onClick": [MockFunction],
@@ -234,7 +269,20 @@ ShallowWrapper {
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Stand",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-paper",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "Stand",
+        ],
         "type": [Function],
       },
       Object {
@@ -243,7 +291,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Split",
+          "children": Array [
+            <FontAwesome
+              name="hand-scissors"
+            />,
+            "Split",
+          ],
           "color": "secondary",
           "disabled": true,
           "onClick": [MockFunction],
@@ -251,7 +304,20 @@ ShallowWrapper {
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Split",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-scissors",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "Split",
+        ],
         "type": [Function],
       },
       Object {
@@ -260,7 +326,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": true,
-          "children": "Double Down",
+          "children": Array [
+            <FontAwesome
+              name="hand-peace"
+            />,
+            "Double Down",
+          ],
           "color": "secondary",
           "disabled": false,
           "onClick": [MockFunction],
@@ -268,7 +339,20 @@ ShallowWrapper {
           "tag": "button",
         },
         "ref": null,
-        "rendered": "Double Down",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-peace",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "Double Down",
+        ],
         "type": [Function],
       },
       Object {
@@ -338,6 +422,9 @@ ShallowWrapper {
             size="md"
             tag="button"
           >
+            <FontAwesome
+              name="hand-point-down"
+            />
             Hit
           </Button>,
           <Button
@@ -348,6 +435,9 @@ ShallowWrapper {
             size="md"
             tag="button"
           >
+            <FontAwesome
+              name="hand-paper"
+            />
             Stand
           </Button>,
           <Button
@@ -358,6 +448,9 @@ ShallowWrapper {
             size="md"
             tag="button"
           >
+            <FontAwesome
+              name="hand-scissors"
+            />
             Split
           </Button>,
           <Button
@@ -368,6 +461,9 @@ ShallowWrapper {
             size="md"
             tag="button"
           >
+            <FontAwesome
+              name="hand-peace"
+            />
             Double Down
           </Button>,
           <Button
@@ -426,7 +522,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Hit",
+            "children": Array [
+              <FontAwesome
+                name="hand-point-down"
+              />,
+              "Hit",
+            ],
             "color": "secondary",
             "disabled": false,
             "onClick": [MockFunction],
@@ -434,7 +535,20 @@ ShallowWrapper {
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Hit",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-point-down",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "Hit",
+          ],
           "type": [Function],
         },
         Object {
@@ -443,7 +557,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Stand",
+            "children": Array [
+              <FontAwesome
+                name="hand-paper"
+              />,
+              "Stand",
+            ],
             "color": "secondary",
             "disabled": false,
             "onClick": [MockFunction],
@@ -451,7 +570,20 @@ ShallowWrapper {
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Stand",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-paper",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "Stand",
+          ],
           "type": [Function],
         },
         Object {
@@ -460,7 +592,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Split",
+            "children": Array [
+              <FontAwesome
+                name="hand-scissors"
+              />,
+              "Split",
+            ],
             "color": "secondary",
             "disabled": true,
             "onClick": [MockFunction],
@@ -468,7 +605,20 @@ ShallowWrapper {
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Split",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-scissors",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "Split",
+          ],
           "type": [Function],
         },
         Object {
@@ -477,7 +627,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": true,
-            "children": "Double Down",
+            "children": Array [
+              <FontAwesome
+                name="hand-peace"
+              />,
+              "Double Down",
+            ],
             "color": "secondary",
             "disabled": false,
             "onClick": [MockFunction],
@@ -485,7 +640,20 @@ ShallowWrapper {
             "tag": "button",
           },
           "ref": null,
-          "rendered": "Double Down",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-peace",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "Double Down",
+          ],
           "type": [Function],
         },
         Object {

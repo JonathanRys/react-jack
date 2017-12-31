@@ -8,6 +8,7 @@ import "./play-field.css"
 import Dealer from './Dealer/Dealer'
 import Deck from './Deck/Deck'
 import Player from './Player/Player'
+import Badge from './Badge/Badge'
 
 export default class PlayField extends Component {
     render() {
@@ -15,6 +16,12 @@ export default class PlayField extends Component {
         return (
             <Container className="PlayField_main">
                 <Row>
+                    <Badge
+                        name={this.props.dealer.name}
+                        avatar={this.props.dealer.avatar}
+                        score={this.props.dealer.score[0]}
+                        dealer={true}
+                    />
                     <Dealer
                         playersTurn={this.props.turn.playersTurn}
                         hand={this.props.dealer.hand}
@@ -33,6 +40,14 @@ export default class PlayField extends Component {
                         drawnCard={this.props.turn.playersTurn ? this.props.deck.drawnCard : null}
                         takeCard={this.props.giveCard}
                         clearCard={this.props.clearCard}
+                    />
+                    <Badge
+                        name={this.props.player.name}
+                        avatar={this.props.player.avatar}
+                        score={this.props.player.score[this.props.player.handIndex]}
+                        balance={this.props.player.balance}
+                        currentBet={this.props.player.currentBet}
+                        dealer={false}
                     />
                 </Row>
             </Container>

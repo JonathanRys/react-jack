@@ -10,7 +10,7 @@ import ControlPanel from './ControlPanel/ControlPanel'
 
 import { newDeck, shuffle, drawOne } from './actions/deckActions'
 import { play, nextPlayer, dealerTurn } from './actions/turnActions'
-import { flipHand } from './actions/playerActions'
+import { flipHand, setName, setAvatar } from './actions/playerActions'
 import { takeCard, dealerTakeCard, stand, winBet, loseBet, setInsured, reset } from './actions/playerActions'
 import { clearCard } from './actions/deckActions'
 
@@ -31,6 +31,12 @@ const dispatchAll = (dispatch, actions) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    setName: (name) => {
+      dispatch(setName(name))
+    },
+    setAvatar: (avatar) => {
+      dispatch(setAvatar(avatar))
+    },
     hitOnClick: () => {
       dispatch(drawOne())
     },
@@ -91,17 +97,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title"><div className="App-logo"></div>React-Jack</h1>
+          <h1 className="App-title"><div className="App-logo"></div>React Jack</h1>
         </header>
         <Container>
           <Row>
-            <Col xs="2" lg="3">
-              <Profile { ...this.props.player} />
+            <Col xs="12" xl="3">
+              <Profile { ...this.props.player} setName={this.props.setName} setAvatar={this.props.setAvatar} />
             </Col>
-            <Col xs="8" lg="6">
-              <PlayField className { ...this.props} />
+            <Col xs="12" xl="6">
+              <PlayField { ...this.props} />
             </Col>
-            <Col xs="2" lg="3">
+            <Col xs="12" xl="3">
               <ControlPanel { ...this.props} />
             </Col>
           </Row>

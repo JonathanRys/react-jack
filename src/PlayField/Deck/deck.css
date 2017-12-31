@@ -1,8 +1,10 @@
 .PlayField_Deck_main {
-    background: url("../Hand/Card/__images__/card-back.png");
+    background: url("../Hand/Card/__images__/bicycle_card-back.png");
     background-color: #666;
     background-size: cover;
+    border-radius: 3px;
     width: 73px;
     height: 98px;
     margin: 8px;
+    margin-left: 20px;
 }

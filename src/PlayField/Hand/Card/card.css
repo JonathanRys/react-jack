@@ -1,7 +1,8 @@
 .PlayField__Card__card-face {
     background-color: #666;
-    background: url(./__images__/card-back.png);
+    background: url(./__images__/bicycle_card-back.png);
     background-size: cover;
+    border-radius: 2px;
     display: inline-block;
     width: 73px;
     height: 98px;
