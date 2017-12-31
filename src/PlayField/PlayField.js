@@ -19,7 +19,7 @@ export default class PlayField extends Component {
                     <Badge
                         name={this.props.dealer.name}
                         avatar={this.props.dealer.avatar}
-                        score={this.props.dealer.score[0]}
+                        score={this.props.dealer.score}
                         dealer={true}
                     />
                     <Dealer
