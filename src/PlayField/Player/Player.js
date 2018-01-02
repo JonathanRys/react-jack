@@ -6,7 +6,7 @@ import Hand from '../Hand/Hand'
 export default class Player extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.drawnCard) {
-            nextProps.takeCard({ card: nextProps.drawnCard })
+            nextProps.takeCard(nextProps.drawnCard)
         }
     }
 
