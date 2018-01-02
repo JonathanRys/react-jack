@@ -47,11 +47,6 @@ describe("Test player-based actions", () => {
         expect(result).toEqual({ type: "SET_INSURED" })
     })
 
-    it("tests reset action creator", () => {
-        const result = actions.reset("test")
-        expect(result).toEqual({ type: "RESET" })
-    })
-
     it("tests credit action creator", () => {
         const result = actions.credit("test")
         expect(result).toEqual({ type: "CREDIT", payload: "test" })

@@ -1,4 +1,4 @@
-import getScore, { dealeraddCard } from './dealerHelpers'
+import getScore, { dealerAddCard } from './dealerHelpers'
 
 const initialState = {
     name: "Dealer",
@@ -14,21 +14,20 @@ const initialState = {
 export default function dealerReducer(state = initialState, action) {
     switch (action.type) {
         case "DEALER_TAKE_CARD":
-            const newHand = dealeraddCard(state.hand, action.payload.card)
+            const newHand = dealerAddCard(state.hand, action.payload.card)
             return {
                 ...state, ...getScore({
                     ...state, ...newHand
                 }), ...newHand
             }
+        case "CLEAR_HANDS":
+            return {
+                ...initialState
+            }
         case "FLIP_HAND":
             return {
                 ...state,
                 handFlipped: true
-            }
-        case "RESET":
-            return {
-                ...initialState,
-                hand: state.hand
             }
         default:
             return state

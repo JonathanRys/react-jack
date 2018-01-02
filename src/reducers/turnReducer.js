@@ -11,7 +11,7 @@ export default function turnReducer(state = initialState, action) {
         case "PLAY":
             return { ...initialState, isPlaying: true, }
         case "DEALER_TURN":
-            return { ...state, isPlaying: false, playersTurn: 0 }
+            return { ...state, playersTurn: 0 }
         case "ADD_PLAYER":
             return { ...state, numPlayers: state.numPlayers < 9 ? state.numPlayers + 1 : 9 }
         case "NEXT_PLAYER":

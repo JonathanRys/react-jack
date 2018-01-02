@@ -1,0 +1,1857 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Badge component renders Badge for dealer 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Badge
+    avatar="../images/default.png"
+    balance={500}
+    clearCard={[MockFunction]}
+    currentBet={5}
+    dealer={true}
+    name="Lester"
+    score={21}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Row
+          tag="div"
+        >
+          <Col
+            lg="4"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            <img
+              alt="avatar"
+              className="PlayField_Badge_avatar"
+              src="../images/default.png"
+            />
+            <div
+              className="PlayField_Badge_name"
+            >
+              Lester
+            </div>
+          </Col>
+          <Col
+            lg={
+              Object {
+                "offset": 4,
+                "size": 4,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            Score: 
+            21
+          </Col>
+        </Row>,
+        <Row
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          tag="div"
+        >
+          <Col
+            lg="4"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            Balance: $
+            500
+          </Col>
+          <Col
+            lg={
+              Object {
+                "offset": 4,
+                "size": 4,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            <div
+              className="PlayField_Badge_bet-controls"
+            >
+              <button>
+                -
+              </button>
+              <button>
+                +
+              </button>
+            </div>
+            Current bet: $
+            5
+          </Col>
+        </Row>,
+      ],
+      "className": "PlayField_Badge_main",
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <img
+                alt="avatar"
+                className="PlayField_Badge_avatar"
+                src="../images/default.png"
+              />
+              <div
+                className="PlayField_Badge_name"
+              >
+                Lester
+              </div>
+            </Col>,
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Score: 
+              21
+            </Col>,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="avatar"
+                  className="PlayField_Badge_avatar"
+                  src="../images/default.png"
+                />,
+                <div
+                  className="PlayField_Badge_name"
+                >
+                  Lester
+                </div>,
+              ],
+              "lg": "4",
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "avatar",
+                  "className": "PlayField_Badge_avatar",
+                  "src": "../images/default.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lester",
+                  "className": "PlayField_Badge_name",
+                },
+                "ref": null,
+                "rendered": "Lester",
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                "Score: ",
+                21,
+              ],
+              "lg": Object {
+                "offset": 4,
+                "size": 4,
+              },
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Score: ",
+              21,
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Balance: $
+              500
+            </Col>,
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <div
+                className="PlayField_Badge_bet-controls"
+              >
+                <button>
+                  -
+                </button>
+                <button>
+                  +
+                </button>
+              </div>
+              Current bet: $
+              5
+            </Col>,
+          ],
+          "style": Object {
+            "display": "none",
+          },
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                "Balance: $",
+                500,
+              ],
+              "lg": "4",
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Balance: $",
+              500,
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="PlayField_Badge_bet-controls"
+                >
+                  <button>
+                    -
+                  </button>
+                  <button>
+                    +
+                  </button>
+                </div>,
+                "Current bet: $",
+                5,
+              ],
+              "lg": Object {
+                "offset": 4,
+                "size": 4,
+              },
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button>
+                      -
+                    </button>,
+                    <button>
+                      +
+                    </button>,
+                  ],
+                  "className": "PlayField_Badge_bet-controls",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "-",
+                    },
+                    "ref": null,
+                    "rendered": "-",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "+",
+                    },
+                    "ref": null,
+                    "rendered": "+",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+              "Current bet: $",
+              5,
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row
+            tag="div"
+          >
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <img
+                alt="avatar"
+                className="PlayField_Badge_avatar"
+                src="../images/default.png"
+              />
+              <div
+                className="PlayField_Badge_name"
+              >
+                Lester
+              </div>
+            </Col>
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Score: 
+              21
+            </Col>
+          </Row>,
+          <Row
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            tag="div"
+          >
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Balance: $
+              500
+            </Col>
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <div
+                className="PlayField_Badge_bet-controls"
+              >
+                <button>
+                  -
+                </button>
+                <button>
+                  +
+                </button>
+              </div>
+              Current bet: $
+              5
+            </Col>
+          </Row>,
+        ],
+        "className": "PlayField_Badge_main",
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                <img
+                  alt="avatar"
+                  className="PlayField_Badge_avatar"
+                  src="../images/default.png"
+                />
+                <div
+                  className="PlayField_Badge_name"
+                >
+                  Lester
+                </div>
+              </Col>,
+              <Col
+                lg={
+                  Object {
+                    "offset": 4,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                Score: 
+                21
+              </Col>,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="avatar"
+                    className="PlayField_Badge_avatar"
+                    src="../images/default.png"
+                  />,
+                  <div
+                    className="PlayField_Badge_name"
+                  >
+                    Lester
+                  </div>,
+                ],
+                "lg": "4",
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "avatar",
+                    "className": "PlayField_Badge_avatar",
+                    "src": "../images/default.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lester",
+                    "className": "PlayField_Badge_name",
+                  },
+                  "ref": null,
+                  "rendered": "Lester",
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  "Score: ",
+                  21,
+                ],
+                "lg": Object {
+                  "offset": 4,
+                  "size": 4,
+                },
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Score: ",
+                21,
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                Balance: $
+                500
+              </Col>,
+              <Col
+                lg={
+                  Object {
+                    "offset": 4,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                <div
+                  className="PlayField_Badge_bet-controls"
+                >
+                  <button>
+                    -
+                  </button>
+                  <button>
+                    +
+                  </button>
+                </div>
+                Current bet: $
+                5
+              </Col>,
+            ],
+            "style": Object {
+              "display": "none",
+            },
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  "Balance: $",
+                  500,
+                ],
+                "lg": "4",
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Balance: $",
+                500,
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="PlayField_Badge_bet-controls"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <button>
+                      +
+                    </button>
+                  </div>,
+                  "Current bet: $",
+                  5,
+                ],
+                "lg": Object {
+                  "offset": 4,
+                  "size": 4,
+                },
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <button>
+                        -
+                      </button>,
+                      <button>
+                        +
+                      </button>,
+                    ],
+                    "className": "PlayField_Badge_bet-controls",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "-",
+                      },
+                      "ref": null,
+                      "rendered": "-",
+                      "type": "button",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "+",
+                      },
+                      "ref": null,
+                      "rendered": "+",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "Current bet: $",
+                5,
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Test Badge component renders Badge for player 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Badge
+    avatar="../images/default.png"
+    balance={500}
+    clearCard={[MockFunction]}
+    currentBet={5}
+    dealer={false}
+    name="Lester"
+    score={21}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Row
+          tag="div"
+        >
+          <Col
+            lg="4"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            <img
+              alt="avatar"
+              className="PlayField_Badge_avatar"
+              src="../images/default.png"
+            />
+            <div
+              className="PlayField_Badge_name"
+            >
+              Lester
+            </div>
+          </Col>
+          <Col
+            lg={
+              Object {
+                "offset": 4,
+                "size": 4,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            Score: 
+            21
+          </Col>
+        </Row>,
+        <Row
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+          tag="div"
+        >
+          <Col
+            lg="4"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            Balance: $
+            500
+          </Col>
+          <Col
+            lg={
+              Object {
+                "offset": 4,
+                "size": 4,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="6"
+          >
+            <div
+              className="PlayField_Badge_bet-controls"
+            >
+              <button>
+                -
+              </button>
+              <button>
+                +
+              </button>
+            </div>
+            Current bet: $
+            5
+          </Col>
+        </Row>,
+      ],
+      "className": "PlayField_Badge_main",
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <img
+                alt="avatar"
+                className="PlayField_Badge_avatar"
+                src="../images/default.png"
+              />
+              <div
+                className="PlayField_Badge_name"
+              >
+                Lester
+              </div>
+            </Col>,
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Score: 
+              21
+            </Col>,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="avatar"
+                  className="PlayField_Badge_avatar"
+                  src="../images/default.png"
+                />,
+                <div
+                  className="PlayField_Badge_name"
+                >
+                  Lester
+                </div>,
+              ],
+              "lg": "4",
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "avatar",
+                  "className": "PlayField_Badge_avatar",
+                  "src": "../images/default.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lester",
+                  "className": "PlayField_Badge_name",
+                },
+                "ref": null,
+                "rendered": "Lester",
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                "Score: ",
+                21,
+              ],
+              "lg": Object {
+                "offset": 4,
+                "size": 4,
+              },
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Score: ",
+              21,
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Balance: $
+              500
+            </Col>,
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <div
+                className="PlayField_Badge_bet-controls"
+              >
+                <button>
+                  -
+                </button>
+                <button>
+                  +
+                </button>
+              </div>
+              Current bet: $
+              5
+            </Col>,
+          ],
+          "style": Object {
+            "display": "flex",
+          },
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                "Balance: $",
+                500,
+              ],
+              "lg": "4",
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Balance: $",
+              500,
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="PlayField_Badge_bet-controls"
+                >
+                  <button>
+                    -
+                  </button>
+                  <button>
+                    +
+                  </button>
+                </div>,
+                "Current bet: $",
+                5,
+              ],
+              "lg": Object {
+                "offset": 4,
+                "size": 4,
+              },
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "xs": "6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button>
+                      -
+                    </button>,
+                    <button>
+                      +
+                    </button>,
+                  ],
+                  "className": "PlayField_Badge_bet-controls",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "-",
+                    },
+                    "ref": null,
+                    "rendered": "-",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "+",
+                    },
+                    "ref": null,
+                    "rendered": "+",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+              "Current bet: $",
+              5,
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row
+            tag="div"
+          >
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <img
+                alt="avatar"
+                className="PlayField_Badge_avatar"
+                src="../images/default.png"
+              />
+              <div
+                className="PlayField_Badge_name"
+              >
+                Lester
+              </div>
+            </Col>
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Score: 
+              21
+            </Col>
+          </Row>,
+          <Row
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+            tag="div"
+          >
+            <Col
+              lg="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              Balance: $
+              500
+            </Col>
+            <Col
+              lg={
+                Object {
+                  "offset": 4,
+                  "size": 4,
+                }
+              }
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+              xs="6"
+            >
+              <div
+                className="PlayField_Badge_bet-controls"
+              >
+                <button>
+                  -
+                </button>
+                <button>
+                  +
+                </button>
+              </div>
+              Current bet: $
+              5
+            </Col>
+          </Row>,
+        ],
+        "className": "PlayField_Badge_main",
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                <img
+                  alt="avatar"
+                  className="PlayField_Badge_avatar"
+                  src="../images/default.png"
+                />
+                <div
+                  className="PlayField_Badge_name"
+                >
+                  Lester
+                </div>
+              </Col>,
+              <Col
+                lg={
+                  Object {
+                    "offset": 4,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                Score: 
+                21
+              </Col>,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="avatar"
+                    className="PlayField_Badge_avatar"
+                    src="../images/default.png"
+                  />,
+                  <div
+                    className="PlayField_Badge_name"
+                  >
+                    Lester
+                  </div>,
+                ],
+                "lg": "4",
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "avatar",
+                    "className": "PlayField_Badge_avatar",
+                    "src": "../images/default.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lester",
+                    "className": "PlayField_Badge_name",
+                  },
+                  "ref": null,
+                  "rendered": "Lester",
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  "Score: ",
+                  21,
+                ],
+                "lg": Object {
+                  "offset": 4,
+                  "size": 4,
+                },
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Score: ",
+                21,
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                Balance: $
+                500
+              </Col>,
+              <Col
+                lg={
+                  Object {
+                    "offset": 4,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+                xs="6"
+              >
+                <div
+                  className="PlayField_Badge_bet-controls"
+                >
+                  <button>
+                    -
+                  </button>
+                  <button>
+                    +
+                  </button>
+                </div>
+                Current bet: $
+                5
+              </Col>,
+            ],
+            "style": Object {
+              "display": "flex",
+            },
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  "Balance: $",
+                  500,
+                ],
+                "lg": "4",
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Balance: $",
+                500,
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="PlayField_Badge_bet-controls"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <button>
+                      +
+                    </button>
+                  </div>,
+                  "Current bet: $",
+                  5,
+                ],
+                "lg": Object {
+                  "offset": 4,
+                  "size": 4,
+                },
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+                "xs": "6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <button>
+                        -
+                      </button>,
+                      <button>
+                        +
+                      </button>,
+                    ],
+                    "className": "PlayField_Badge_bet-controls",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "-",
+                      },
+                      "ref": null,
+                      "rendered": "-",
+                      "type": "button",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "+",
+                      },
+                      "ref": null,
+                      "rendered": "+",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "Current bet: $",
+                5,
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

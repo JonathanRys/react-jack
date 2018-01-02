@@ -4,7 +4,12 @@ exports[`Test Profile component sets new player name 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Profile />,
+  Symbol(enzyme.__unrendered__): <Profile
+    avatar="./images/default.png"
+    name="Lester"
+    setAvatar={[MockFunction]}
+    setName={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -42,7 +47,7 @@ ShallowWrapper {
             onChange={[Function]}
             tag="p"
             type="text"
-            value={undefined}
+            value="Lester"
           />
         </FormGroup>,
         <FormGroup
@@ -69,12 +74,12 @@ ShallowWrapper {
             onChange={[Function]}
             tag="p"
             type="text"
-            value={undefined}
+            value="./images/default.png"
           />
           <img
             alt="avatar"
             className="avatar"
-            src={undefined}
+            src="./images/default.png"
           />
         </FormGroup>,
         <Button
@@ -117,7 +122,7 @@ ShallowWrapper {
               onChange={[Function]}
               tag="p"
               type="text"
-              value={undefined}
+              value="Lester"
             />,
           ],
           "tag": "div",
@@ -154,7 +159,7 @@ ShallowWrapper {
               "onChange": [Function],
               "tag": "p",
               "type": "text",
-              "value": undefined,
+              "value": "Lester",
             },
             "ref": null,
             "rendered": null,
@@ -190,12 +195,12 @@ ShallowWrapper {
               onChange={[Function]}
               tag="p"
               type="text"
-              value={undefined}
+              value="./images/default.png"
             />,
             <img
               alt="avatar"
               className="avatar"
-              src={undefined}
+              src="./images/default.png"
             />,
           ],
           "tag": "div",
@@ -232,7 +237,7 @@ ShallowWrapper {
               "onChange": [Function],
               "tag": "p",
               "type": "text",
-              "value": undefined,
+              "value": "./images/default.png",
             },
             "ref": null,
             "rendered": null,
@@ -245,7 +250,7 @@ ShallowWrapper {
             "props": Object {
               "alt": "avatar",
               "className": "avatar",
-              "src": undefined,
+              "src": "./images/default.png",
             },
             "ref": null,
             "rendered": null,
@@ -302,7 +307,7 @@ ShallowWrapper {
               onChange={[Function]}
               tag="p"
               type="text"
-              value={undefined}
+              value="Lester"
             />
           </FormGroup>,
           <FormGroup
@@ -329,12 +334,12 @@ ShallowWrapper {
               onChange={[Function]}
               tag="p"
               type="text"
-              value={undefined}
+              value="./images/default.png"
             />
             <img
               alt="avatar"
               className="avatar"
-              src={undefined}
+              src="./images/default.png"
             />
           </FormGroup>,
           <Button
@@ -377,7 +382,7 @@ ShallowWrapper {
                 onChange={[Function]}
                 tag="p"
                 type="text"
-                value={undefined}
+                value="Lester"
               />,
             ],
             "tag": "div",
@@ -414,7 +419,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "tag": "p",
                 "type": "text",
-                "value": undefined,
+                "value": "Lester",
               },
               "ref": null,
               "rendered": null,
@@ -450,12 +455,12 @@ ShallowWrapper {
                 onChange={[Function]}
                 tag="p"
                 type="text"
-                value={undefined}
+                value="./images/default.png"
               />,
               <img
                 alt="avatar"
                 className="avatar"
-                src={undefined}
+                src="./images/default.png"
               />,
             ],
             "tag": "div",
@@ -492,7 +497,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "tag": "p",
                 "type": "text",
-                "value": undefined,
+                "value": "./images/default.png",
               },
               "ref": null,
               "rendered": null,
@@ -505,7 +510,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": "avatar",
                 "className": "avatar",
-                "src": undefined,
+                "src": "./images/default.png",
               },
               "ref": null,
               "rendered": null,

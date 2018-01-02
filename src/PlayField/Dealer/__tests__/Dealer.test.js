@@ -12,7 +12,17 @@ const mockProps = {
 
 describe("Test Hand component", () => {
     it("matches the snapshot", () => {
-        const component = shallow(<Dealer {...mockProps} />)
+        const testProps = { ...mockProps }
+        const component = shallow(<Dealer {...testProps} />)
+        expect(component).toMatchSnapshot()
+        expect(testProps.takeCard).not.toHaveBeenCalled()
+        expect(testProps.clearCard).not.toHaveBeenCalled()
+    })
+
+    it("matches the snapshot", () => {
+        const testProps = { ...mockProps }
+        testProps.drawnCard = "D5"
+        const component = shallow(<Dealer {...testProps} />)
         expect(component).toMatchSnapshot()
     })
 })

@@ -39,6 +39,6 @@ export default function getScore(state) {
     }
 };
 
-export function dealeraddCard(hand, card) {
+export function dealerAddCard(hand, card) {
     return { hand: [...hand, card] }
 }

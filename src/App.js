@@ -8,11 +8,10 @@ import PlayField from './PlayField/PlayField'
 import Profile from './Profile/Profile'
 import ControlPanel from './ControlPanel/ControlPanel'
 
-import { newDeck, shuffle, drawOne } from './actions/deckActions'
+import { newDeck, shuffle, drawOne, clearCard } from './actions/deckActions'
 import { play, nextPlayer, dealerTurn } from './actions/turnActions'
-import { flipHand, setName, setAvatar } from './actions/playerActions'
-import { takeCard, dealerTakeCard, stand, winBet, loseBet, setInsured, reset } from './actions/playerActions'
-import { clearCard } from './actions/deckActions'
+import { flipHand, setName, setAvatar, clearHands } from './actions/playerActions'
+import { takeCard, dealerTakeCard, stand, buyChips, setBet, winBet, loseBet, setInsured } from './actions/playerActions'
 
 import { connect } from 'react-redux'
 
@@ -32,10 +31,28 @@ const dispatchAll = (dispatch, actions) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setName: (name) => {
-      dispatch(setName(name))
+      dispatch(setName({ name: name }))
     },
     setAvatar: (avatar) => {
-      dispatch(setAvatar(avatar))
+      dispatch(setAvatar({ avatar: avatar }))
+    },
+    buyChips: (newChips) => {
+      dispatch(buyChips({ newChips: newChips }))
+    },
+    setBet: (newBet) => {
+      dispatch(setBet({ newBet: newBet }))
+    },
+    winBet: (multiplier) => {
+      dispatch(winBet({ multiplier: multiplier }))
+    },
+    loseBet: () => {
+      dispatch(loseBet())
+    },
+    dealerTurn: () => {
+      dispatchAll(dispatch, [dealerTurn, flipHand])
+    },
+    nextPlayer: () => {
+      dispatch(nextPlayer())
     },
     hitOnClick: () => {
       dispatch(drawOne())
@@ -47,47 +64,27 @@ const mapDispatchToProps = (dispatch) => {
       // Not sure what to do here yet
     },
     doubleDownOnClick: () => {
-      dispatch(drawOne())
-      dispatch(flipHand())
-      dispatch(dealerTurn())
+      dispatchAll(dispatch, [drawOne, flipHand, dealerTurn])
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured())
     },
-
-    winBet: (xBlackjack) => {
-      dispatch(winBet(xBlackjack))
-    },
-    loseBet: () => {
-      dispatch(loseBet())
-    },
-    dealerTurn: () => {
-      dispatch(dealerTurn())
-      dispatch(flipHand())
-    },
-    drawOne: () => {
-      dispatch(drawOne())
-    },
-    nextPlayer: () => {
-      dispatch(nextPlayer())
-    },
     dealOnClick: () => {
-      dispatchAll(dispatch, [reset, play, newDeck, shuffle])
+      dispatchAll(dispatch, [clearHands, play, newDeck, shuffle])
     },
     keepDealing: () => {
-      dispatchAll(dispatch, [drawOne, nextPlayer])
+      dispatchAll(dispatch, [nextPlayer, drawOne])
     },
     giveCard: (card) => {
-      dispatch(takeCard(card))
-    },
-    giveDealerCard: (card) => {
-      dispatch(dealerTakeCard(card))
-    },
-    clearCard: () => {
+      dispatch(takeCard({ card: card }))
       dispatch(clearCard())
     },
-    reset: () => {
-      dispatch(reset())
+    giveDealerCard: (card) => {
+      dispatch(dealerTakeCard({ card: card }))
+      dispatch(clearCard())
+    },
+    clearHands: () => {
+      dispatch(clearHands())
     },
   }
 }

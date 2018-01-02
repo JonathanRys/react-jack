@@ -15,7 +15,7 @@ export default function getScore(state) {
 
         // Calculate score based on points enum
         score = cards.map((card) => {
-            if (card.slice(1) === "A")++numberOfAces;
+            if (card.slice(1) === "A") numberOfAces++;
             return points[card.slice(1)]
         }).reduce((a, b) => a + b)
 
@@ -41,12 +41,12 @@ export default function getScore(state) {
         ],
         busted: [
             ...state.busted.slice(0, index),
-            newScore > 21,
+            (newScore > 21),
             ...state.busted.slice(index + 1)
         ],
         hasBlackjack: [
             ...state.hasBlackjack.slice(0, index),
-            newScore === 21 && state.hands[index].length === 2,
+            (newScore === 21 && state.hands[index].length === 2),
             ...state.hasBlackjack.slice(index + 1)
         ]
     }

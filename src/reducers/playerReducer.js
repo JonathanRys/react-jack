@@ -36,6 +36,14 @@ export default function playerReducer(state = initialState, action) {
                 }),
                 ...newCards
             }
+        case "CLEAR_HANDS":
+            return {
+                ...initialState,
+                name: state.name,
+                avatar: state.avatar,
+                balance: state.balance,
+                currentBet: state.currentBet,
+            }
         case "STAND":
             return {
                 ...state, playerStands: [
@@ -51,15 +59,15 @@ export default function playerReducer(state = initialState, action) {
         case "LOSE_BET":
             return { ...state, balance: state.balance - state.currentBet }
         case "WIN_BET":
-            const multiplier = action.payload ? action.payload.multiplier : 1
-            return { ...state, balance: state.balance + state.currentBet * multiplier }
+            const multiplier = action.payload ? action.payload.multiplier || 1 : 1
+            return { ...state, balance: state.balance + (state.currentBet * multiplier) }
         case "SET_INSURED":
             return {
                 ...state,
                 balance: state.balance - (state.currentBet * INSURANCE_RATE),
                 hasInsurance: [
                     ...state.hasInsurance.slice(0, index),
-                    [true],
+                    true,
                     ...state.hasInsurance.slice(index + 1)
                 ]
             }
@@ -67,15 +75,6 @@ export default function playerReducer(state = initialState, action) {
             return { ...state, balance: state.balance + action.payload.delta }
         case "DEBIT":
             return { ...state, balance: state.balance - action.payload.delta }
-        case "RESET":
-            return {
-                ...initialState,
-                name: state.name,
-                avatar: state.avatar,
-                hands: state.hands,
-                balance: state.balance,
-                currentBet: state.currentBet,
-            }
         default:
             return state
     }

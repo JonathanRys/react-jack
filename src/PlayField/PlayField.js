@@ -19,7 +19,7 @@ export default class PlayField extends Component {
                     <Badge
                         name={this.props.dealer.name}
                         avatar={this.props.dealer.avatar}
-                        score={this.props.dealer.score}
+                        score={this.props.dealer.score[0]}
                         dealer={true}
                     />
                     <Dealer
@@ -27,7 +27,6 @@ export default class PlayField extends Component {
                         hand={this.props.dealer.hand}
                         drawnCard={this.props.turn.playersTurn ? null : this.props.deck.drawnCard}
                         takeCard={this.props.giveDealerCard}
-                        clearCard={this.props.clearCard}
                     />
                 </Row>
                 <Row>
@@ -39,7 +38,6 @@ export default class PlayField extends Component {
                         hands={this.props.player.hands}
                         drawnCard={this.props.turn.playersTurn ? this.props.deck.drawnCard : null}
                         takeCard={this.props.giveCard}
-                        clearCard={this.props.clearCard}
                     />
                     <Badge
                         name={this.props.player.name}

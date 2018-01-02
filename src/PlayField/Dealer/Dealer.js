@@ -7,7 +7,6 @@ export default class Dealer extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.drawnCard) {
             nextProps.takeCard({ card: nextProps.drawnCard })
-            nextProps.clearCard()
         }
     }
 
@@ -22,5 +21,4 @@ Dealer.propTypes = {
     hand: PropTypes.array.isRequired,
     drawnCard: PropTypes.string,
     takeCard: PropTypes.func.isRequired,
-    clearCard: PropTypes.func.isRequired,
 }

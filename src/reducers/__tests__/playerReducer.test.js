@@ -1,7 +1,7 @@
 import '../../setupTests'
 
 import playerReducer from '../playerReducer'
-import { setName, setAvatar, takeCard, stand, buyChips, setBet, loseBet, winBet, reset, setInsured, credit, debit } from '../../actions/playerActions.js'
+import { setName, setAvatar, takeCard, clearHands, stand, buyChips, setBet, loseBet, winBet, reset, setInsured, credit, debit } from '../../actions/playerActions.js'
 import { createStore } from 'redux'
 
 describe("Test playerReducer reducer", () => {
@@ -45,7 +45,7 @@ describe("Test playerReducer reducer", () => {
         const store = createStore(playerReducer)
         store.dispatch(stand())
         expect(store.getState().playerStands[store.getState().handIndex]).toEqual(true)
-        store.dispatch(reset())
+        store.dispatch(clearHands())
         expect(store.getState().playerStands[store.getState().handIndex]).toEqual(false)
     })
 
@@ -80,7 +80,7 @@ describe("Test playerReducer reducer", () => {
         store.dispatch(winBet({ multiplier: 1.5 }))
         expect(store.getState().balance).toEqual(512.5)
         // Test RESET
-        store.dispatch(reset())
+        store.dispatch(clearHands())
         expect(store.getState()).toEqual({
             name: "Player1",
             avatar: "./images/default.png",
@@ -103,7 +103,7 @@ describe("Test playerReducer reducer", () => {
     it("is able to purchase insurance", () => {
         const store = createStore(playerReducer)
         store.dispatch(setInsured())
-        expect(store.getState().hasInsurance[store.getState().handIndex]).toEqual([true])
+        expect(store.getState().hasInsurance[store.getState().handIndex]).toEqual(true)
     })
 
     it("credits the account", () => {

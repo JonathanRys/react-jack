@@ -11,6 +11,10 @@ export function takeCard(payload) {
     return { type: "TAKE_CARD", payload: payload }
 }
 
+export function clearHands(payload) {
+    return { type: "CLEAR_HANDS" }
+}
+
 export function flipHand() {
     return { type: "FLIP_HAND" }
 }
@@ -41,10 +45,6 @@ export function winBet(payload) {
 
 export function setInsured() {
     return { type: "SET_INSURED" }
-}
-
-export function reset() {
-    return { type: "RESET" }
 }
 
 export function credit(payload) {

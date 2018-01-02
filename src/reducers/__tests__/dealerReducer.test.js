@@ -1,5 +1,5 @@
 import dealerReducer from '../dealerReducer'
-import { dealerTakeCard, reset, flipHand } from '../../actions/playerActions.js'
+import { dealerTakeCard, reset, flipHand, clearHands } from '../../actions/playerActions.js'
 import { createStore } from 'redux'
 
 describe("Test dealerReducer reducer", () => {
@@ -32,6 +32,12 @@ describe("Test dealerReducer reducer", () => {
         store.dispatch(dealerTakeCard({ card: "SA" }))
         store.dispatch(dealerTakeCard({ card: "CQ" }))
         expect(store.getState().hand).toEqual(["SA", "CQ"])
+    })
+
+    it("clears the dealers hand", () => {
+        const store = createStore(dealerReducer)
+        store.dispatch(clearHands())
+        expect(store.getState().hand).toEqual([])
     })
 
     it("flips the dealers hand", () => {
