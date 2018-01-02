@@ -39,14 +39,13 @@ export default class ControlPanel extends Component {
         } else if (nextProps.turn.playersTurn) {
             // It's the player's turn, but check if that should change
             if (dealersTurn) {
-                // I like this... it scales to multiple players
                 nextProps.nextPlayer()
             }
         } else {
-            if (dealersTurn) {
+            if (dealersTurn && nextProps.turn.isPlaying) {
                 //Take dealer's turn
                 console.log("Looks like it's the dealer's turn:")
-                nextProps.dealerTurn()
+                nextProps.nextPlayer()
 
                 // It's still the dealer's turn - hit until 17
                 if (nextProps.dealer.score < 17) {
@@ -62,7 +61,6 @@ export default class ControlPanel extends Component {
                     // Compare scores and debit/credit player
                     if (nextProps.player.busted[index]) {
                         nextProps.loseBet()
-                        nextProps.reset()
                         return
                         // If it looks like the player won
                     } else if (nextProps.dealer.busted || nextProps.player.score[index] < nextProps.dealer.score) {
@@ -74,12 +72,10 @@ export default class ControlPanel extends Component {
                             nextProps.winBet,
                             nextProps.loseBet,
                         )
-                        nextProps.reset()
                         return
                     } else {
                         // We know the player isn't busted, the dealer isn't busted, and that the player has a lower scoring hand
                         nextProps.loseBet()
-                        nextProps.reset()
                         return
                     }
                 }
@@ -87,6 +83,7 @@ export default class ControlPanel extends Component {
             }
             // If returning above, unwrap this
             else {
+                // The turn has ended, awaiting user input
                 // nextProps.nextPlayer()
             }
         }
@@ -144,5 +141,4 @@ ControlPanel.propTypes = {
     doubleDownOnClick: PropTypes.func.isRequired,
     buyInsuranceOnClick: PropTypes.func.isRequired,
     dealOnClick: PropTypes.func.isRequired,
-    reset: PropTypes.func.isRequired,
 }
