@@ -32,11 +32,11 @@ ShallowWrapper {
     player={
       Object {
         "avatar": "./images/default.png",
-        "balance": 0,
+        "balance": 500,
         "busted": Array [
           false,
         ],
-        "currentBet": 0,
+        "currentBet": 5,
         "hands": Array [
           Array [
             "SA",
@@ -159,7 +159,7 @@ ShallowWrapper {
         <Button
           block={true}
           color="primary"
-          disabled={true}
+          disabled={false}
           onClick={[MockFunction]}
           size="md"
           tag="button"
@@ -367,7 +367,7 @@ ShallowWrapper {
             " Deal",
           ],
           "color": "primary",
-          "disabled": true,
+          "disabled": false,
           "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
@@ -467,7 +467,7 @@ ShallowWrapper {
           <Button
             block={true}
             color="primary"
-            disabled={true}
+            disabled={false}
             onClick={[MockFunction]}
             size="md"
             tag="button"
@@ -675,7 +675,7 @@ ShallowWrapper {
               " Deal",
             ],
             "color": "primary",
-            "disabled": true,
+            "disabled": false,
             "onClick": [MockFunction],
             "size": "md",
             "tag": "button",

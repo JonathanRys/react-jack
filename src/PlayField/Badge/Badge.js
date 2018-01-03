@@ -5,14 +5,17 @@ import "./badge.css";
 
 import { Container, Row, Col } from "reactstrap";
 
-export default class Badge extends Component {
-  constructor(props) {
-    super(props);
+const MIN_BET = 5;
 
-    this.state = {
-      currentBet: props.currentBet
-    };
-  }
+export default class Badge extends Component {
+  onIncrement = () => {
+    this.props.setBet(this.props.currentBet + 1);
+  };
+
+  onDecrement = () => {
+    this.props.setBet(this.props.currentBet - 1);
+  };
+
   render() {
     return (
       <Container className="PlayField_Badge_main">
@@ -36,12 +39,21 @@ export default class Badge extends Component {
           <Col xs="6" lg="4">
             Balance: ${this.props.balance}
           </Col>
-          <Col xs="6" lg={{ size: 4, offset: 4 }}>
+          <Col
+            xs="6"
+            lg={{ size: 4, offset: 4 }}
+            className="PlayField_Badge_betting-main"
+          >
             <div className="PlayField_Badge_bet-controls">
-              <button>-</button>
-              <button>+</button>
+              <button
+                disabled={this.props.currentBet <= MIN_BET}
+                onClick={this.onDecrement}
+              >
+                &ndash;
+              </button>
+              <button onClick={this.onIncrement}>+</button>
             </div>
-            Current bet: ${this.state.currentBet}
+            Current bet: ${this.props.currentBet}
           </Col>
         </Row>
       </Container>
@@ -56,5 +68,6 @@ Badge.propTypes = {
   balance: PropTypes.number,
   currentBet: PropTypes.number,
   dealer: PropTypes.bool.isRequired,
-  flipped: PropTypes.bool.isRequired
+  flipped: PropTypes.bool.isRequired,
+  setBet: PropTypes.func
 };

@@ -6,6 +6,12 @@
 }
 
 .PlayField_Badge_bet-controls button {
-  margin: 10px 3px 0px;
+  margin: -2px 3px 0px;
   padding: 0px 5px;
+  height: 20px;
+  width: 20px;
+  line-height: normal;
+}
+.PlayField_Badge_betting-main {
+  margin-top: -24px;
 }

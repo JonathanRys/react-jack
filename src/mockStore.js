@@ -12,8 +12,8 @@ export default {
     avatar: "./images/default.png",
     playerIndex: 1,
 
-    balance: 0,
-    currentBet: 0,
+    balance: 500,
+    currentBet: 5,
 
     hands: [["SA", "CK"], ["D2", "HJ"]],
     score: [0],

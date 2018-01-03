@@ -78,7 +78,7 @@ describe("Test playerReducer reducer", () => {
   it("credit given amount to player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch(buyChips({ newChips: 500 }));
-    expect(store.getState().balance).toEqual(500);
+    expect(store.getState().balance).toEqual(1000);
   });
 
   it("set the current bet", () => {
@@ -89,7 +89,6 @@ describe("Test playerReducer reducer", () => {
 
   it("deducts given amount from player's balance", () => {
     const store = createStore(playerReducer);
-    store.dispatch(buyChips({ newChips: 500 }));
     store.dispatch(setBet({ newBet: 5 }));
     store.dispatch(loseBet());
     expect(store.getState().balance).toEqual(495);
@@ -97,7 +96,6 @@ describe("Test playerReducer reducer", () => {
 
   it("adds the current bet times a multiplier to the player's balance", () => {
     const store = createStore(playerReducer);
-    store.dispatch(buyChips({ newChips: 500 }));
     store.dispatch(setBet({ newBet: 5 }));
     // test WIN_BET
     store.dispatch(winBet());
@@ -137,13 +135,13 @@ describe("Test playerReducer reducer", () => {
   it("credits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch(credit({ delta: 50 }));
-    expect(store.getState().balance).toEqual(50);
+    expect(store.getState().balance).toEqual(550);
   });
 
   it("debits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch(credit({ delta: 50 }));
     store.dispatch(debit({ delta: 25 }));
-    expect(store.getState().balance).toEqual(25);
+    expect(store.getState().balance).toEqual(525);
   });
 });

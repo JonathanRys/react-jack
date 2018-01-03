@@ -18,6 +18,8 @@ const mockProps = {
   reset: jest.fn()
 };
 
+// test every permutation of state that applies to the game to make sure it operates as expected
+
 describe("Test PlayField component", () => {
   it("matches the snapshot", () => {
     const testProps = { ...mockProps };

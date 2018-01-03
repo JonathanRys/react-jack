@@ -178,7 +178,10 @@ export default class ControlPanel extends Component {
           size="md"
           color="primary"
           block
-          disabled={this.props.turn.isPlaying}
+          disabled={
+            this.props.turn.isPlaying &&
+            this.props.player.balance - this.state.currentBet > 0
+          }
           onClick={this.props.dealOnClick}
         >
           <FontAwesome name="handshake-o" /> Deal

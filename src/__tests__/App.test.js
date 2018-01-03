@@ -32,7 +32,6 @@ describe("Test the App component", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
-    component.props().buyChips(500);
     expect(store.getState().player.balance).toEqual(500);
     component.props().setBet(5);
     expect(store.getState().player.currentBet).toEqual(5);
@@ -47,11 +46,11 @@ describe("Test the App component", () => {
     const component = shallow(<App store={store} />);
 
     component.props().buyChips(500);
-    expect(store.getState().player.balance).toEqual(500);
+    expect(store.getState().player.balance).toEqual(1000);
     component.props().setBet(5);
     expect(store.getState().player.currentBet).toEqual(5);
     component.props().loseBet();
-    expect(store.getState().player.balance).toEqual(495);
+    expect(store.getState().player.balance).toEqual(995);
   });
 
   it("stops playing the game", () => {

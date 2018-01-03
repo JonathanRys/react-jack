@@ -56,6 +56,7 @@ export default class PlayField extends Component {
             score={player.score[index]}
             balance={player.balance}
             currentBet={player.currentBet}
+            setBet={this.props.setBet}
             dealer={false}
             flipped={true}
           />
