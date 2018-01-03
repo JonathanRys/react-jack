@@ -54,6 +54,16 @@ describe("Test the App component", () => {
     expect(store.getState().player.balance).toEqual(495);
   });
 
+  it("stops playing the game", () => {
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
+
+    component.props().dealOnClick();
+    expect(store.getState().turn.isPlaying).toEqual(true);
+    component.props().stop();
+    expect(store.getState().turn.isPlaying).toEqual(false);
+  });
+
   it("sets dealers turn", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);

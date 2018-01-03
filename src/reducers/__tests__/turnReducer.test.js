@@ -3,6 +3,7 @@ import "../../setupTests";
 import turnReducer from "../turnReducer";
 import {
   play,
+  stop,
   addPlayer,
   nextPlayer,
   dealerTurn
@@ -14,6 +15,12 @@ describe("Test turnReducer reducer", () => {
     const store = createStore(turnReducer);
     store.dispatch(play());
     expect(store.getState().isPlaying).toEqual(true);
+  });
+
+  it("dispatches STOP action", () => {
+    const store = createStore(turnReducer);
+    store.dispatch(stop());
+    expect(store.getState().isPlaying).toEqual(false);
   });
 
   it("dispatches DEALER_TURN action", () => {

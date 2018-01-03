@@ -17,7 +17,17 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "TAKE_CARD", payload: "test" });
   });
 
-  it("tests takeCard action creator", () => {
+  it("tests clearHands action creator", () => {
+    const result = actions.clearHands("test");
+    expect(result).toEqual({ type: "CLEAR_HANDS" });
+  });
+
+  it("tests flipHand action creator", () => {
+    const result = actions.flipHand("test");
+    expect(result).toEqual({ type: "FLIP_HAND" });
+  });
+
+  it("tests dealerTakeCard action creator", () => {
     const result = actions.dealerTakeCard("test");
     expect(result).toEqual({ type: "DEALER_TAKE_CARD", payload: "test" });
   });
