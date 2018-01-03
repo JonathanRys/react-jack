@@ -9,13 +9,8 @@ import Profile from "./Profile/Profile";
 import ControlPanel from "./ControlPanel/ControlPanel";
 
 import { newDeck, shuffle, drawOne, clearCard } from "./actions/deckActions";
-import { play, nextPlayer, dealerTurn } from "./actions/turnActions";
-import {
-  flipHand,
-  setName,
-  setAvatar,
-  clearHands
-} from "./actions/playerActions";
+import { play, stop, nextPlayer, dealerTurn } from "./actions/turnActions";
+import { setName, setAvatar, clearHands } from "./actions/playerActions";
 import {
   takeCard,
   dealerTakeCard,
@@ -64,8 +59,11 @@ const mapDispatchToProps = dispatch => {
     loseBet: () => {
       dispatch(loseBet());
     },
+    stop: () => {
+      dispatch(stop());
+    },
     dealerTurn: () => {
-      dispatchAll(dispatch, [dealerTurn, flipHand]);
+      dispatchAll(dispatch, [dealerTurn]);
     },
     nextPlayer: () => {
       dispatch(nextPlayer());
@@ -80,7 +78,7 @@ const mapDispatchToProps = dispatch => {
       // Not sure what to do here yet
     },
     doubleDownOnClick: () => {
-      dispatchAll(dispatch, [drawOne, flipHand, dealerTurn]);
+      dispatchAll(dispatch, [drawOne, dealerTurn]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());

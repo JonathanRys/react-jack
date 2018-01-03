@@ -10,6 +10,8 @@ export default function turnReducer(state = initialState, action) {
   switch (action.type) {
     case "PLAY":
       return { ...initialState, isPlaying: true };
+    case "STOP":
+      return { ...initialState, isPlaying: false };
     case "DEALER_TURN":
       return { ...state, playersTurn: 0 };
     case "ADD_PLAYER":

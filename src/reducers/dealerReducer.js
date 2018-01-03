@@ -6,9 +6,9 @@ const initialState = {
 
   handFlipped: false,
   hand: [],
-  score: [0],
-  busted: [false],
-  hasBlackjack: [false]
+  score: 0,
+  busted: false,
+  hasBlackjack: false
 };
 
 export default function dealerReducer(state = initialState, action) {
@@ -26,11 +26,6 @@ export default function dealerReducer(state = initialState, action) {
     case "CLEAR_HANDS":
       return {
         ...initialState
-      };
-    case "FLIP_HAND":
-      return {
-        ...state,
-        handFlipped: true
       };
     default:
       return state;

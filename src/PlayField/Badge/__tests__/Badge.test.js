@@ -13,7 +13,8 @@ const mockProps = {
   clearCard: jest.fn(),
   balance: 500,
   currentBet: 5,
-  dealer: false
+  dealer: false,
+  flipped: false
 };
 
 describe("Test Badge component", () => {

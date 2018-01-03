@@ -3,8 +3,13 @@ import * as actions from "../../actions/turnActions.js";
 
 describe("Test turn-based actions", () => {
   it("tests play action creator", () => {
-    const result = actions.play("test");
+    const result = actions.play();
     expect(result).toEqual({ type: "PLAY" });
+  });
+
+  it("tests play action creator", () => {
+    const result = actions.stop();
+    expect(result).toEqual({ type: "STOP" });
   });
 
   it("tests addPlayer action creator", () => {

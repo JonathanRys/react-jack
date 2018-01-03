@@ -13,18 +13,22 @@ import Badge from "./Badge/Badge";
 export default class PlayField extends Component {
   render() {
     console.log("PlayField props:", this.props);
+    const player = this.props.player;
+    const dealer = this.props.dealer;
+    const index = player.handIndex;
     return (
       <Container className="PlayField_main">
         <Row>
           <Badge
-            name={this.props.dealer.name}
-            avatar={this.props.dealer.avatar}
-            score={this.props.dealer.score[0]}
+            name={dealer.name}
+            avatar={dealer.avatar}
+            score={dealer.score}
             dealer={true}
+            flipped={!this.props.turn.playersTurn}
           />
           <Dealer
-            playersTurn={this.props.turn.playersTurn}
-            hand={this.props.dealer.hand}
+            hand={dealer.hand}
+            flipped={!this.props.turn.playersTurn}
             drawnCard={
               this.props.turn.playersTurn ? null : this.props.deck.drawnCard
             }
@@ -38,19 +42,22 @@ export default class PlayField extends Component {
         <Row>
           <Player
             playersTurn={this.props.turn.playersTurn}
-            hands={this.props.player.hands}
+            hands={player.hands}
             drawnCard={
-              this.props.turn.playersTurn ? this.props.deck.drawnCard : null
+              this.props.turn.playersTurn === player.playerIndex
+                ? this.props.deck.drawnCard
+                : null
             }
             takeCard={this.props.giveCard}
           />
           <Badge
-            name={this.props.player.name}
-            avatar={this.props.player.avatar}
-            score={this.props.player.score[this.props.player.handIndex]}
-            balance={this.props.player.balance}
-            currentBet={this.props.player.currentBet}
+            name={player.name}
+            avatar={player.avatar}
+            score={player.score[index]}
+            balance={player.balance}
+            currentBet={player.currentBet}
             dealer={false}
+            flipped={true}
           />
         </Row>
       </Container>

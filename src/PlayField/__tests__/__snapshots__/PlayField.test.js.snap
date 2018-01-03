@@ -9,21 +9,14 @@ ShallowWrapper {
     dealer={
       Object {
         "avatar": "./images/dealer.png",
-        "busted": Array [
-          false,
-        ],
+        "busted": false,
         "hand": Array [
           "HA",
           "C5",
         ],
-        "handFlipped": false,
-        "hasBlackjack": Array [
-          false,
-        ],
+        "hasBlackjack": false,
         "name": "Dealer",
-        "score": Array [
-          0,
-        ],
+        "score": 0,
       }
     }
     deck={
@@ -98,18 +91,19 @@ ShallowWrapper {
           <Badge
             avatar="./images/dealer.png"
             dealer={true}
+            flipped={true}
             name="Dealer"
             score={0}
           />
           <Dealer
             drawnCard={null}
+            flipped={true}
             hand={
               Array [
                 "HA",
                 "C5",
               ]
             }
-            playersTurn={0}
             takeCard={[MockFunction]}
           />
         </Row>,
@@ -144,6 +138,7 @@ ShallowWrapper {
             balance={0}
             currentBet={0}
             dealer={false}
+            flipped={true}
             name="Player1"
             score={undefined}
           />
@@ -163,18 +158,19 @@ ShallowWrapper {
             <Badge
               avatar="./images/dealer.png"
               dealer={true}
+              flipped={true}
               name="Dealer"
               score={0}
             />,
             <Dealer
               drawnCard={null}
+              flipped={true}
               hand={
                 Array [
                   "HA",
                   "C5",
                 ]
               }
-              playersTurn={0}
               takeCard={[MockFunction]}
             />,
           ],
@@ -189,6 +185,7 @@ ShallowWrapper {
             "props": Object {
               "avatar": "./images/dealer.png",
               "dealer": true,
+              "flipped": true,
               "name": "Dealer",
               "score": 0,
             },
@@ -202,11 +199,11 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "drawnCard": null,
+              "flipped": true,
               "hand": Array [
                 "HA",
                 "C5",
               ],
-              "playersTurn": 0,
               "takeCard": [MockFunction],
             },
             "ref": null,
@@ -270,6 +267,7 @@ ShallowWrapper {
               balance={0}
               currentBet={0}
               dealer={false}
+              flipped={true}
               name="Player1"
               score={undefined}
             />,
@@ -310,6 +308,7 @@ ShallowWrapper {
               "balance": 0,
               "currentBet": 0,
               "dealer": false,
+              "flipped": true,
               "name": "Player1",
               "score": undefined,
             },
@@ -336,18 +335,19 @@ ShallowWrapper {
             <Badge
               avatar="./images/dealer.png"
               dealer={true}
+              flipped={true}
               name="Dealer"
               score={0}
             />
             <Dealer
               drawnCard={null}
+              flipped={true}
               hand={
                 Array [
                   "HA",
                   "C5",
                 ]
               }
-              playersTurn={0}
               takeCard={[MockFunction]}
             />
           </Row>,
@@ -382,6 +382,7 @@ ShallowWrapper {
               balance={0}
               currentBet={0}
               dealer={false}
+              flipped={true}
               name="Player1"
               score={undefined}
             />
@@ -401,18 +402,19 @@ ShallowWrapper {
               <Badge
                 avatar="./images/dealer.png"
                 dealer={true}
+                flipped={true}
                 name="Dealer"
                 score={0}
               />,
               <Dealer
                 drawnCard={null}
+                flipped={true}
                 hand={
                   Array [
                     "HA",
                     "C5",
                   ]
                 }
-                playersTurn={0}
                 takeCard={[MockFunction]}
               />,
             ],
@@ -427,6 +429,7 @@ ShallowWrapper {
               "props": Object {
                 "avatar": "./images/dealer.png",
                 "dealer": true,
+                "flipped": true,
                 "name": "Dealer",
                 "score": 0,
               },
@@ -440,11 +443,11 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "drawnCard": null,
+                "flipped": true,
                 "hand": Array [
                   "HA",
                   "C5",
                 ],
-                "playersTurn": 0,
                 "takeCard": [MockFunction],
               },
               "ref": null,
@@ -508,6 +511,7 @@ ShallowWrapper {
                 balance={0}
                 currentBet={0}
                 dealer={false}
+                flipped={true}
                 name="Player1"
                 score={undefined}
               />,
@@ -548,6 +552,7 @@ ShallowWrapper {
                 "balance": 0,
                 "currentBet": 0,
                 "dealer": false,
+                "flipped": true,
                 "name": "Player1",
                 "score": undefined,
               },

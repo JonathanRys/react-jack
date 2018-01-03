@@ -11,12 +11,19 @@ export default class Dealer extends Component {
   }
 
   render() {
-    return <Hand hand={this.props.hand} dealer={true} handFlipped={false} />;
+    return (
+      <Hand
+        hand={this.props.hand}
+        dealer={true}
+        handFlipped={this.props.flipped}
+      />
+    );
   }
 }
 
 Dealer.propTypes = {
   hand: PropTypes.array.isRequired,
+  flipped: PropTypes.bool.isRequired,
   drawnCard: PropTypes.string,
   takeCard: PropTypes.func.isRequired
 };

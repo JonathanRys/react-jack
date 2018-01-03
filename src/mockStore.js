@@ -2,12 +2,10 @@ export default {
   dealer: {
     name: "Dealer",
     avatar: "./images/dealer.png",
-
-    handFlipped: false,
     hand: ["HA", "C5"],
-    score: [0],
-    busted: [false],
-    hasBlackjack: [false]
+    score: 0,
+    busted: false,
+    hasBlackjack: false
   },
   player: {
     name: "Player1",

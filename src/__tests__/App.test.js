@@ -59,11 +59,9 @@ describe("Test the App component", () => {
     const component = shallow(<App store={store} />);
 
     component.props().nextPlayer();
-    expect(store.getState().dealer.handFlipped).toEqual(false);
     expect(store.getState().turn.playersTurn).toEqual(1);
     component.props().dealerTurn();
     expect(store.getState().turn.playersTurn).toEqual(0);
-    expect(store.getState().dealer.handFlipped).toEqual(true);
   });
 
   it("player hits on click", () => {
@@ -90,11 +88,9 @@ describe("Test the App component", () => {
     expect(store.getState().turn.playersTurn).toEqual(0);
     component.props().nextPlayer();
     expect(store.getState().deck.drawnCard).toEqual(null);
-    expect(store.getState().dealer.handFlipped).toEqual(false);
     expect(store.getState().turn.playersTurn).toEqual(1);
     component.props().doubleDownOnClick();
     expect(store.getState().deck.drawnCard).not.toEqual(null);
-    expect(store.getState().dealer.handFlipped).toEqual(true);
     expect(store.getState().turn.playersTurn).toEqual(0);
   });
 

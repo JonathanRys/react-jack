@@ -26,7 +26,8 @@ export default class Badge extends Component {
             <div className="PlayField_Badge_name">{this.props.name}</div>
           </Col>
           <Col xs="6" lg={{ size: 4, offset: 4 }}>
-            Score: {this.props.score}
+            Score:{" "}
+            {this.props.dealer && !this.props.flipped ? null : this.props.score}
           </Col>
         </Row>
         <Row
@@ -54,5 +55,6 @@ Badge.propTypes = {
   score: PropTypes.number,
   balance: PropTypes.number,
   currentBet: PropTypes.number,
-  dealer: PropTypes.bool.isRequired
+  dealer: PropTypes.bool.isRequired,
+  flipped: PropTypes.bool.isRequired
 };

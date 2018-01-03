@@ -10,21 +10,14 @@ ShallowWrapper {
     dealer={
       Object {
         "avatar": "./images/dealer.png",
-        "busted": Array [
-          false,
-        ],
+        "busted": false,
         "hand": Array [
           "HA",
           "C5",
         ],
-        "handFlipped": false,
-        "hasBlackjack": Array [
-          false,
-        ],
+        "hasBlackjack": false,
         "name": "Dealer",
-        "score": Array [
-          0,
-        ],
+        "score": 0,
       }
     }
     deck={

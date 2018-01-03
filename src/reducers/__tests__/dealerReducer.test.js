@@ -44,11 +44,4 @@ describe("Test dealerReducer reducer", () => {
     store.dispatch(clearHands());
     expect(store.getState().hand).toEqual([]);
   });
-
-  it("flips the dealers hand", () => {
-    const store = createStore(dealerReducer);
-    store.dispatch(dealerTakeCard({ card: "SA" }));
-    store.dispatch(dealerTakeCard({ card: "CQ" }));
-    store.dispatch(flipHand());
-  });
 });

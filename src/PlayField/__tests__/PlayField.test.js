@@ -4,6 +4,7 @@ import { shallow } from "enzyme";
 import PlayField from "../PlayField";
 
 import mockStore from "../../mockStore";
+import { dealerAddCard } from "../../reducers/dealerHelpers";
 
 const mockProps = {
   ...mockStore,

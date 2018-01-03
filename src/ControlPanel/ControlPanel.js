@@ -46,6 +46,8 @@ export default class ControlPanel extends Component {
       nextProps.player.busted[index] ||
       nextProps.player.hasBlackjack[index];
 
+    if (!nextProps.turn.isPlaying) return;
+    // Deal the cards
     if (
       nextProps.turn.isPlaying &&
       (nextProps.dealer.hand.length < 1 || nextProps.player.hands[0].length < 2)
@@ -54,13 +56,13 @@ export default class ControlPanel extends Component {
     } else if (nextProps.turn.playersTurn) {
       // It's the player's turn, but check if that should change
       if (dealersTurn) {
-        nextProps.nextPlayer();
+        nextProps.dealerTurn();
       }
     } else {
-      if (dealersTurn && nextProps.turn.isPlaying) {
+      if (dealersTurn && !nextProps.turn.playersTurn) {
         //Take dealer's turn
         console.log("Looks like it's the dealer's turn:");
-        nextProps.nextPlayer();
+        nextProps.dealerTurn();
 
         // It's still the dealer's turn - hit until 17
         if (nextProps.dealer.score < 17) {
@@ -69,9 +71,10 @@ export default class ControlPanel extends Component {
             nextProps.loseBet();
             return;
           }
-          nextProps.drawOne();
+          nextProps.hitOnClick();
           return;
         } else {
+          nextProps.stop();
           console.log(
             "Draw loop over, comparing scores:",
             nextProps.dealer.score,
@@ -96,16 +99,13 @@ export default class ControlPanel extends Component {
             );
             return;
           } else {
-            // We know the player isn't busted, the dealer isn't busted, and that the player has a lower scoring hand
             nextProps.loseBet();
             return;
           }
         }
-        // reset player
       } else {
-        // If returning above, unwrap this
         // The turn has ended, awaiting user input
-        // nextProps.nextPlayer()
+        nextProps.nextPlayer();
       }
     }
   }

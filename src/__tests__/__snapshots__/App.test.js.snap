@@ -33,18 +33,12 @@ ShallowWrapper {
       "dealOnClick": [Function],
       "dealer": Object {
         "avatar": "./images/dealer.png",
-        "busted": Array [
-          false,
-        ],
+        "busted": false,
         "hand": Array [],
         "handFlipped": false,
-        "hasBlackjack": Array [
-          false,
-        ],
+        "hasBlackjack": false,
         "name": "Dealer",
-        "score": Array [
-          0,
-        ],
+        "score": 0,
       },
       "dealerTurn": [Function],
       "deck": Object {
@@ -90,6 +84,7 @@ ShallowWrapper {
       "setName": [Function],
       "splitOnClick": [Function],
       "standOnClick": [Function],
+      "stop": [Function],
       "store": Object {
         "dispatch": [Function],
         "getState": [Function],
@@ -140,18 +135,12 @@ ShallowWrapper {
         "dealOnClick": [Function],
         "dealer": Object {
           "avatar": "./images/dealer.png",
-          "busted": Array [
-            false,
-          ],
+          "busted": false,
           "hand": Array [],
           "handFlipped": false,
-          "hasBlackjack": Array [
-            false,
-          ],
+          "hasBlackjack": false,
           "name": "Dealer",
-          "score": Array [
-            0,
-          ],
+          "score": 0,
         },
         "dealerTurn": [Function],
         "deck": Object {
@@ -197,6 +186,7 @@ ShallowWrapper {
         "setName": [Function],
         "splitOnClick": [Function],
         "standOnClick": [Function],
+        "stop": [Function],
         "store": Object {
           "dispatch": [Function],
           "getState": [Function],
