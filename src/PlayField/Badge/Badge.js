@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import "./badge.css";
 
+import FontAwesome from "react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
 
 const MIN_BET = 5;
@@ -49,9 +50,11 @@ export default class Badge extends Component {
                 disabled={this.props.currentBet <= MIN_BET}
                 onClick={this.onDecrement}
               >
-                &ndash;
+                <FontAwesome name="minus" />
               </button>
-              <button onClick={this.onIncrement}>+</button>
+              <button onClick={this.onIncrement}>
+                <FontAwesome name="plus" />
+              </button>
             </div>
             Current bet: ${this.props.currentBet}
           </Col>
