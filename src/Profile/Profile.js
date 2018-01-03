@@ -20,8 +20,8 @@ export default class Profile extends Component {
   };
 
   onClick = () => {
-    this.props.setName({ name: this.state.playerName });
-    this.props.setAvatar({ avatar: this.state.playerAvatar });
+    this.props.setName(this.state.playerName);
+    this.props.setAvatar(this.state.playerAvatar);
   };
 
   render() {
