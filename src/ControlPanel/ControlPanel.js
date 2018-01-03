@@ -180,7 +180,7 @@ export default class ControlPanel extends Component {
           block
           disabled={
             this.props.turn.isPlaying &&
-            this.props.player.balance - this.state.currentBet > 0
+            this.props.player.balance - this.props.player.currentBet > 0
           }
           onClick={this.props.dealOnClick}
         >
@@ -198,6 +198,7 @@ ControlPanel.propTypes = {
     handIndex: PropTypes.number,
     playerStands: PropTypes.array,
     busted: PropTypes.array,
+    currentBet: PropTypes.number,
     hasBlackjack: PropTypes.array
   }),
   dealer: PropTypes.shape({
