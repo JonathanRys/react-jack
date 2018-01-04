@@ -25,6 +25,8 @@ ShallowWrapper {
         "drawnCard": null,
       }
     }
+    dispatch={[MockFunction]}
+    getState={[MockFunction]}
     giveCard={[MockFunction]}
     giveDealerCard={[MockFunction]}
     player={
@@ -62,6 +64,7 @@ ShallowWrapper {
         "splitHand": false,
       }
     }
+    subscribe={[MockFunction]}
     turn={
       Object {
         "errMsg": "",
@@ -542,6 +545,592 @@ ShallowWrapper {
                   ],
                 ],
                 "playersTurn": 0,
+                "takeCard": [MockFunction],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "avatar": "./images/default.png",
+                "balance": 500,
+                "currentBet": 5,
+                "dealer": false,
+                "flipped": true,
+                "name": "Player1",
+                "score": undefined,
+                "setBet": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Test PlayField component tests playersTurn 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PlayField
+    clearCard={[MockFunction]}
+    dealer={
+      Object {
+        "avatar": "./images/dealer.png",
+        "busted": false,
+        "hand": Array [
+          "HA",
+          "C5",
+        ],
+        "hasBlackjack": false,
+        "name": "Dealer",
+        "score": 0,
+      }
+    }
+    deck={
+      Object {
+        "deck": Array [],
+        "drawnCard": null,
+      }
+    }
+    dispatch={[MockFunction]}
+    getState={[MockFunction]}
+    giveCard={[MockFunction]}
+    giveDealerCard={[MockFunction]}
+    player={
+      Object {
+        "avatar": "./images/default.png",
+        "balance": 500,
+        "busted": Array [
+          false,
+        ],
+        "currentBet": 5,
+        "hands": Array [
+          Array [
+            "SA",
+            "CK",
+          ],
+          Array [
+            "D2",
+            "HJ",
+          ],
+        ],
+        "hasBlackjack": Array [
+          false,
+        ],
+        "hasInsurance": Array [
+          false,
+        ],
+        "name": "Player1",
+        "playerIndex": 1,
+        "playerStands": Array [
+          false,
+        ],
+        "score": Array [
+          0,
+        ],
+        "splitHand": false,
+      }
+    }
+    subscribe={[MockFunction]}
+    turn={
+      Object {
+        "errMsg": "",
+        "error": false,
+        "isPlaying": true,
+        "numPlayers": 2,
+        "playersTurn": 1,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Row
+          tag="div"
+        >
+          <Badge
+            avatar="./images/dealer.png"
+            dealer={true}
+            flipped={false}
+            name="Dealer"
+            score={0}
+          />
+          <Dealer
+            drawnCard={null}
+            flipped={false}
+            hand={
+              Array [
+                "HA",
+                "C5",
+              ]
+            }
+            takeCard={[MockFunction]}
+          />
+        </Row>,
+        <Row
+          tag="div"
+        >
+          <Deck />
+           
+        </Row>,
+        <Row
+          tag="div"
+        >
+          <Player
+            drawnCard={null}
+            hands={
+              Array [
+                Array [
+                  "SA",
+                  "CK",
+                ],
+                Array [
+                  "D2",
+                  "HJ",
+                ],
+              ]
+            }
+            playersTurn={1}
+            takeCard={[MockFunction]}
+          />
+          <Badge
+            avatar="./images/default.png"
+            balance={500}
+            currentBet={5}
+            dealer={false}
+            flipped={true}
+            name="Player1"
+            score={undefined}
+            setBet={undefined}
+          />
+        </Row>,
+      ],
+      "className": "PlayField_main",
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Badge
+              avatar="./images/dealer.png"
+              dealer={true}
+              flipped={false}
+              name="Dealer"
+              score={0}
+            />,
+            <Dealer
+              drawnCard={null}
+              flipped={false}
+              hand={
+                Array [
+                  "HA",
+                  "C5",
+                ]
+              }
+              takeCard={[MockFunction]}
+            />,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "avatar": "./images/dealer.png",
+              "dealer": true,
+              "flipped": false,
+              "name": "Dealer",
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "drawnCard": null,
+              "flipped": false,
+              "hand": Array [
+                "HA",
+                "C5",
+              ],
+              "takeCard": [MockFunction],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Deck />,
+            " ",
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " ",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Player
+              drawnCard={null}
+              hands={
+                Array [
+                  Array [
+                    "SA",
+                    "CK",
+                  ],
+                  Array [
+                    "D2",
+                    "HJ",
+                  ],
+                ]
+              }
+              playersTurn={1}
+              takeCard={[MockFunction]}
+            />,
+            <Badge
+              avatar="./images/default.png"
+              balance={500}
+              currentBet={5}
+              dealer={false}
+              flipped={true}
+              name="Player1"
+              score={undefined}
+              setBet={undefined}
+            />,
+          ],
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "drawnCard": null,
+              "hands": Array [
+                Array [
+                  "SA",
+                  "CK",
+                ],
+                Array [
+                  "D2",
+                  "HJ",
+                ],
+              ],
+              "playersTurn": 1,
+              "takeCard": [MockFunction],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "avatar": "./images/default.png",
+              "balance": 500,
+              "currentBet": 5,
+              "dealer": false,
+              "flipped": true,
+              "name": "Player1",
+              "score": undefined,
+              "setBet": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row
+            tag="div"
+          >
+            <Badge
+              avatar="./images/dealer.png"
+              dealer={true}
+              flipped={false}
+              name="Dealer"
+              score={0}
+            />
+            <Dealer
+              drawnCard={null}
+              flipped={false}
+              hand={
+                Array [
+                  "HA",
+                  "C5",
+                ]
+              }
+              takeCard={[MockFunction]}
+            />
+          </Row>,
+          <Row
+            tag="div"
+          >
+            <Deck />
+             
+          </Row>,
+          <Row
+            tag="div"
+          >
+            <Player
+              drawnCard={null}
+              hands={
+                Array [
+                  Array [
+                    "SA",
+                    "CK",
+                  ],
+                  Array [
+                    "D2",
+                    "HJ",
+                  ],
+                ]
+              }
+              playersTurn={1}
+              takeCard={[MockFunction]}
+            />
+            <Badge
+              avatar="./images/default.png"
+              balance={500}
+              currentBet={5}
+              dealer={false}
+              flipped={true}
+              name="Player1"
+              score={undefined}
+              setBet={undefined}
+            />
+          </Row>,
+        ],
+        "className": "PlayField_main",
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Badge
+                avatar="./images/dealer.png"
+                dealer={true}
+                flipped={false}
+                name="Dealer"
+                score={0}
+              />,
+              <Dealer
+                drawnCard={null}
+                flipped={false}
+                hand={
+                  Array [
+                    "HA",
+                    "C5",
+                  ]
+                }
+                takeCard={[MockFunction]}
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "avatar": "./images/dealer.png",
+                "dealer": true,
+                "flipped": false,
+                "name": "Dealer",
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "drawnCard": null,
+                "flipped": false,
+                "hand": Array [
+                  "HA",
+                  "C5",
+                ],
+                "takeCard": [MockFunction],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Deck />,
+              " ",
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " ",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Player
+                drawnCard={null}
+                hands={
+                  Array [
+                    Array [
+                      "SA",
+                      "CK",
+                    ],
+                    Array [
+                      "D2",
+                      "HJ",
+                    ],
+                  ]
+                }
+                playersTurn={1}
+                takeCard={[MockFunction]}
+              />,
+              <Badge
+                avatar="./images/default.png"
+                balance={500}
+                currentBet={5}
+                dealer={false}
+                flipped={true}
+                name="Player1"
+                score={undefined}
+                setBet={undefined}
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "drawnCard": null,
+                "hands": Array [
+                  Array [
+                    "SA",
+                    "CK",
+                  ],
+                  Array [
+                    "D2",
+                    "HJ",
+                  ],
+                ],
+                "playersTurn": 1,
                 "takeCard": [MockFunction],
               },
               "ref": null,

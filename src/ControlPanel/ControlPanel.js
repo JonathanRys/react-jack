@@ -127,6 +127,7 @@ export default class ControlPanel extends Component {
       this.props.dealer.hand[0].slice(1) === "A" &&
       !this.props.player.hasInsurance[this.props.player.handIndex];
 
+    // Would it be more readable to use Array.map here?
     return (
       <Form xs="4" sm="6" md="8" lg="12" className="ControlPanel_main">
         <Button

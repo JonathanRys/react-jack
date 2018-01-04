@@ -12,7 +12,6 @@ import Badge from "./Badge/Badge";
 
 export default class PlayField extends Component {
   render() {
-    console.log("PlayField props:", this.props);
     const player = this.props.player;
     const dealer = this.props.dealer;
     const index = player.handIndex;

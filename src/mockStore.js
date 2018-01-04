@@ -33,5 +33,8 @@ export default {
   deck: {
     drawnCard: null,
     deck: []
-  }
+  },
+  subscribe: jest.fn(),
+  dispatch: jest.fn(),
+  getState: jest.fn()
 };

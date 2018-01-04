@@ -78,7 +78,7 @@ describe("Test playerReducer reducer", () => {
   it("credit given amount to player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch(buyChips({ newChips: 500 }));
-    expect(store.getState().balance).toEqual(1000);
+    expect(store.getState().balance).toEqual(995);
   });
 
   it("set the current bet", () => {
@@ -91,7 +91,7 @@ describe("Test playerReducer reducer", () => {
     const store = createStore(playerReducer);
     store.dispatch(setBet({ newBet: 5 }));
     store.dispatch(loseBet());
-    expect(store.getState().balance).toEqual(495);
+    expect(store.getState().balance).toEqual(490);
   });
 
   it("adds the current bet times a multiplier to the player's balance", () => {
@@ -99,10 +99,10 @@ describe("Test playerReducer reducer", () => {
     store.dispatch(setBet({ newBet: 5 }));
     // test WIN_BET
     store.dispatch(winBet());
-    expect(store.getState().balance).toEqual(505);
+    expect(store.getState().balance).toEqual(500);
     // Test WIN_BET with a multiplier
     store.dispatch(winBet({ multiplier: 1.5 }));
-    expect(store.getState().balance).toEqual(512.5);
+    expect(store.getState().balance).toEqual(507.5);
     // Test RESET
     store.dispatch(clearHands());
     expect(store.getState()).toEqual({
@@ -111,7 +111,7 @@ describe("Test playerReducer reducer", () => {
       playerIndex: 1,
       handIndex: 0,
 
-      balance: 512.5,
+      balance: 507.5,
       currentBet: 5,
 
       hands: [[]],
@@ -135,13 +135,13 @@ describe("Test playerReducer reducer", () => {
   it("credits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch(credit({ delta: 50 }));
-    expect(store.getState().balance).toEqual(550);
+    expect(store.getState().balance).toEqual(545);
   });
 
   it("debits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch(credit({ delta: 50 }));
     store.dispatch(debit({ delta: 25 }));
-    expect(store.getState().balance).toEqual(525);
+    expect(store.getState().balance).toEqual(520);
   });
 });

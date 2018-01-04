@@ -19,4 +19,11 @@ describe("Test PlayField component", () => {
     const component = shallow(<PlayField {...testProps} />);
     expect(component).toMatchSnapshot();
   });
+
+  it("tests playersTurn", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.playersTurn = 1;
+    const component = shallow(<PlayField {...testProps} />);
+    expect(component).toMatchSnapshot();
+  });
 });

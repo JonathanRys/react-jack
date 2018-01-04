@@ -6,7 +6,7 @@ const initialState = {
   playerIndex: 1,
   handIndex: 0,
 
-  balance: 500,
+  balance: 495,
   currentBet: 5,
 
   hands: [[]],

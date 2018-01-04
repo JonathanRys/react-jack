@@ -54,7 +54,7 @@ ShallowWrapper {
       "nextPlayer": [Function],
       "player": Object {
         "avatar": "./images/default.png",
-        "balance": 500,
+        "balance": 495,
         "busted": Array [
           false,
         ],
@@ -156,7 +156,7 @@ ShallowWrapper {
         "nextPlayer": [Function],
         "player": Object {
           "avatar": "./images/default.png",
-          "balance": 500,
+          "balance": 495,
           "busted": Array [
             false,
           ],
