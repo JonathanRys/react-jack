@@ -159,7 +159,7 @@ ShallowWrapper {
         <Button
           block={true}
           color="primary"
-          disabled={false}
+          disabled={true}
           onClick={[MockFunction]}
           size="md"
           tag="button"
@@ -367,7 +367,7 @@ ShallowWrapper {
             " Deal",
           ],
           "color": "primary",
-          "disabled": false,
+          "disabled": true,
           "onClick": [MockFunction],
           "size": "md",
           "tag": "button",
@@ -467,7 +467,7 @@ ShallowWrapper {
           <Button
             block={true}
             color="primary"
-            disabled={false}
+            disabled={true}
             onClick={[MockFunction]}
             size="md"
             tag="button"
@@ -675,7 +675,7 @@ ShallowWrapper {
               " Deal",
             ],
             "color": "primary",
-            "disabled": false,
+            "disabled": true,
             "onClick": [MockFunction],
             "size": "md",
             "tag": "button",

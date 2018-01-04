@@ -45,28 +45,28 @@ export default function getScore(state) {
 
   // Return a new object with the updated score
   return {
-    score: [
-      ...state.score.slice(0, index),
-      newScore,
-      ...state.score.slice(index + 1)
-    ],
-    busted: [
-      ...state.busted.slice(0, index),
-      newScore > 21,
-      ...state.busted.slice(index + 1)
-    ],
-    hasBlackjack: [
-      ...state.hasBlackjack.slice(0, index),
+    score: replaceAtIndex(state.score, newScore, index),
+    busted: replaceAtIndex(state.busted, newScore > 21, index),
+    hasBlackjack: replaceAtIndex(
+      state.hasBlackjack,
       newScore === 21 && state.hands[index].length === 2,
-      ...state.hasBlackjack.slice(index + 1)
-    ]
+      index
+    )
   };
+}
+
+export function replaceAtIndex(parentArray, itemToAdd, index) {
+  return [
+    ...parentArray.slice(0, index),
+    itemToAdd,
+    ...parentArray.slice(index + 1)
+  ];
 }
 
 export function addCard(hands, card, index = 0) {
   const newHand = [...hands[index], card];
 
   return {
-    hands: [...hands.slice(0, index), newHand, ...hands.slice(index + 1)]
+    hands: replaceAtIndex(hands, newHand, index)
   };
 }
