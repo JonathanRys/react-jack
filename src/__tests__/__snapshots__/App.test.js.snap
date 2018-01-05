@@ -29,6 +29,7 @@ ShallowWrapper {
     "props": Object {
       "buyChips": [Function],
       "buyInsuranceOnClick": [Function],
+      "clearCard": [Function],
       "clearHands": [Function],
       "dealOnClick": [Function],
       "dealer": Object {
@@ -52,6 +53,7 @@ ShallowWrapper {
       "keepDealing": [Function],
       "loseBet": [Function],
       "nextPlayer": [Function],
+      "play": [Function],
       "player": Object {
         "avatar": "./images/default.png",
         "balance": 495,
@@ -131,6 +133,7 @@ ShallowWrapper {
       "props": Object {
         "buyChips": [Function],
         "buyInsuranceOnClick": [Function],
+        "clearCard": [Function],
         "clearHands": [Function],
         "dealOnClick": [Function],
         "dealer": Object {
@@ -154,6 +157,7 @@ ShallowWrapper {
         "keepDealing": [Function],
         "loseBet": [Function],
         "nextPlayer": [Function],
+        "play": [Function],
         "player": Object {
           "avatar": "./images/default.png",
           "balance": 495,

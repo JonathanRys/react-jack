@@ -59,6 +59,9 @@ const mapDispatchToProps = dispatch => {
     loseBet: () => {
       dispatch(loseBet());
     },
+    play: () => {
+      dispatch(play());
+    },
     stop: () => {
       dispatch(stop());
     },
@@ -78,13 +81,14 @@ const mapDispatchToProps = dispatch => {
       // Not sure what to do here yet
     },
     doubleDownOnClick: () => {
+      // Thunk this
       dispatchAll(dispatch, [drawOne, dealerTurn]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());
     },
     dealOnClick: () => {
-      dispatchAll(dispatch, [clearHands, play, newDeck, shuffle]);
+      dispatchAll(dispatch, [clearHands, newDeck, shuffle]);
     },
     keepDealing: () => {
       dispatchAll(dispatch, [nextPlayer, drawOne]);
@@ -95,6 +99,9 @@ const mapDispatchToProps = dispatch => {
     },
     giveDealerCard: card => {
       dispatch(dealerTakeCard({ card }));
+      dispatch(clearCard());
+    },
+    clearCard: () => {
       dispatch(clearCard());
     },
     clearHands: () => {

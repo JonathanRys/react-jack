@@ -11,10 +11,12 @@ const MIN_BET = 5;
 export default class Badge extends Component {
   onIncrement = () => {
     this.props.setBet(this.props.currentBet + 1);
+    this.props.buyChips(-1);
   };
 
   onDecrement = () => {
     this.props.setBet(this.props.currentBet - 1);
+    this.props.buyChips(1);
   };
 
   render() {
@@ -72,5 +74,6 @@ Badge.propTypes = {
   currentBet: PropTypes.number,
   dealer: PropTypes.bool.isRequired,
   flipped: PropTypes.bool.isRequired,
-  setBet: PropTypes.func
+  setBet: PropTypes.func,
+  buyChips: PropTypes.func
 };

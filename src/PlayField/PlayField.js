@@ -32,6 +32,7 @@ export default class PlayField extends Component {
               this.props.turn.playersTurn ? null : this.props.deck.drawnCard
             }
             takeCard={this.props.giveDealerCard}
+            isPlaying={this.props.turn.isPlaying}
           />
         </Row>
         <Row>
@@ -48,6 +49,7 @@ export default class PlayField extends Component {
                 : null
             }
             takeCard={this.props.giveCard}
+            isPlaying={this.props.turn.isPlaying}
           />
           <Badge
             name={player.name}
@@ -55,6 +57,7 @@ export default class PlayField extends Component {
             score={player.score[index]}
             balance={player.balance}
             currentBet={player.currentBet}
+            buyChips={this.props.buyChips}
             setBet={this.props.setBet}
             dealer={false}
             flipped={true}

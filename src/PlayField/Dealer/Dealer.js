@@ -5,7 +5,7 @@ import Hand from "../Hand/Hand";
 
 export default class Dealer extends Component {
   componentWillReceiveProps(nextProps) {
-    if (nextProps.drawnCard) {
+    if (nextProps.drawnCard && nextProps.isPlaying) {
       nextProps.takeCard(nextProps.drawnCard);
     }
   }
@@ -25,5 +25,6 @@ Dealer.propTypes = {
   hand: PropTypes.array.isRequired,
   flipped: PropTypes.bool.isRequired,
   drawnCard: PropTypes.string,
-  takeCard: PropTypes.func.isRequired
+  takeCard: PropTypes.func.isRequired,
+  isPlaying: PropTypes.bool.isRequired
 };

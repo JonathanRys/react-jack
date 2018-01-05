@@ -58,9 +58,6 @@ describe("Test the App component", () => {
     const component = shallow(<App store={store} />);
 
     component.props().dealOnClick();
-    expect(store.getState().turn.isPlaying).toEqual(true);
-    component.props().stop();
-    expect(store.getState().turn.isPlaying).toEqual(false);
   });
 
   it("sets dealers turn", () => {
@@ -118,7 +115,6 @@ describe("Test the App component", () => {
 
     // Initial expectations
     expect(store.getState().player.hands[0]).toEqual([]);
-    expect(store.getState().turn.isPlaying).toEqual(false);
     expect(store.getState().deck.deck).toEqual([]);
 
     store.dispatch({ type: "TAKE_CARD", payload: { card: "H8" } });
@@ -131,7 +127,6 @@ describe("Test the App component", () => {
 
     component.props().dealOnClick();
     expect(store.getState().player.hands[0]).toEqual([]);
-    expect(store.getState().turn.isPlaying).toEqual(true);
     expect(store.getState().deck.deck).not.toEqual([]);
     expect(store.getState().deck.deck).not.toEqual(unShuffledDeck);
 

@@ -107,6 +107,7 @@ ShallowWrapper {
                 "C5",
               ]
             }
+            isPlaying={true}
             takeCard={[MockFunction]}
           />
         </Row>,
@@ -133,12 +134,14 @@ ShallowWrapper {
                 ],
               ]
             }
+            isPlaying={true}
             playersTurn={0}
             takeCard={[MockFunction]}
           />
           <Badge
             avatar="./images/default.png"
             balance={500}
+            buyChips={undefined}
             currentBet={5}
             dealer={false}
             flipped={true}
@@ -175,6 +178,7 @@ ShallowWrapper {
                   "C5",
                 ]
               }
+              isPlaying={true}
               takeCard={[MockFunction]}
             />,
           ],
@@ -208,6 +212,7 @@ ShallowWrapper {
                 "HA",
                 "C5",
               ],
+              "isPlaying": true,
               "takeCard": [MockFunction],
             },
             "ref": null,
@@ -263,12 +268,14 @@ ShallowWrapper {
                   ],
                 ]
               }
+              isPlaying={true}
               playersTurn={0}
               takeCard={[MockFunction]}
             />,
             <Badge
               avatar="./images/default.png"
               balance={500}
+              buyChips={undefined}
               currentBet={5}
               dealer={false}
               flipped={true}
@@ -297,6 +304,7 @@ ShallowWrapper {
                   "HJ",
                 ],
               ],
+              "isPlaying": true,
               "playersTurn": 0,
               "takeCard": [MockFunction],
             },
@@ -311,6 +319,7 @@ ShallowWrapper {
             "props": Object {
               "avatar": "./images/default.png",
               "balance": 500,
+              "buyChips": undefined,
               "currentBet": 5,
               "dealer": false,
               "flipped": true,
@@ -354,6 +363,7 @@ ShallowWrapper {
                   "C5",
                 ]
               }
+              isPlaying={true}
               takeCard={[MockFunction]}
             />
           </Row>,
@@ -380,12 +390,14 @@ ShallowWrapper {
                   ],
                 ]
               }
+              isPlaying={true}
               playersTurn={0}
               takeCard={[MockFunction]}
             />
             <Badge
               avatar="./images/default.png"
               balance={500}
+              buyChips={undefined}
               currentBet={5}
               dealer={false}
               flipped={true}
@@ -422,6 +434,7 @@ ShallowWrapper {
                     "C5",
                   ]
                 }
+                isPlaying={true}
                 takeCard={[MockFunction]}
               />,
             ],
@@ -455,6 +468,7 @@ ShallowWrapper {
                   "HA",
                   "C5",
                 ],
+                "isPlaying": true,
                 "takeCard": [MockFunction],
               },
               "ref": null,
@@ -510,12 +524,14 @@ ShallowWrapper {
                     ],
                   ]
                 }
+                isPlaying={true}
                 playersTurn={0}
                 takeCard={[MockFunction]}
               />,
               <Badge
                 avatar="./images/default.png"
                 balance={500}
+                buyChips={undefined}
                 currentBet={5}
                 dealer={false}
                 flipped={true}
@@ -544,6 +560,7 @@ ShallowWrapper {
                     "HJ",
                   ],
                 ],
+                "isPlaying": true,
                 "playersTurn": 0,
                 "takeCard": [MockFunction],
               },
@@ -558,6 +575,7 @@ ShallowWrapper {
               "props": Object {
                 "avatar": "./images/default.png",
                 "balance": 500,
+                "buyChips": undefined,
                 "currentBet": 5,
                 "dealer": false,
                 "flipped": true,
@@ -693,6 +711,7 @@ ShallowWrapper {
                 "C5",
               ]
             }
+            isPlaying={true}
             takeCard={[MockFunction]}
           />
         </Row>,
@@ -719,12 +738,14 @@ ShallowWrapper {
                 ],
               ]
             }
+            isPlaying={true}
             playersTurn={1}
             takeCard={[MockFunction]}
           />
           <Badge
             avatar="./images/default.png"
             balance={500}
+            buyChips={undefined}
             currentBet={5}
             dealer={false}
             flipped={true}
@@ -761,6 +782,7 @@ ShallowWrapper {
                   "C5",
                 ]
               }
+              isPlaying={true}
               takeCard={[MockFunction]}
             />,
           ],
@@ -794,6 +816,7 @@ ShallowWrapper {
                 "HA",
                 "C5",
               ],
+              "isPlaying": true,
               "takeCard": [MockFunction],
             },
             "ref": null,
@@ -849,12 +872,14 @@ ShallowWrapper {
                   ],
                 ]
               }
+              isPlaying={true}
               playersTurn={1}
               takeCard={[MockFunction]}
             />,
             <Badge
               avatar="./images/default.png"
               balance={500}
+              buyChips={undefined}
               currentBet={5}
               dealer={false}
               flipped={true}
@@ -883,6 +908,7 @@ ShallowWrapper {
                   "HJ",
                 ],
               ],
+              "isPlaying": true,
               "playersTurn": 1,
               "takeCard": [MockFunction],
             },
@@ -897,6 +923,7 @@ ShallowWrapper {
             "props": Object {
               "avatar": "./images/default.png",
               "balance": 500,
+              "buyChips": undefined,
               "currentBet": 5,
               "dealer": false,
               "flipped": true,
@@ -940,6 +967,7 @@ ShallowWrapper {
                   "C5",
                 ]
               }
+              isPlaying={true}
               takeCard={[MockFunction]}
             />
           </Row>,
@@ -966,12 +994,14 @@ ShallowWrapper {
                   ],
                 ]
               }
+              isPlaying={true}
               playersTurn={1}
               takeCard={[MockFunction]}
             />
             <Badge
               avatar="./images/default.png"
               balance={500}
+              buyChips={undefined}
               currentBet={5}
               dealer={false}
               flipped={true}
@@ -1008,6 +1038,7 @@ ShallowWrapper {
                     "C5",
                   ]
                 }
+                isPlaying={true}
                 takeCard={[MockFunction]}
               />,
             ],
@@ -1041,6 +1072,7 @@ ShallowWrapper {
                   "HA",
                   "C5",
                 ],
+                "isPlaying": true,
                 "takeCard": [MockFunction],
               },
               "ref": null,
@@ -1096,12 +1128,14 @@ ShallowWrapper {
                     ],
                   ]
                 }
+                isPlaying={true}
                 playersTurn={1}
                 takeCard={[MockFunction]}
               />,
               <Badge
                 avatar="./images/default.png"
                 balance={500}
+                buyChips={undefined}
                 currentBet={5}
                 dealer={false}
                 flipped={true}
@@ -1130,6 +1164,7 @@ ShallowWrapper {
                     "HJ",
                   ],
                 ],
+                "isPlaying": true,
                 "playersTurn": 1,
                 "takeCard": [MockFunction],
               },
@@ -1144,6 +1179,7 @@ ShallowWrapper {
               "props": Object {
                 "avatar": "./images/default.png",
                 "balance": 500,
+                "buyChips": undefined,
                 "currentBet": 5,
                 "dealer": false,
                 "flipped": true,

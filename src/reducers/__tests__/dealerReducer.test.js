@@ -32,13 +32,6 @@ describe("Test dealerReducer reducer", () => {
     expect(store.getState().hasBlackjack).toEqual(true);
   });
 
-  it("takes multiple cards and calculates the new score correctly with blackjack", () => {
-    const store = createStore(dealerReducer);
-    store.dispatch(dealerTakeCard({ card: "SA" }));
-    store.dispatch(dealerTakeCard({ card: "CQ" }));
-    expect(store.getState().hand).toEqual(["SA", "CQ"]);
-  });
-
   it("clears the dealers hand", () => {
     const store = createStore(dealerReducer);
     store.dispatch(clearHands());

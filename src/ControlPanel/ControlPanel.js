@@ -6,108 +6,11 @@ import "./control_panel.css";
 import { Button, Form } from "reactstrap";
 import FontAwesome from "react-fontawesome";
 
-function solveForBlackjack(
-  hasBlackjack,
-  dealerHasBlackjack,
-  hasInsurance,
-  winBet,
-  loseBet
-) {
-  console.log(
-    "args:",
-    hasBlackjack,
-    dealerHasBlackjack,
-    hasInsurance,
-    winBet,
-    loseBet
-  );
-  // Curry this
-  if (hasBlackjack) {
-    if (dealerHasBlackjack) {
-      if (hasInsurance) {
-        loseBet();
-      }
-    } else {
-      winBet(1.5);
-    }
-  } else {
-    // Credit Player
-    winBet();
-  }
-}
+import gameEngine from "./gameEngine";
 
 export default class ControlPanel extends Component {
   componentWillReceiveProps(nextProps) {
-    // Game Logic
-    console.log("nextProps", nextProps);
-    const index = nextProps.player.handIndex;
-    const dealersTurn =
-      nextProps.player.playerStands[index] ||
-      nextProps.player.busted[index] ||
-      nextProps.player.hasBlackjack[index];
-
-    if (!nextProps.turn.isPlaying) return;
-    // Deal the cards
-    if (
-      nextProps.turn.isPlaying &&
-      (nextProps.dealer.hand.length < 1 || nextProps.player.hands[0].length < 2)
-    ) {
-      nextProps.keepDealing();
-    } else if (nextProps.turn.playersTurn) {
-      // It's the player's turn, but check if that should change
-      if (dealersTurn) {
-        nextProps.dealerTurn();
-      }
-    } else {
-      if (dealersTurn && !nextProps.turn.playersTurn) {
-        //Take dealer's turn
-        console.log("Looks like it's the dealer's turn:");
-        nextProps.dealerTurn();
-
-        // It's still the dealer's turn - hit until 17
-        if (nextProps.dealer.score < 17) {
-          // Don't bother drawing if the player is busted
-          if (nextProps.player.busted[index]) {
-            nextProps.loseBet();
-            return;
-          }
-          nextProps.hitOnClick();
-          return;
-        } else {
-          nextProps.stop();
-          console.log(
-            "Draw loop over, comparing scores:",
-            nextProps.dealer.score,
-            nextProps.player.score[index]
-          );
-          // Compare scores and debit/credit player
-          if (nextProps.player.busted[index]) {
-            nextProps.loseBet();
-            return;
-            // If it looks like the player won
-          } else if (
-            nextProps.dealer.busted ||
-            nextProps.player.score[index] < nextProps.dealer.score
-          ) {
-            //Check for blackjack
-            solveForBlackjack(
-              nextProps.player.hasBlackjack[index],
-              nextProps.dealer.hasBlackjack,
-              nextProps.player.hasInsurance[index],
-              nextProps.winBet,
-              nextProps.loseBet
-            );
-            return;
-          } else {
-            nextProps.loseBet();
-            return;
-          }
-        }
-      } else {
-        // The turn has ended, awaiting user input
-        nextProps.nextPlayer();
-      }
-    }
+    gameEngine(nextProps);
   }
 
   render() {

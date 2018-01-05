@@ -8,7 +8,8 @@ const mockProps = {
   flipped: true,
   drawnCard: null,
   takeCard: jest.fn(),
-  clearCard: jest.fn()
+  clearCard: jest.fn(),
+  isPlaying: true
 };
 
 describe("Test Hand component", () => {
@@ -31,6 +32,14 @@ describe("Test Hand component", () => {
     const testProps = { ...mockProps };
     testProps.drawnCard = "D5";
     testProps.flipped = false;
+    const component = shallow(<Dealer {...testProps} />);
+    expect(component).toMatchSnapshot();
+  });
+
+  it("doesn't draw a card if not playing", () => {
+    const testProps = { ...mockProps };
+    testProps.drawnCard = "S7";
+    testProps.isPlaying = false;
     const component = shallow(<Dealer {...testProps} />);
     expect(component).toMatchSnapshot();
   });
