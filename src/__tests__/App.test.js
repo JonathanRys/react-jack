@@ -8,7 +8,8 @@ import rootReducer from "../reducers/index";
 
 describe("Test the App component", () => {
   it("renders without crashing", () => {
-    const component = shallow(<App store={createStore(rootReducer)} />);
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
     expect(component).toMatchSnapshot();
   });
 
@@ -53,19 +54,21 @@ describe("Test the App component", () => {
     expect(store.getState().player.balance).toEqual(990);
   });
 
-  it("stops playing the game", () => {
+  it("starts and stops playing the game", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
-    component.props().dealOnClick();
+    component.props().play();
+    expect(store.getState().turn.isPlaying).toEqual(true);
+
+    component.props().stop();
+    expect(store.getState().turn.isPlaying).toEqual(false);
   });
 
   it("sets dealers turn", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
-    component.props().nextPlayer();
-    expect(store.getState().turn.playersTurn).toEqual(1);
     component.props().dealerTurn();
     expect(store.getState().turn.playersTurn).toEqual(0);
   });
@@ -91,13 +94,10 @@ describe("Test the App component", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
-    expect(store.getState().turn.playersTurn).toEqual(0);
-    component.props().nextPlayer();
-    expect(store.getState().deck.drawnCard).toEqual(null);
     expect(store.getState().turn.playersTurn).toEqual(1);
     component.props().doubleDownOnClick();
     expect(store.getState().deck.drawnCard).not.toEqual(null);
-    expect(store.getState().turn.playersTurn).toEqual(0);
+    expect(store.getState().turn.playersTurn).toEqual(1);
   });
 
   it("buys insurance on click", () => {
@@ -132,7 +132,7 @@ describe("Test the App component", () => {
 
     component.props().keepDealing();
     expect(store.getState().deck.drawnCard).not.toEqual("");
-    expect(store.getState().turn.playersTurn).toEqual(1);
+    expect(store.getState().turn.playersTurn).toEqual(0);
   });
 
   it("takes player card from draw pile", () => {
@@ -159,6 +159,18 @@ describe("Test the App component", () => {
 
     component.props().giveDealerCard(drawnCard);
     expect(store.getState().dealer.hand).toEqual([drawnCard]);
+    expect(store.getState().deck.drawnCard).toEqual(null);
+  });
+
+  it("clears the drawnCard", () => {
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
+
+    component.props().hitOnClick();
+
+    expect(store.getState().deck.drawnCard).not.toEqual(null);
+
+    component.props().clearCard();
     expect(store.getState().deck.drawnCard).toEqual(null);
   });
 

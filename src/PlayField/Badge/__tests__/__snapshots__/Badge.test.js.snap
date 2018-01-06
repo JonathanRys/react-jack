@@ -7,7 +7,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Badge
     avatar="../images/default.png"
     balance={500}
-    clearCard={[MockFunction]}
     currentBet={5}
     dealer={true}
     flipped={false}
@@ -1072,7 +1071,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Badge
     avatar="../images/default.png"
     balance={500}
-    clearCard={[MockFunction]}
     currentBet={5}
     dealer={false}
     flipped={false}

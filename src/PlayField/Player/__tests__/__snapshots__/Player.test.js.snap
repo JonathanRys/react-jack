@@ -1,71 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Hand component doesn't draw a card if not playing 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Player
-    clearCard={[MockFunction]}
-    drawnCard="S7"
-    hands={
-      Array [
-        Array [
-          "SA",
-          "SJ",
-        ],
-      ]
-    }
-    isPlaying={false}
-    takeCard={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Array [
-    <Hand
-      dealer={false}
-      hand={
-        Array [
-          "SA",
-          "SJ",
-        ]
-      }
-    />,
-  ],
-  Symbol(enzyme.__nodes__): Array [
-    Array [
-      <Hand
-        dealer={false}
-        hand={
-          Array [
-            "SA",
-            "SJ",
-          ]
-        }
-      />,
-    ],
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
 exports[`Test Hand component matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Player
-    clearCard={[MockFunction]}
-    drawnCard={null}
     hands={
       Array [
         Array [
@@ -74,67 +13,6 @@ ShallowWrapper {
         ],
       ]
     }
-    isPlaying={true}
-    takeCard={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Array [
-    <Hand
-      dealer={false}
-      hand={
-        Array [
-          "SA",
-          "SJ",
-        ]
-      }
-    />,
-  ],
-  Symbol(enzyme.__nodes__): Array [
-    Array [
-      <Hand
-        dealer={false}
-        hand={
-          Array [
-            "SA",
-            "SJ",
-          ]
-        }
-      />,
-    ],
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
-exports[`Test Hand component matches the snapshot after drawing a card 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Player
-    clearCard={[MockFunction]}
-    drawnCard="S7"
-    hands={
-      Array [
-        Array [
-          "SA",
-          "SJ",
-        ],
-      ]
-    }
-    isPlaying={true}
-    takeCard={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

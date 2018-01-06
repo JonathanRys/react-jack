@@ -19,6 +19,7 @@ describe("Test turnReducer reducer", () => {
 
   it("dispatches STOP action", () => {
     const store = createStore(turnReducer);
+    store.dispatch(play());
     store.dispatch(stop());
     expect(store.getState().isPlaying).toEqual(false);
   });
@@ -48,11 +49,11 @@ describe("Test turnReducer reducer", () => {
   it("dispatches NEXT_PLAYER action", () => {
     const store = createStore(turnReducer);
     store.dispatch(nextPlayer());
-    expect(store.getState().playersTurn).toEqual(1);
-    store.dispatch(nextPlayer());
     expect(store.getState().playersTurn).toEqual(0);
     store.dispatch(nextPlayer());
     expect(store.getState().playersTurn).toEqual(1);
+    store.dispatch(nextPlayer());
+    expect(store.getState().playersTurn).toEqual(0);
   });
 
   // it("dispatches HIT action", () => {

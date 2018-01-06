@@ -1,30 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import Hand from "../Hand/Hand";
 
-export default class Dealer extends Component {
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.drawnCard && nextProps.isPlaying) {
-      nextProps.takeCard(nextProps.drawnCard);
-    }
-  }
-
-  render() {
-    return (
-      <Hand
-        hand={this.props.hand}
-        dealer={true}
-        handFlipped={this.props.flipped}
-      />
-    );
-  }
+export default function Dealer({ hand, flipped }) {
+  return <Hand hand={hand} dealer={true} handFlipped={flipped} />;
 }
 
 Dealer.propTypes = {
   hand: PropTypes.array.isRequired,
-  flipped: PropTypes.bool.isRequired,
-  drawnCard: PropTypes.string,
-  takeCard: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+  flipped: PropTypes.bool.isRequired
 };

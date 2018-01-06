@@ -24,9 +24,9 @@ export default {
     playerStands: [false]
   },
   turn: {
-    isPlaying: true,
+    isPlaying: false,
     numPlayers: 2,
-    playersTurn: 0,
+    playersTurn: 1,
     error: false,
     errMsg: ""
   },

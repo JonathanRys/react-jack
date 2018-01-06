@@ -1,7 +1,7 @@
 const initialState = {
   isPlaying: false,
   numPlayers: 2,
-  playersTurn: 0,
+  playersTurn: 1,
   error: false,
   errMsg: ""
 };

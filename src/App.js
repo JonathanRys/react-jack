@@ -66,7 +66,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(stop());
     },
     dealerTurn: () => {
-      dispatchAll(dispatch, [dealerTurn]);
+      dispatch(dealerTurn());
     },
     nextPlayer: () => {
       dispatch(nextPlayer());
@@ -82,7 +82,7 @@ const mapDispatchToProps = dispatch => {
     },
     doubleDownOnClick: () => {
       // Thunk this
-      dispatchAll(dispatch, [drawOne, dealerTurn]);
+      dispatchAll(dispatch, [drawOne, stand]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());

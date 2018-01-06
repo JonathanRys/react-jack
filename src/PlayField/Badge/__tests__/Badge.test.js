@@ -10,7 +10,6 @@ const mockProps = {
   name: "Lester",
   avatar: "../images/default.png",
   score: 21,
-  clearCard: jest.fn(),
   balance: 500,
   currentBet: 5,
   dealer: false,
@@ -29,5 +28,29 @@ describe("Test Badge component", () => {
 
     const component = shallow(<Badge {...testProps} />);
     expect(component).toMatchSnapshot();
+  });
+
+  it("decreases the players balance when onDecrement is called", () => {
+    const testProps = { ...mockProps };
+    testProps.setBet = jest.fn();
+    testProps.buyChips = jest.fn();
+
+    const component = shallow(<Badge {...testProps} />);
+    component.instance().onDecrement();
+
+    expect(testProps.setBet).toHaveBeenCalledWith(4);
+    expect(testProps.buyChips).toHaveBeenCalledWith(1);
+  });
+
+  it("increases the players balance when onIncrement is called", () => {
+    const testProps = { ...mockProps };
+    testProps.setBet = jest.fn();
+    testProps.buyChips = jest.fn();
+
+    const component = shallow(<Badge {...testProps} />);
+    component.instance().onIncrement();
+
+    expect(testProps.setBet).toHaveBeenCalledWith(6);
+    expect(testProps.buyChips).toHaveBeenCalledWith(-1);
   });
 });

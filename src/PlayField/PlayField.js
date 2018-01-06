@@ -25,32 +25,14 @@ export default class PlayField extends Component {
             dealer={true}
             flipped={!this.props.turn.playersTurn}
           />
-          <Dealer
-            hand={dealer.hand}
-            flipped={!this.props.turn.playersTurn}
-            drawnCard={
-              this.props.turn.playersTurn ? null : this.props.deck.drawnCard
-            }
-            takeCard={this.props.giveDealerCard}
-            isPlaying={this.props.turn.isPlaying}
-          />
+          <Dealer hand={dealer.hand} flipped={!this.props.turn.playersTurn} />
         </Row>
         <Row>
           <Deck />{" "}
           {/* Really just an image I guess.  Maybe add some animation... */}
         </Row>
         <Row>
-          <Player
-            playersTurn={this.props.turn.playersTurn}
-            hands={player.hands}
-            drawnCard={
-              this.props.turn.playersTurn === player.playerIndex
-                ? this.props.deck.drawnCard
-                : null
-            }
-            takeCard={this.props.giveCard}
-            isPlaying={this.props.turn.isPlaying}
-          />
+          <Player hands={player.hands} />
           <Badge
             name={player.name}
             avatar={player.avatar}
