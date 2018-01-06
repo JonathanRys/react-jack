@@ -11,7 +11,7 @@ export default function gameEngine(nextProps) {
   const playerScore = nextProps.player.score[index];
 
   if (!nextProps.turn.isPlaying && !dealersTurn) {
-    console.log("Not Playing", nextProps);
+    // console.log("Not Playing", nextProps);
     if (
       nextProps.dealer.hand.length < 2 ||
       nextProps.player.hands[0].length < 2
@@ -48,7 +48,7 @@ export default function gameEngine(nextProps) {
   // Return if the game is over
   if (!nextProps.turn.isPlaying) return null;
 
-  console.log("Playing", nextProps);
+  // console.log("Playing", nextProps);
   if (nextProps.turn.playersTurn) {
     // It's the player's turn, but check if that should change
     if (dealersTurn) {
@@ -71,7 +71,7 @@ export default function gameEngine(nextProps) {
       return null;
     } else {
       // Stop playing and...
-      console.log("stop playing:", nextProps);
+      // console.log("stop playing:", nextProps);
       nextProps.stop();
       // Score the player's hand
       if (playerScore > 21) {

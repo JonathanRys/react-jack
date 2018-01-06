@@ -29,7 +29,6 @@ ShallowWrapper {
     "props": Object {
       "buyChips": [Function],
       "buyInsuranceOnClick": [Function],
-      "clearCard": [Function],
       "clearHands": [Function],
       "dealOnClick": [Function],
       "dealer": Object {
@@ -133,7 +132,6 @@ ShallowWrapper {
       "props": Object {
         "buyChips": [Function],
         "buyInsuranceOnClick": [Function],
-        "clearCard": [Function],
         "clearHands": [Function],
         "dealOnClick": [Function],
         "dealer": Object {

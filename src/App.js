@@ -101,9 +101,6 @@ const mapDispatchToProps = dispatch => {
       dispatch(dealerTakeCard({ card }));
       dispatch(clearCard());
     },
-    clearCard: () => {
-      dispatch(clearCard());
-    },
     clearHands: () => {
       dispatch(clearHands());
     }

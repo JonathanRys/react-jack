@@ -162,18 +162,6 @@ describe("Test the App component", () => {
     expect(store.getState().deck.drawnCard).toEqual(null);
   });
 
-  it("clears the drawnCard", () => {
-    const store = createStore(rootReducer);
-    const component = shallow(<App store={store} />);
-
-    component.props().hitOnClick();
-
-    expect(store.getState().deck.drawnCard).not.toEqual(null);
-
-    component.props().clearCard();
-    expect(store.getState().deck.drawnCard).toEqual(null);
-  });
-
   it("clears the hands", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
