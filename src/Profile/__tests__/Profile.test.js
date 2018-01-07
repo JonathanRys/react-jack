@@ -39,24 +39,39 @@ describe("Test Profile component", () => {
     expect(mockProps.setName).toHaveBeenCalledWith("Lester");
   });
 
-  it("handles onChange on the avatar", () => {
+  it("handles onClick on the male avatar", () => {
     const component = shallow(<Profile {...mockProps} />);
 
     const event = {
       target: {
-        name: "playerAvatar",
-        value: "./images/dealer.png"
+        getAttribute: () => "./images/male.png"
       }
     };
 
-    const input = component.find("#playerAvatar");
-    input.simulate("change", event);
-    expect(component.state().playerAvatar).toEqual("./images/dealer.png");
+    const input = component.find("#maleAvatar");
+    input.simulate("click", event);
+    expect(component.state().playerAvatar).toEqual("./images/male.png");
 
     const button = component.find(Button);
     button.simulate("click");
-    expect(mockProps.setAvatar).toHaveBeenCalledWith("./images/dealer.png");
+    expect(mockProps.setAvatar).toHaveBeenCalledWith("./images/male.png");
   });
 
-  it("handles onClick", () => {});
+  it("handles onClick on the female avatar", () => {
+    const component = shallow(<Profile {...mockProps} />);
+
+    const event = {
+      target: {
+        getAttribute: () => "./images/female.png"
+      }
+    };
+
+    const input = component.find("#femaleAvatar");
+    input.simulate("click", event);
+    expect(component.state().playerAvatar).toEqual("./images/female.png");
+
+    const button = component.find(Button);
+    button.simulate("click");
+    expect(mockProps.setAvatar).toHaveBeenCalledWith("./images/female.png");
+  });
 });

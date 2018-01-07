@@ -10,43 +10,29 @@ export default function gameEngine(nextProps) {
   const dealerScore = nextProps.dealer.score;
   const playerScore = nextProps.player.score[index];
 
-  if (!nextProps.turn.isPlaying && !dealersTurn) {
-    // console.log("Not Playing", nextProps);
-    if (
-      nextProps.dealer.hand.length < 2 ||
-      nextProps.player.hands[0].length < 2
-    ) {
-      // Deal the cards
-      if (nextProps.deck.drawnCard) {
-        if (nextProps.turn.playersTurn) {
-          nextProps.giveCard(nextProps.deck.drawnCard);
-        } else {
-          nextProps.giveDealerCard(nextProps.deck.drawnCard);
-        }
-        console.log("drawnCard");
-        return null;
-      } else {
-        console.log("keepDealing");
-        nextProps.keepDealing();
-      }
+  // Don't use the game engine if the game is over
+  if (!nextProps.turn.isPlaying) return null;
+
+  // If there is a drawn card, take it, clear it and await new props
+  if (nextProps.deck.drawnCard) {
+    if (nextProps.turn.playersTurn) {
+      nextProps.giveCard(nextProps.deck.drawnCard);
     } else {
-      console.log("play");
-      nextProps.play();
+      nextProps.giveDealerCard(nextProps.deck.drawnCard);
     }
     return null;
   }
 
-  // otherwise take the cards
-  if (nextProps.deck.drawnCard) {
-    if (nextProps.turn.playersTurn) {
-      nextProps.giveCard(nextProps.drawnCard);
-    } else {
-      nextProps.giveDealerCard(nextProps.drawnCard);
-    }
+  // Since we're playing, see if the players have all their cards
+  if (
+    nextProps.dealer.hand.length < 2 ||
+    nextProps.player.hands[0].length < 2
+  ) {
+    // Deal the cards
+    console.log("keepDealing");
+    nextProps.keepDealing();
+    return null;
   }
-
-  // Return if the game is over
-  if (!nextProps.turn.isPlaying) return null;
 
   // console.log("Playing", nextProps);
   if (nextProps.turn.playersTurn) {

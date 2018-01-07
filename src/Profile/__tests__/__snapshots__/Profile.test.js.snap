@@ -68,18 +68,27 @@ ShallowWrapper {
           >
             Avatar
           </Label>
-          <Input
-            id="playerAvatar"
-            name="playerAvatar"
-            onChange={[Function]}
-            tag="p"
-            type="text"
-            value="./images/default.png"
+          <br />
+          <img
+            alt="default avatar"
+            className="avatar selected"
+            id="defaultAvatar"
+            onClick={[Function]}
+            src="./images/default.png"
           />
           <img
-            alt="avatar"
-            className="avatar"
-            src="./images/default.png"
+            alt="male avatar"
+            className="avatar "
+            id="maleAvatar"
+            onClick={[Function]}
+            src="./images/male.png"
+          />
+          <img
+            alt="female avatar"
+            className="avatar "
+            id="femaleAvatar"
+            onClick={[Function]}
+            src="./images/female.png"
           />
         </FormGroup>,
         <Button
@@ -189,18 +198,27 @@ ShallowWrapper {
             >
               Avatar
             </Label>,
-            <Input
-              id="playerAvatar"
-              name="playerAvatar"
-              onChange={[Function]}
-              tag="p"
-              type="text"
-              value="./images/default.png"
+            <br />,
+            <img
+              alt="default avatar"
+              className="avatar selected"
+              id="defaultAvatar"
+              onClick={[Function]}
+              src="./images/default.png"
             />,
             <img
-              alt="avatar"
-              className="avatar"
-              src="./images/default.png"
+              alt="male avatar"
+              className="avatar "
+              id="maleAvatar"
+              onClick={[Function]}
+              src="./images/male.png"
+            />,
+            <img
+              alt="female avatar"
+              className="avatar "
+              id="femaleAvatar"
+              onClick={[Function]}
+              src="./images/female.png"
             />,
           ],
           "tag": "div",
@@ -230,27 +248,52 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "id": "playerAvatar",
-              "name": "playerAvatar",
-              "onChange": [Function],
-              "tag": "p",
-              "type": "text",
-              "value": "./images/default.png",
-            },
+            "nodeType": "host",
+            "props": Object {},
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": "br",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "avatar",
-              "className": "avatar",
+              "alt": "default avatar",
+              "className": "avatar selected",
+              "id": "defaultAvatar",
+              "onClick": [Function],
               "src": "./images/default.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "male avatar",
+              "className": "avatar ",
+              "id": "maleAvatar",
+              "onClick": [Function],
+              "src": "./images/male.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "female avatar",
+              "className": "avatar ",
+              "id": "femaleAvatar",
+              "onClick": [Function],
+              "src": "./images/female.png",
             },
             "ref": null,
             "rendered": null,
@@ -328,18 +371,27 @@ ShallowWrapper {
             >
               Avatar
             </Label>
-            <Input
-              id="playerAvatar"
-              name="playerAvatar"
-              onChange={[Function]}
-              tag="p"
-              type="text"
-              value="./images/default.png"
+            <br />
+            <img
+              alt="default avatar"
+              className="avatar selected"
+              id="defaultAvatar"
+              onClick={[Function]}
+              src="./images/default.png"
             />
             <img
-              alt="avatar"
-              className="avatar"
-              src="./images/default.png"
+              alt="male avatar"
+              className="avatar "
+              id="maleAvatar"
+              onClick={[Function]}
+              src="./images/male.png"
+            />
+            <img
+              alt="female avatar"
+              className="avatar "
+              id="femaleAvatar"
+              onClick={[Function]}
+              src="./images/female.png"
             />
           </FormGroup>,
           <Button
@@ -449,18 +501,27 @@ ShallowWrapper {
               >
                 Avatar
               </Label>,
-              <Input
-                id="playerAvatar"
-                name="playerAvatar"
-                onChange={[Function]}
-                tag="p"
-                type="text"
-                value="./images/default.png"
+              <br />,
+              <img
+                alt="default avatar"
+                className="avatar selected"
+                id="defaultAvatar"
+                onClick={[Function]}
+                src="./images/default.png"
               />,
               <img
-                alt="avatar"
-                className="avatar"
-                src="./images/default.png"
+                alt="male avatar"
+                className="avatar "
+                id="maleAvatar"
+                onClick={[Function]}
+                src="./images/male.png"
+              />,
+              <img
+                alt="female avatar"
+                className="avatar "
+                id="femaleAvatar"
+                onClick={[Function]}
+                src="./images/female.png"
               />,
             ],
             "tag": "div",
@@ -490,27 +551,52 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "id": "playerAvatar",
-                "name": "playerAvatar",
-                "onChange": [Function],
-                "tag": "p",
-                "type": "text",
-                "value": "./images/default.png",
-              },
+              "nodeType": "host",
+              "props": Object {},
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": "br",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "avatar",
-                "className": "avatar",
+                "alt": "default avatar",
+                "className": "avatar selected",
+                "id": "defaultAvatar",
+                "onClick": [Function],
                 "src": "./images/default.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "male avatar",
+                "className": "avatar ",
+                "id": "maleAvatar",
+                "onClick": [Function],
+                "src": "./images/male.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "female avatar",
+                "className": "avatar ",
+                "id": "femaleAvatar",
+                "onClick": [Function],
+                "src": "./images/female.png",
               },
               "ref": null,
               "rendered": null,

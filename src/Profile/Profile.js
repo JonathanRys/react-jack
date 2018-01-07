@@ -24,6 +24,10 @@ export default class Profile extends Component {
     this.props.setAvatar(this.state.playerAvatar);
   };
 
+  avatarOnClick = e => {
+    this.setState({ playerAvatar: e.target.getAttribute("src") });
+  };
+
   render() {
     return (
       <Form className="Profile_main">
@@ -39,14 +43,38 @@ export default class Profile extends Component {
         </FormGroup>
         <FormGroup>
           <Label for="avatar">Avatar</Label>
-          <Input
-            type="text"
-            name="playerAvatar"
-            id="playerAvatar"
-            onChange={this.onChange}
-            value={this.state.playerAvatar}
+          <br />
+          <img
+            id="defaultAvatar"
+            className={`avatar ${
+              this.state.playerAvatar === "./images/default.png"
+                ? "selected"
+                : ""
+            }`}
+            alt="default avatar"
+            onClick={this.avatarOnClick}
+            src="./images/default.png"
           />
-          <img className="avatar" alt="avatar" src={this.props.avatar} />
+          <img
+            id="maleAvatar"
+            className={`avatar ${
+              this.state.playerAvatar === "./images/male.png" ? "selected" : ""
+            }`}
+            alt="male avatar"
+            onClick={this.avatarOnClick}
+            src="./images/male.png"
+          />
+          <img
+            id="femaleAvatar"
+            className={`avatar ${
+              this.state.playerAvatar === "./images/female.png"
+                ? "selected"
+                : ""
+            }`}
+            onClick={this.avatarOnClick}
+            alt="female avatar"
+            src="./images/female.png"
+          />
         </FormGroup>
         <Button onClick={this.onClick}>Change</Button>
       </Form>

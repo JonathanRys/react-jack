@@ -60,10 +60,10 @@ const mapDispatchToProps = dispatch => {
       dispatch(loseBet());
     },
     play: () => {
-      dispatch(play());
+      dispatchAll(dispatch, [play, dealerTurn, nextPlayer]);
     },
     stop: () => {
-      dispatch(stop());
+      dispatchAll(dispatch, [stop, dealerTurn]);
     },
     dealerTurn: () => {
       dispatch(dealerTurn());
@@ -88,7 +88,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(setInsured());
     },
     dealOnClick: () => {
-      dispatchAll(dispatch, [clearHands, newDeck, shuffle]);
+      dispatchAll(dispatch, [clearHands, newDeck, shuffle, play]);
     },
     keepDealing: () => {
       dispatchAll(dispatch, [nextPlayer, drawOne]);

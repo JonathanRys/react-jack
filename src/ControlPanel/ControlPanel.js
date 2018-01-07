@@ -94,7 +94,8 @@ export default class ControlPanel extends Component {
     );
   }
 }
-// Write deep prop type checks here
+
+// Write deeper prop type checks here
 ControlPanel.propTypes = {
   player: PropTypes.shape({
     hands: PropTypes.array,

@@ -1,10 +1,5 @@
 import dealerReducer from "../dealerReducer";
-import {
-  dealerTakeCard,
-  reset,
-  flipHand,
-  clearHands
-} from "../../actions/playerActions.js";
+import { dealerTakeCard, clearHands } from "../../actions/playerActions.js";
 import { createStore } from "redux";
 
 describe("Test dealerReducer reducer", () => {

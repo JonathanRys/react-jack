@@ -33,9 +33,18 @@ const mockProps = {
 };
 
 describe("Test gameEngine", () => {
-  it("calls keepDealing when the hands are empty and isPlaying is false", () => {
+  it("returns null if isPlaying is false", () => {
     const testProps = { ...mockProps };
     testProps.turn.isPlaying = false;
+    testProps.keepDealing = jest.fn();
+
+    const result = gameEngine(testProps);
+    expect(result).toEqual(null);
+  });
+
+  it("calls keepDealing when the hands are empty and isPlaying is true", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.isPlaying = true;
     testProps.keepDealing = jest.fn();
 
     gameEngine(testProps);
@@ -49,11 +58,11 @@ describe("Test gameEngine", () => {
     expect(testProps.winBet).not.toHaveBeenCalled();
   });
 
-  it("calls keepDealing when the dealer has only one card and isPlaying is false", () => {
+  it("calls keepDealing when the dealer has only one card and isPlaying is true", () => {
     const testProps = { ...mockProps };
     testProps.player.hands = [["H7", "D4"]];
     testProps.dealer.hand = ["CA"];
-    testProps.turn.isPlaying = false;
+    testProps.turn.isPlaying = true;
     testProps.keepDealing = jest.fn();
 
     gameEngine(testProps);
@@ -67,13 +76,13 @@ describe("Test gameEngine", () => {
     expect(testProps.winBet).not.toHaveBeenCalled();
   });
 
-  it("calls giveCard when the player needs cards, a card is drawn and isPlaying is false", () => {
+  it("calls giveCard when the player needs cards, a card is drawn and isPlaying is true", () => {
     const testProps = { ...mockProps };
     testProps.turn.playersTurn = 1;
     testProps.deck.drawnCard = "C5";
     testProps.player.hands = [["H7"]];
     testProps.dealer.hand = ["CA", "C4"];
-    testProps.turn.isPlaying = false;
+    testProps.turn.isPlaying = true;
     testProps.giveCard = jest.fn();
 
     gameEngine(testProps);
@@ -88,13 +97,13 @@ describe("Test gameEngine", () => {
     expect(testProps.giveCard).toHaveBeenCalled();
   });
 
-  it("calls giveDealerCard when the dealer needs cards, a card is drawn and isPlaying is false", () => {
+  it("calls giveDealerCard when the dealer needs cards, a card is drawn and isPlaying is true", () => {
     const testProps = { ...mockProps };
     testProps.turn.playersTurn = 0;
     testProps.deck.drawnCard = "C5";
     testProps.player.hands = [["H7", "D4"]];
     testProps.dealer.hand = ["CA"];
-    testProps.turn.isPlaying = false;
+    testProps.turn.isPlaying = true;
     testProps.giveDealerCard = jest.fn();
 
     gameEngine(testProps);
@@ -109,30 +118,11 @@ describe("Test gameEngine", () => {
     expect(testProps.giveDealerCard).toHaveBeenCalled();
   });
 
-  it("calls play when the dealer and player have their cards and isPlaying is false", () => {
-    const testProps = { ...mockProps };
-    testProps.player.hands = [["H7", "D4"]];
-    testProps.dealer.hand = ["CA", "S8"];
-    testProps.deck.drawnCard = "C5";
-    testProps.turn.isPlaying = false;
-    testProps.play = jest.fn();
-
-    gameEngine(testProps);
-    expect(testProps.dealerTurn).not.toHaveBeenCalled();
-    expect(testProps.hitOnClick).not.toHaveBeenCalled();
-    expect(testProps.keepDealing).not.toHaveBeenCalled();
-    expect(testProps.nextPlayer).not.toHaveBeenCalled();
-
-    expect(testProps.play).toHaveBeenCalled();
-
-    expect(testProps.stop).not.toHaveBeenCalled();
-    expect(testProps.winBet).not.toHaveBeenCalled();
-  });
-
   it("calls nextPlayer when isPlaying is true, the dealer has two cards and playersTurn equals 0", () => {
     const testProps = { ...mockProps };
     testProps.player.hands = [["H7", "D4"]];
     testProps.dealer.hand = ["CA", "D9"];
+    testProps.deck.drawnCard = null;
     testProps.turn.isPlaying = true;
     testProps.nextPlayer = jest.fn();
 
@@ -177,13 +167,13 @@ describe("Test gameEngine", () => {
       testProps.dealerTurn = jest.fn();
 
       gameEngine(testProps);
-      expect(testProps.dealerTurn).toHaveBeenCalled();
-
       expect(testProps.hitOnClick).not.toHaveBeenCalled();
       expect(testProps.keepDealing).not.toHaveBeenCalled();
       expect(testProps.nextPlayer).not.toHaveBeenCalled();
       expect(testProps.stop).not.toHaveBeenCalled();
       expect(testProps.winBet).not.toHaveBeenCalled();
+
+      expect(testProps.dealerTurn).toHaveBeenCalled();
     });
 
     it("calls dealerTurn when isPlaying is true, the dealer has two cards, playersTurn equals 1 and the player is busted", () => {
@@ -495,7 +485,7 @@ describe("Test gameEngine", () => {
     };
 
     testProps.turn = {
-      isPlaying: false,
+      isPlaying: true,
       numPlayers: 2,
       playersTurn: 1
     };
