@@ -55,7 +55,7 @@ describe("Test PlayField component", () => {
     expect(componentWillUpdate(testProps)).toEqual(undefined);
   });
 
-  it("sets the status if the  componentWillUpdate", () => {
+  it("sets the status if the componentWillUpdate", () => {
     const testProps = { ...mockProps };
     testProps.turn.isPlaying = true;
     const component = shallow(<ControlPanel {...testProps} />);
@@ -63,5 +63,27 @@ describe("Test PlayField component", () => {
 
     expect(componentWillUpdate(testProps)).toEqual(undefined);
     expect(testProps.setStatus).toHaveBeenCalledWith(null);
+  });
+
+  it("ends the turn with buyInsuranceOnClick", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.isPlaying = true;
+    const component = shallow(<ControlPanel {...testProps} />);
+    const buyInsuranceOnClick = component.instance().buyInsuranceOnClick;
+
+    buyInsuranceOnClick();
+
+    expect(testProps.buyInsuranceOnClick).toHaveBeenCalled();
+    expect(testProps.standOnClick).toHaveBeenCalled();
+  });
+
+  it("switches onClick handlers when the dealer has blackjack", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.isPlaying = true;
+    testProps.dealer.hand = ["SA", "HJ"];
+    testProps.dealer.hasBlackjack = true;
+    const component = shallow(<ControlPanel {...testProps} />);
+
+    expect(component).toMatchSnapshot();
   });
 });

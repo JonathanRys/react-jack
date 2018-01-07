@@ -9,6 +9,7 @@ const mockProps = {
     hands: [[]],
     handIndex: 0,
     busted: [false],
+    doubledDown: [false],
     hasBlackjack: [false],
     playerStands: [false],
     score: [0]
@@ -450,6 +451,50 @@ describe("Test gameEngine", () => {
       const result = gameEngine(testProps);
       expect(result).toEqual("Lost");
     });
+
+    it("handles double down properly on push", () => {
+      const testProps = { ...mockProps };
+      testProps.player.busted[0] = false;
+      testProps.player.doubledDown[0] = true;
+      testProps.player.playerStands[0] = true;
+      testProps.player.hasBlackjack[0] = false;
+      testProps.player.hands = [["H3", "D8", "C6"]]; // 17
+      testProps.player.score[0] = 17;
+
+      testProps.dealer.hand = ["C8", "D9"]; // 17
+      testProps.dealer.score = 17;
+
+      testProps.turn.isPlaying = true;
+      testProps.turn.playersTurn = 0;
+      testProps.stop = jest.fn();
+      testProps.winBet = jest.fn();
+
+      const result = gameEngine(testProps);
+      expect(result).toEqual("Push");
+      expect(testProps.winBet).toHaveBeenCalledWith(2);
+    });
+  });
+
+  it("handles double down properly on win", () => {
+    const testProps = { ...mockProps };
+    testProps.player.busted[0] = false;
+    testProps.player.doubledDown[0] = true;
+    testProps.player.playerStands[0] = true;
+    testProps.player.hasBlackjack[0] = false;
+    testProps.player.hands = [["H3", "D8", "C8"]]; // 19
+    testProps.player.score[0] = 19;
+
+    testProps.dealer.hand = ["C8", "D9"]; // 17
+    testProps.dealer.score = 17;
+
+    testProps.turn.isPlaying = true;
+    testProps.turn.playersTurn = 0;
+    testProps.stop = jest.fn();
+    testProps.winBet = jest.fn();
+
+    const result = gameEngine(testProps);
+    expect(result).toEqual("Won");
+    expect(testProps.winBet).toHaveBeenCalledWith(4);
   });
 
   it("passes a special test", () => {
@@ -462,6 +507,7 @@ describe("Test gameEngine", () => {
       currentBet: 5,
       handIndex: 0,
       hands: [[]],
+      doubledDown: [false],
       hasBlackjack: [false],
       hasInsurance: [false],
       playerIndex: 1,

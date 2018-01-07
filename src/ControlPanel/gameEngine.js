@@ -62,7 +62,7 @@ export default function gameEngine(nextProps) {
         // Busted
         return "Bust";
       } else if (playerScore === dealerScore) {
-        nextProps.winBet(nextProps.player.doubledDown ? 2 : 1);
+        nextProps.winBet(nextProps.player.doubledDown[index] ? 2 : 1);
         // Push
         return "Push";
       } else if (nextProps.player.hasBlackjack[index]) {
@@ -71,7 +71,7 @@ export default function gameEngine(nextProps) {
         return "Blackjack";
       } else if (dealerScore > 21 || playerScore > dealerScore) {
         // Won
-        nextProps.winBet(nextProps.player.doubledDown ? 4 : 2);
+        nextProps.winBet(nextProps.player.doubledDown[index] ? 4 : 2);
         return "Won";
       } else {
         // Lost
