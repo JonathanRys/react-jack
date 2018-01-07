@@ -131,7 +131,11 @@ describe("Test playerReducer reducer", () => {
 
   it("is able to purchase insurance", () => {
     const store = createStore(playerReducer);
+
+    expect(store.getState().balance).toEqual(500);
     store.dispatch({ type: "SET_INSURED" });
+
+    expect(store.getState().balance).toEqual(497.5);
     expect(store.getState().hasInsurance[store.getState().handIndex]).toEqual(
       true
     );
