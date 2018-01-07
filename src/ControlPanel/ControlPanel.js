@@ -17,7 +17,8 @@ export default class ControlPanel extends Component {
   }
 
   componentWillUpdate(nextProps) {
-    nextProps.setStatus(gameEngine(nextProps));
+    const result = gameEngine(nextProps);
+    if (nextProps.turn.isPlaying) nextProps.setStatus(result);
   }
 
   render() {

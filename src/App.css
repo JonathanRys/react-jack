@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "OldStamper";
+  src: url("./__fonts__/old_stamper.woff2") format("woff2"),
+    url("./__fonts__/old_stamper.woff") format("woff"),
+    url("./__fonts__/old_stamper.ttf") format("truetype");
+}
+
 .App {
   text-align: center;
 }

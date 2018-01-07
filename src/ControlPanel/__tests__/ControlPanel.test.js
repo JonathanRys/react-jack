@@ -48,9 +48,20 @@ describe("Test PlayField component", () => {
 
   it("dummy test for componentWillUpdate", () => {
     const testProps = { ...mockProps };
+    testProps.turn.isPlaying = false;
     const component = shallow(<ControlPanel {...testProps} />);
     const componentWillUpdate = component.instance().componentWillUpdate;
 
     expect(componentWillUpdate(testProps)).toEqual(undefined);
+  });
+
+  it("sets the status if the  componentWillUpdate", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.isPlaying = true;
+    const component = shallow(<ControlPanel {...testProps} />);
+    const componentWillUpdate = component.instance().componentWillUpdate;
+
+    expect(componentWillUpdate(testProps)).toEqual(undefined);
+    expect(testProps.setStatus).toHaveBeenCalledWith(null);
   });
 });

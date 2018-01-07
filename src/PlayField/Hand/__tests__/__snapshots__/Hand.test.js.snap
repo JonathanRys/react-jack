@@ -39,7 +39,11 @@ ShallowWrapper {
         ],
         <div
           className="Playfield_Hand_status"
-        />,
+        >
+          <div
+            className="Playfield_Hand_statusText"
+          />
+        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -78,11 +82,24 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": <div
+            className="Playfield_Hand_statusText"
+          />,
           "className": "Playfield_Hand_status",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "Playfield_Hand_statusText",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
         "type": "div",
       },
     ],
@@ -107,7 +124,11 @@ ShallowWrapper {
           ],
           <div
             className="Playfield_Hand_status"
-          />,
+          >
+            <div
+              className="Playfield_Hand_statusText"
+            />
+          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -146,11 +167,24 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": <div
+              className="Playfield_Hand_statusText"
+            />,
             "className": "Playfield_Hand_status",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "Playfield_Hand_statusText",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
           "type": "div",
         },
       ],
@@ -207,7 +241,11 @@ ShallowWrapper {
         <div
           className="Playfield_Hand_status"
         >
-          
+          <div
+            className="Playfield_Hand_statusText"
+          >
+            
+          </div>
         </div>,
       ],
       "className": "PlayField_Hand",
@@ -247,11 +285,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "",
+          "children": <div
+            className="Playfield_Hand_statusText"
+          >
+            
+          </div>,
           "className": "Playfield_Hand_status",
         },
         "ref": null,
-        "rendered": "",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "Playfield_Hand_statusText",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "div",
+        },
         "type": "div",
       },
     ],
@@ -277,7 +330,11 @@ ShallowWrapper {
           <div
             className="Playfield_Hand_status"
           >
-            
+            <div
+              className="Playfield_Hand_statusText"
+            >
+              
+            </div>
           </div>,
         ],
         "className": "PlayField_Hand",
@@ -317,11 +374,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "",
+            "children": <div
+              className="Playfield_Hand_statusText"
+            >
+              
+            </div>,
             "className": "Playfield_Hand_status",
           },
           "ref": null,
-          "rendered": "",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+              "className": "Playfield_Hand_statusText",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "div",
+          },
           "type": "div",
         },
       ],
@@ -377,7 +449,11 @@ ShallowWrapper {
         ],
         <div
           className="Playfield_Hand_status"
-        />,
+        >
+          <div
+            className="Playfield_Hand_statusText"
+          />
+        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -416,11 +492,24 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": <div
+            className="Playfield_Hand_statusText"
+          />,
           "className": "Playfield_Hand_status",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "Playfield_Hand_statusText",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
         "type": "div",
       },
     ],
@@ -445,7 +534,11 @@ ShallowWrapper {
           ],
           <div
             className="Playfield_Hand_status"
-          />,
+          >
+            <div
+              className="Playfield_Hand_statusText"
+            />
+          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -484,11 +577,24 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": <div
+              className="Playfield_Hand_statusText"
+            />,
             "className": "Playfield_Hand_status",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "Playfield_Hand_statusText",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
           "type": "div",
         },
       ],

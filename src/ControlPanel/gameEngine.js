@@ -29,12 +29,10 @@ export default function gameEngine(nextProps) {
     nextProps.player.hands[0].length < 2
   ) {
     // Deal the cards
-    console.log("keepDealing");
     nextProps.keepDealing();
     return null;
   }
 
-  // console.log("Playing", nextProps);
   if (nextProps.turn.playersTurn) {
     // It's the player's turn, but check if that should change
     if (dealersTurn) {
@@ -47,17 +45,16 @@ export default function gameEngine(nextProps) {
       // Don't bother drawing if the player is busted or has blackjack
       if (nextProps.player.busted[index]) {
         nextProps.stop();
-        return null;
+        return "Bust";
       } else if (nextProps.player.hasBlackjack[index]) {
         nextProps.stop();
-        return null;
+        return "Blackjack";
       }
       // Draw a card
       nextProps.hitOnClick();
       return null;
     } else {
       // Stop playing and...
-      // console.log("stop playing:", nextProps);
       nextProps.stop();
       // Score the player's hand
       if (playerScore > 21) {
