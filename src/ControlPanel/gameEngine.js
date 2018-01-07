@@ -36,6 +36,7 @@ export default function gameEngine(nextProps) {
     if (dealersTurn) {
       nextProps.dealerTurn();
     }
+    // check for dealer blackjack in the control panel
     return null;
   } else if (dealersTurn) {
     // It's still the dealer's turn - hit until 17
@@ -53,21 +54,27 @@ export default function gameEngine(nextProps) {
       nextProps.hitOnClick();
       return null;
     } else {
-      // Stop playing and...
+      // Stop playing
       nextProps.stop();
+
       // Score the player's hand
       if (playerScore > 21) {
+        // Busted
         return "Bust";
       } else if (playerScore === dealerScore) {
-        nextProps.winBet();
+        nextProps.winBet(nextProps.player.doubledDown ? 2 : 1);
+        // Push
         return "Push";
       } else if (nextProps.player.hasBlackjack[index]) {
+        // Blackjack
         nextProps.winBet(2.5);
         return "Blackjack";
       } else if (dealerScore > 21 || playerScore > dealerScore) {
-        nextProps.winBet(2);
+        // Won
+        nextProps.winBet(nextProps.player.doubledDown ? 4 : 2);
         return "Won";
       } else {
+        // Lost
         return "Lost";
       }
     }

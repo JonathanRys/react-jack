@@ -21,9 +21,14 @@ export default class ControlPanel extends Component {
     if (nextProps.turn.isPlaying) nextProps.setStatus(result);
   }
 
+  buyInsuranceOnClick = () => {
+    this.props.buyInsuranceOnClick();
+    this.props.standOnClick();
+  };
+
   render() {
     const canSplit =
-      !this.props.turn.isPlaying &&
+      this.props.turn.isPlaying &&
       this.props.player.hands[0] &&
       this.props.player.hands[0].length === 2 &&
       this.props.player.hands[0][0].slice(1) ===
@@ -38,6 +43,10 @@ export default class ControlPanel extends Component {
       this.props.dealer.hand[0].slice(1) === "A" &&
       !this.props.player.hasInsurance[this.props.player.handIndex];
 
+    const dealerHasBlackjack =
+      this.props.dealer.hasBlackjack &&
+      this.props.dealer.hand[0].slice(1) === "A";
+
     // Would it be more readable to use Array.map here?
     return (
       <Form xs="4" sm="6" md="8" lg="12" className="ControlPanel_main">
@@ -46,7 +55,9 @@ export default class ControlPanel extends Component {
           color="secondary"
           block
           disabled={!this.props.turn.isPlaying}
-          onClick={this.props.hitOnClick}
+          onClick={
+            dealerHasBlackjack ? this.props.standOnClick : this.props.hitOnClick
+          }
         >
           <FontAwesome name="hand-o-down" /> Hit
         </Button>
@@ -64,7 +75,11 @@ export default class ControlPanel extends Component {
           color="secondary"
           block
           disabled={!canSplit}
-          onClick={this.props.splitOnClick}
+          onClick={
+            dealerHasBlackjack
+              ? this.props.standOnClick
+              : this.props.splitOnClick
+          }
         >
           <FontAwesome name="hand-scissors-o" /> Split
         </Button>
@@ -73,7 +88,11 @@ export default class ControlPanel extends Component {
           color="secondary"
           block
           disabled={!canDouble}
-          onClick={this.props.doubleDownOnClick}
+          onClick={
+            dealerHasBlackjack
+              ? this.props.standOnClick
+              : this.props.doubleDownOnClick
+          }
         >
           <FontAwesome name="align-justify " /> Double Down
         </Button>
@@ -82,7 +101,7 @@ export default class ControlPanel extends Component {
           color="secondary"
           block
           disabled={!canBuyInsurance}
-          onClick={this.props.buyInsuranceOnClick}
+          onClick={this.buyInsuranceOnClick}
         >
           <FontAwesome name="dollar" /> Buy Insurance
         </Button>

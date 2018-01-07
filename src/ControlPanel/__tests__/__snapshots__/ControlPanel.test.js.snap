@@ -157,7 +157,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={true}
-          onClick={[MockFunction]}
+          onClick={[Function]}
           size="md"
           tag="button"
         >
@@ -343,7 +343,7 @@ ShallowWrapper {
           ],
           "color": "secondary",
           "disabled": true,
-          "onClick": [MockFunction],
+          "onClick": [Function],
           "size": "md",
           "tag": "button",
         },
@@ -465,7 +465,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={true}
-            onClick={[MockFunction]}
+            onClick={[Function]}
             size="md"
             tag="button"
           >
@@ -651,7 +651,7 @@ ShallowWrapper {
             ],
             "color": "secondary",
             "disabled": true,
-            "onClick": [MockFunction],
+            "onClick": [Function],
             "size": "md",
             "tag": "button",
           },
@@ -878,7 +878,7 @@ ShallowWrapper {
           block={true}
           color="secondary"
           disabled={false}
-          onClick={[MockFunction]}
+          onClick={[Function]}
           size="md"
           tag="button"
         >
@@ -1064,7 +1064,7 @@ ShallowWrapper {
           ],
           "color": "secondary",
           "disabled": false,
-          "onClick": [MockFunction],
+          "onClick": [Function],
           "size": "md",
           "tag": "button",
         },
@@ -1186,7 +1186,7 @@ ShallowWrapper {
             block={true}
             color="secondary"
             disabled={false}
-            onClick={[MockFunction]}
+            onClick={[Function]}
             size="md"
             tag="button"
           >
@@ -1372,7 +1372,7 @@ ShallowWrapper {
             ],
             "color": "secondary",
             "disabled": false,
-            "onClick": [MockFunction],
+            "onClick": [Function],
             "size": "md",
             "tag": "button",
           },
