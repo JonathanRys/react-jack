@@ -23,7 +23,7 @@ import {
   buyChips,
   setBet,
   winBet,
-  loseBet,
+  deductBet,
   setInsured
 } from "./actions/playerActions";
 
@@ -64,9 +64,6 @@ const mapDispatchToProps = dispatch => {
     winBet: multiplier => {
       dispatch(winBet({ multiplier }));
     },
-    loseBet: () => {
-      dispatch(loseBet());
-    },
     play: () => {
       dispatchAll(dispatch, [play, dealerTurn, nextPlayer]);
     },
@@ -97,7 +94,7 @@ const mapDispatchToProps = dispatch => {
     },
     dealOnClick: () => {
       // Use a new deck every time so the cards can't be counted
-      dispatchAll(dispatch, [clearHands, newDeck, shuffle, play]);
+      dispatchAll(dispatch, [clearHands, deductBet, newDeck, shuffle, play]);
     },
     keepDealing: () => {
       dispatchAll(dispatch, [nextPlayer, drawOne]);

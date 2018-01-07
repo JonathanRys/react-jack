@@ -73,7 +73,7 @@ describe("Test playerReducer reducer", () => {
   it("credit given amount to player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "BUY_CHIPS", payload: { newChips: 500 } });
-    expect(store.getState().balance).toEqual(995);
+    expect(store.getState().balance).toEqual(1000);
   });
 
   it("set the current bet", () => {
@@ -85,8 +85,8 @@ describe("Test playerReducer reducer", () => {
   it("deducts given amount from player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "SET_BET", payload: { newBet: 5 } });
-    store.dispatch({ type: "LOSE_BET" });
-    expect(store.getState().balance).toEqual(490);
+    store.dispatch({ type: "DEDUCT_BET" });
+    expect(store.getState().balance).toEqual(495);
   });
 
   it("adds the current bet times a multiplier to the player's balance", () => {
@@ -94,10 +94,10 @@ describe("Test playerReducer reducer", () => {
     store.dispatch({ type: "SET_BET", payload: { newBet: 5 } });
     // test WIN_BET
     store.dispatch({ type: "WIN_BET" });
-    expect(store.getState().balance).toEqual(500);
+    expect(store.getState().balance).toEqual(505);
     // Test WIN_BET with a multiplier
     store.dispatch({ type: "WIN_BET", payload: { multiplier: 1.5 } });
-    expect(store.getState().balance).toEqual(507.5);
+    expect(store.getState().balance).toEqual(512.5);
     // Test RESET
     store.dispatch({ type: "CLEAR_HANDS" });
     expect(store.getState()).toEqual({
@@ -106,7 +106,7 @@ describe("Test playerReducer reducer", () => {
       playerIndex: 1,
       handIndex: 0,
 
-      balance: 507.5,
+      balance: 512.5,
       currentBet: 5,
 
       hands: [[]],
@@ -131,13 +131,13 @@ describe("Test playerReducer reducer", () => {
   it("credits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "CREDIT", payload: { delta: 50 } });
-    expect(store.getState().balance).toEqual(545);
+    expect(store.getState().balance).toEqual(550);
   });
 
   it("debits the account", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "CREDIT", payload: { delta: 50 } });
     store.dispatch({ type: "DEBIT", payload: { delta: 25 } });
-    expect(store.getState().balance).toEqual(520);
+    expect(store.getState().balance).toEqual(525);
   });
 });

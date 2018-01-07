@@ -41,25 +41,22 @@ describe("Test the App component", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
-    expect(store.getState().player.balance).toEqual(495);
+    expect(store.getState().player.balance).toEqual(500);
     component.props().setBet(5);
     expect(store.getState().player.currentBet).toEqual(5);
     component.props().winBet();
-    expect(store.getState().player.balance).toEqual(500);
+    expect(store.getState().player.balance).toEqual(505);
     component.props().winBet(2);
-    expect(store.getState().player.balance).toEqual(510);
+    expect(store.getState().player.balance).toEqual(515);
   });
 
-  it("loses bet", () => {
+  it("deducts given amount from player's balance", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
+    expect(store.getState().player.balance).toEqual(500);
     component.props().buyChips(500);
-    expect(store.getState().player.balance).toEqual(995);
-    component.props().setBet(5);
-    expect(store.getState().player.currentBet).toEqual(5);
-    component.props().loseBet();
-    expect(store.getState().player.balance).toEqual(990);
+    expect(store.getState().player.balance).toEqual(1000);
   });
 
   it("starts and stops playing the game", () => {

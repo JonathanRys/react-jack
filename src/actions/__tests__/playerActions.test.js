@@ -42,9 +42,9 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "BUY_CHIPS", payload: "test" });
   });
 
-  it("tests loseBet action creator", () => {
-    const result = actions.loseBet("test");
-    expect(result).toEqual({ type: "LOSE_BET" });
+  it("tests deductBet action creator", () => {
+    const result = actions.deductBet("test");
+    expect(result).toEqual({ type: "DEDUCT_BET" });
   });
 
   it("tests setBet action creator", () => {

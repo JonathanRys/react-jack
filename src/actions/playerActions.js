@@ -35,8 +35,8 @@ export function buyChips(payload) {
   return { type: "BUY_CHIPS", payload: payload };
 }
 
-export function loseBet() {
-  return { type: "LOSE_BET" };
+export function deductBet() {
+  return { type: "DEDUCT_BET" };
 }
 
 export function setBet(payload) {

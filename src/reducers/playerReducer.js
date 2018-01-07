@@ -6,7 +6,7 @@ const initialState = {
   playerIndex: 1,
   handIndex: 0,
 
-  balance: 495,
+  balance: 500,
   currentBet: 5,
 
   hands: [[]],
@@ -68,7 +68,7 @@ export default function playerReducer(state = initialState, action) {
       return { ...state, balance: state.balance + action.payload.newChips };
     case "SET_BET":
       return { ...state, currentBet: action.payload.newBet };
-    case "LOSE_BET":
+    case "DEDUCT_BET":
       return { ...state, balance: state.balance - state.currentBet };
     case "WIN_BET":
       const multiplier = action.payload ? action.payload.multiplier || 1 : 1;

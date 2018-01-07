@@ -50,12 +50,11 @@ ShallowWrapper {
       "giveDealerCard": [Function],
       "hitOnClick": [Function],
       "keepDealing": [Function],
-      "loseBet": [Function],
       "nextPlayer": [Function],
       "play": [Function],
       "player": Object {
         "avatar": "./images/default.png",
-        "balance": 495,
+        "balance": 500,
         "busted": Array [
           false,
         ],
@@ -157,12 +156,11 @@ ShallowWrapper {
         "giveDealerCard": [Function],
         "hitOnClick": [Function],
         "keepDealing": [Function],
-        "loseBet": [Function],
         "nextPlayer": [Function],
         "play": [Function],
         "player": Object {
           "avatar": "./images/default.png",
-          "balance": 495,
+          "balance": 500,
           "busted": Array [
             false,
           ],
