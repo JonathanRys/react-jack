@@ -718,7 +718,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`Test PlayField component test isPlaying 1`] = `
+exports[`Test PlayField component test snapshot with isPlaying equal to true 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
