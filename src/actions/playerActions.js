@@ -7,6 +7,10 @@ export function setAvatar(payload) {
   return { type: "SET_AVATAR", payload: payload };
 }
 
+export function setStatus(payload) {
+  return { type: "SET_STATUS", payload: payload };
+}
+
 export function takeCard(payload) {
   return { type: "TAKE_CARD", payload: payload };
 }

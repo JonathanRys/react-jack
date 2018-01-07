@@ -12,6 +12,11 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "SET_AVATAR", payload: "test" });
   });
 
+  it("tests setStatus action creator", () => {
+    const result = actions.setStatus("test");
+    expect(result).toEqual({ type: "SET_STATUS", payload: "test" });
+  });
+
   it("tests takeCard action creator", () => {
     const result = actions.takeCard("test");
     expect(result).toEqual({ type: "TAKE_CARD", payload: "test" });
