@@ -10,7 +10,12 @@ import ControlPanel from "./ControlPanel/ControlPanel";
 
 import { newDeck, shuffle, drawOne, clearCard } from "./actions/deckActions";
 import { play, stop, nextPlayer, dealerTurn } from "./actions/turnActions";
-import { setName, setAvatar, clearHands } from "./actions/playerActions";
+import {
+  setName,
+  setAvatar,
+  setStatus,
+  clearHands
+} from "./actions/playerActions";
 import {
   takeCard,
   dealerTakeCard,
@@ -47,6 +52,9 @@ const mapDispatchToProps = dispatch => {
     setAvatar: avatar => {
       dispatch(setAvatar({ avatar }));
     },
+    setStatus: status => {
+      dispatch(setStatus({ status }));
+    },
     buyChips: newChips => {
       dispatch(buyChips({ newChips }));
     },
@@ -79,15 +87,16 @@ const mapDispatchToProps = dispatch => {
     },
     splitOnClick: () => {
       // Not sure what to do here yet
+      // the player store is configured to accept multiple hands though
     },
     doubleDownOnClick: () => {
-      // Thunk this
       dispatchAll(dispatch, [drawOne, stand]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());
     },
     dealOnClick: () => {
+      // Use a new deck every time so the cards can't be counted
       dispatchAll(dispatch, [clearHands, newDeck, shuffle, play]);
     },
     keepDealing: () => {

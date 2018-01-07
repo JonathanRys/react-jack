@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import _ from "lodash";
+
 import "./control_panel.css";
 
 import { Button, Form } from "reactstrap";
@@ -9,8 +11,13 @@ import FontAwesome from "react-fontawesome";
 import gameEngine from "./gameEngine";
 
 export default class ControlPanel extends Component {
-  componentWillReceiveProps(nextProps) {
-    gameEngine(nextProps);
+  shouldComponentUpdate(nextProps) {
+    if (_.isEqual(this.props, nextProps)) return false;
+    return true;
+  }
+
+  componentWillUpdate(nextProps) {
+    nextProps.setStatus(gameEngine(nextProps));
   }
 
   render() {

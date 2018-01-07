@@ -7,6 +7,7 @@ import mockStore from "../../mockStore";
 
 const mockProps = {
   ...mockStore,
+  setStatus: jest.fn(),
   hitOnClick: jest.fn(),
   standOnClick: jest.fn(),
   winBet: jest.fn(),
@@ -25,5 +26,31 @@ describe("Test PlayField component", () => {
     const testProps = { ...mockProps };
     const component = shallow(<ControlPanel {...testProps} />);
     expect(component).toMatchSnapshot();
+  });
+
+  it("test snapshot with isPlaying equal to true", () => {
+    const testProps = { ...mockProps };
+    testProps.turn.isPlaying = true;
+    const component = shallow(<ControlPanel {...testProps} />);
+    expect(component).toMatchSnapshot();
+  });
+
+  it("updates only when the props have changed", () => {
+    const testProps = { ...mockProps };
+    const component = shallow(<ControlPanel {...testProps} />);
+    const shouldComponentUpdate = component.instance().shouldComponentUpdate;
+
+    expect(shouldComponentUpdate.bind({ props: true })(true)).toEqual(false);
+    expect(shouldComponentUpdate.bind({ props: true })(false)).toEqual(true);
+    expect(shouldComponentUpdate.bind({ props: false })(true)).toEqual(true);
+    expect(shouldComponentUpdate.bind({ props: false })(false)).toEqual(false);
+  });
+
+  it("dummy test for componentWillUpdate", () => {
+    const testProps = { ...mockProps };
+    const component = shallow(<ControlPanel {...testProps} />);
+    const componentWillUpdate = component.instance().componentWillUpdate;
+
+    expect(componentWillUpdate(testProps)).toEqual(undefined);
   });
 });

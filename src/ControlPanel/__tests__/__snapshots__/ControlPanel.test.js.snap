@@ -64,9 +64,13 @@ ShallowWrapper {
           0,
         ],
         "splitHand": false,
+        "status": Array [
+          null,
+        ],
       }
     }
     reset={[MockFunction]}
+    setStatus={[MockFunction]}
     splitOnClick={[MockFunction]}
     standOnClick={[MockFunction]}
     subscribe={[MockFunction]}
@@ -679,6 +683,724 @@ ShallowWrapper {
             ],
             "color": "primary",
             "disabled": false,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "handshake-o",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Deal",
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Test PlayField component test isPlaying 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ControlPanel
+    buyInsuranceOnClick={[MockFunction]}
+    dealOnClick={[MockFunction]}
+    dealer={
+      Object {
+        "avatar": "./images/dealer.png",
+        "busted": false,
+        "hand": Array [
+          "HA",
+          "C5",
+        ],
+        "hasBlackjack": false,
+        "name": "Dealer",
+        "score": 0,
+      }
+    }
+    deck={
+      Object {
+        "deck": Array [],
+        "drawnCard": null,
+      }
+    }
+    dispatch={[MockFunction]}
+    doubleDownOnClick={[MockFunction]}
+    getState={[MockFunction]}
+    hitOnClick={[MockFunction]}
+    loseBet={[MockFunction]}
+    player={
+      Object {
+        "avatar": "./images/default.png",
+        "balance": 500,
+        "busted": Array [
+          false,
+        ],
+        "currentBet": 5,
+        "hands": Array [
+          Array [
+            "SA",
+            "CK",
+          ],
+          Array [
+            "D2",
+            "HJ",
+          ],
+        ],
+        "hasBlackjack": Array [
+          false,
+        ],
+        "hasInsurance": Array [
+          false,
+        ],
+        "name": "Player1",
+        "playerIndex": 1,
+        "playerStands": Array [
+          false,
+        ],
+        "score": Array [
+          0,
+        ],
+        "splitHand": false,
+        "status": Array [
+          null,
+        ],
+      }
+    }
+    reset={[MockFunction]}
+    setStatus={[MockFunction]}
+    splitOnClick={[MockFunction]}
+    standOnClick={[MockFunction]}
+    subscribe={[MockFunction]}
+    turn={
+      Object {
+        "errMsg": "",
+        "error": false,
+        "isPlaying": true,
+        "numPlayers": 2,
+        "playersTurn": 1,
+      }
+    }
+    winBet={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="hand-o-down"
+          />
+           Hit
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="hand-paper-o"
+          />
+           Stand
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={true}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="hand-scissors-o"
+          />
+           Split
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="align-justify "
+          />
+           Double Down
+        </Button>,
+        <Button
+          block={true}
+          color="secondary"
+          disabled={false}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="dollar"
+          />
+           Buy Insurance
+        </Button>,
+        <Button
+          block={true}
+          color="primary"
+          disabled={true}
+          onClick={[MockFunction]}
+          size="md"
+          tag="button"
+        >
+          <FontAwesome
+            name="handshake-o"
+          />
+           Deal
+        </Button>,
+      ],
+      "className": "ControlPanel_main",
+      "lg": "12",
+      "md": "8",
+      "sm": "6",
+      "tag": "form",
+      "xs": "4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="hand-o-down"
+            />,
+            " Hit",
+          ],
+          "color": "secondary",
+          "disabled": false,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-o-down",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Hit",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="hand-paper-o"
+            />,
+            " Stand",
+          ],
+          "color": "secondary",
+          "disabled": false,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-paper-o",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Stand",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="hand-scissors-o"
+            />,
+            " Split",
+          ],
+          "color": "secondary",
+          "disabled": true,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "hand-scissors-o",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Split",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="align-justify "
+            />,
+            " Double Down",
+          ],
+          "color": "secondary",
+          "disabled": false,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "align-justify ",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Double Down",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="dollar"
+            />,
+            " Buy Insurance",
+          ],
+          "color": "secondary",
+          "disabled": false,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "dollar",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Buy Insurance",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": true,
+          "children": Array [
+            <FontAwesome
+              name="handshake-o"
+            />,
+            " Deal",
+          ],
+          "color": "primary",
+          "disabled": true,
+          "onClick": [MockFunction],
+          "size": "md",
+          "tag": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "handshake-o",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " Deal",
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="hand-o-down"
+            />
+             Hit
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="hand-paper-o"
+            />
+             Stand
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={true}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="hand-scissors-o"
+            />
+             Split
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="align-justify "
+            />
+             Double Down
+          </Button>,
+          <Button
+            block={true}
+            color="secondary"
+            disabled={false}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="dollar"
+            />
+             Buy Insurance
+          </Button>,
+          <Button
+            block={true}
+            color="primary"
+            disabled={true}
+            onClick={[MockFunction]}
+            size="md"
+            tag="button"
+          >
+            <FontAwesome
+              name="handshake-o"
+            />
+             Deal
+          </Button>,
+        ],
+        "className": "ControlPanel_main",
+        "lg": "12",
+        "md": "8",
+        "sm": "6",
+        "tag": "form",
+        "xs": "4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="hand-o-down"
+              />,
+              " Hit",
+            ],
+            "color": "secondary",
+            "disabled": false,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-o-down",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Hit",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="hand-paper-o"
+              />,
+              " Stand",
+            ],
+            "color": "secondary",
+            "disabled": false,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-paper-o",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Stand",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="hand-scissors-o"
+              />,
+              " Split",
+            ],
+            "color": "secondary",
+            "disabled": true,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "hand-scissors-o",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Split",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="align-justify "
+              />,
+              " Double Down",
+            ],
+            "color": "secondary",
+            "disabled": false,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "align-justify ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Double Down",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="dollar"
+              />,
+              " Buy Insurance",
+            ],
+            "color": "secondary",
+            "disabled": false,
+            "onClick": [MockFunction],
+            "size": "md",
+            "tag": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "dollar",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " Buy Insurance",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": true,
+            "children": Array [
+              <FontAwesome
+                name="handshake-o"
+              />,
+              " Deal",
+            ],
+            "color": "primary",
+            "disabled": true,
             "onClick": [MockFunction],
             "size": "md",
             "tag": "button",

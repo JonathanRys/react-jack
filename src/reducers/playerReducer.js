@@ -10,7 +10,7 @@ const initialState = {
   currentBet: 5,
 
   hands: [[]],
-  status: [],
+  status: [null],
   score: [0],
   busted: [false],
   hasBlackjack: [false],
@@ -29,7 +29,14 @@ export default function playerReducer(state = initialState, action) {
     case "SET_AVATAR":
       return { ...state, avatar: action.payload.avatar };
     case "SET_STATUS":
-      return { ...state, status: action.payload.status };
+      return {
+        ...state,
+        status: [
+          ...state.status.slice(0, index),
+          action.payload.status,
+          ...state.status.slice(index + 1)
+        ]
+      };
     case "TAKE_CARD":
       const newCards = addCard(state.hands, action.payload.card, index);
       return {

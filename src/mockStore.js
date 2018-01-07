@@ -16,6 +16,7 @@ export default {
     currentBet: 5,
 
     hands: [["SA", "CK"], ["D2", "HJ"]],
+    status: [null],
     score: [0],
     busted: [false],
     hasBlackjack: [false],

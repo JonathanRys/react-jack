@@ -7,7 +7,7 @@ import { createStore } from "redux";
 import rootReducer from "../reducers/index";
 
 describe("Test the App component", () => {
-  it("renders without crashing", () => {
+  it("matches the snapshot", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
     expect(component).toMatchSnapshot();
@@ -27,6 +27,14 @@ describe("Test the App component", () => {
 
     component.props().setAvatar("./images/test.png");
     expect(store.getState().player.avatar).toEqual("./images/test.png");
+  });
+
+  it("sets the player's status", () => {
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
+
+    component.props().setStatus("Blackjack");
+    expect(store.getState().player.status[0]).toEqual("Blackjack");
   });
 
   it("wins bet", () => {

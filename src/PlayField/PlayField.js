@@ -32,7 +32,7 @@ export default class PlayField extends Component {
           {/* Really just an image I guess.  Maybe add some animation... */}
         </Row>
         <Row>
-          <Player hands={player.hands} />
+          <Player hands={player.hands} status={player.status[index]} />
           <Badge
             name={player.name}
             avatar={player.avatar}

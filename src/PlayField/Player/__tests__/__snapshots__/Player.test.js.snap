@@ -30,6 +30,7 @@ ShallowWrapper {
           "SJ",
         ]
       }
+      status={undefined}
     />,
   ],
   Symbol(enzyme.__nodes__): Array [
@@ -42,6 +43,7 @@ ShallowWrapper {
             "SJ",
           ]
         }
+        status={undefined}
       />,
     ],
   ],

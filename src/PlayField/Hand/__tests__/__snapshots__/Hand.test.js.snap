@@ -27,13 +27,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
-          card="SA"
-          faceUp={true}
-        />,
-        <Card
-          card="SJ"
-          faceUp={true}
+        Array [
+          <Card
+            card="SA"
+            faceUp={true}
+          />,
+          <Card
+            card="SJ"
+            faceUp={true}
+          />,
+        ],
+        <div
+          className="Playfield_Hand_status"
         />,
       ],
       "className": "PlayField_Hand",
@@ -68,6 +73,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "Playfield_Hand_status",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -78,13 +95,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
-            card="SA"
-            faceUp={true}
-          />,
-          <Card
-            card="SJ"
-            faceUp={true}
+          Array [
+            <Card
+              card="SA"
+              faceUp={true}
+            />,
+            <Card
+              card="SJ"
+              faceUp={true}
+            />,
+          ],
+          <div
+            className="Playfield_Hand_status"
           />,
         ],
         "className": "PlayField_Hand",
@@ -118,6 +140,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "Playfield_Hand_status",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
         },
       ],
       "type": "div",
@@ -160,14 +194,21 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
-          card="SA"
-          faceUp={true}
-        />,
-        <Card
-          card="SJ"
-          faceUp={false}
-        />,
+        Array [
+          <Card
+            card="SA"
+            faceUp={true}
+          />,
+          <Card
+            card="SJ"
+            faceUp={false}
+          />,
+        ],
+        <div
+          className="Playfield_Hand_status"
+        >
+          
+        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -201,6 +242,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "Playfield_Hand_status",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -211,14 +264,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
-            card="SA"
-            faceUp={true}
-          />,
-          <Card
-            card="SJ"
-            faceUp={false}
-          />,
+          Array [
+            <Card
+              card="SA"
+              faceUp={true}
+            />,
+            <Card
+              card="SJ"
+              faceUp={false}
+            />,
+          ],
+          <div
+            className="Playfield_Hand_status"
+          >
+            
+          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -251,6 +311,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "Playfield_Hand_status",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "div",
         },
       ],
       "type": "div",
@@ -293,13 +365,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
-          card="SA"
-          faceUp={true}
-        />,
-        <Card
-          card="SJ"
-          faceUp={true}
+        Array [
+          <Card
+            card="SA"
+            faceUp={true}
+          />,
+          <Card
+            card="SJ"
+            faceUp={true}
+          />,
+        ],
+        <div
+          className="Playfield_Hand_status"
         />,
       ],
       "className": "PlayField_Hand",
@@ -334,6 +411,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "Playfield_Hand_status",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -344,13 +433,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
-            card="SA"
-            faceUp={true}
-          />,
-          <Card
-            card="SJ"
-            faceUp={true}
+          Array [
+            <Card
+              card="SA"
+              faceUp={true}
+            />,
+            <Card
+              card="SJ"
+              faceUp={true}
+            />,
+          ],
+          <div
+            className="Playfield_Hand_status"
           />,
         ],
         "className": "PlayField_Hand",
@@ -384,6 +478,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "Playfield_Hand_status",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
         },
       ],
       "type": "div",

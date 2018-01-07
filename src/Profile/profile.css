@@ -9,10 +9,11 @@
 }
 
 .avatar {
-  margin: 15px 5px;
+  background: #fff;
   border: 1px solid black;
   border-radius: 5px;
   height: 52px;
+  margin: 15px 5px;
   width: 52px;
 }
 

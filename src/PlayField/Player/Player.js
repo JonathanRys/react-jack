@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 import Hand from "../Hand/Hand";
 
-export default function Player({ hands }) {
+export default function Player({ hands, status }) {
   return hands.map((hand, index) => (
-    <Hand key={`hand-${index}`} hand={hand} dealer={false} />
+    <Hand key={`hand-${index}`} hand={hand} status={status} dealer={false} />
   ));
 }
 

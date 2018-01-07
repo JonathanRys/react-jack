@@ -23,7 +23,7 @@ describe("Test playerReducer reducer", () => {
   it("sets the players status", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "SET_STATUS", payload: { status: "Blackjack" } });
-    expect(store.getState().status).toEqual("Blackjack");
+    expect(store.getState().status).toEqual(["Blackjack"]);
   });
 
   it("takes a new card and calculates the new score", () => {
@@ -110,7 +110,7 @@ describe("Test playerReducer reducer", () => {
       currentBet: 5,
 
       hands: [[]],
-      status: [],
+      status: [null],
       score: [0],
       busted: [false],
       hasBlackjack: [false],

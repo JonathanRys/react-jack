@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the App component renders without crashing 1`] = `
+exports[`Test the App component matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -79,11 +79,14 @@ ShallowWrapper {
           0,
         ],
         "splitHand": false,
-        "status": Array [],
+        "status": Array [
+          null,
+        ],
       },
       "setAvatar": [Function],
       "setBet": [Function],
       "setName": [Function],
+      "setStatus": [Function],
       "splitOnClick": [Function],
       "standOnClick": [Function],
       "stop": [Function],
@@ -183,11 +186,14 @@ ShallowWrapper {
             0,
           ],
           "splitHand": false,
-          "status": Array [],
+          "status": Array [
+            null,
+          ],
         },
         "setAvatar": [Function],
         "setBet": [Function],
         "setName": [Function],
+        "setStatus": [Function],
         "splitOnClick": [Function],
         "standOnClick": [Function],
         "stop": [Function],
