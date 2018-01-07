@@ -7,11 +7,14 @@ import { shallow } from "enzyme";
 import Badge from "../Badge";
 
 const mockProps = {
-  name: "Lester",
-  avatar: "../images/default.png",
-  score: 21,
-  balance: 500,
-  currentBet: 5,
+  player: {
+    name: "Lester",
+    avatar: "../images/default.png",
+    score: 21,
+    balance: 500,
+    currentBet: 5
+  },
+  isPlaying: true,
   dealer: false,
   flipped: false
 };
@@ -25,7 +28,8 @@ describe("Test Badge component", () => {
   it("renders Badge for dealer", () => {
     const testProps = { ...mockProps };
     testProps.dealer = true;
-    testProps.balance = null;
+    testProps.player.balance = null;
+    testProps.isPlaying = false;
 
     const component = shallow(<Badge {...testProps} />);
     expect(component).toMatchSnapshot();

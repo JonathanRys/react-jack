@@ -88,7 +88,7 @@ const mapDispatchToProps = dispatch => {
       // the player store is configured to accept multiple hands though
     },
     doubleDownOnClick: () => {
-      dispatchAll(dispatch, [setDoubleDown, drawOne, stand]);
+      dispatchAll(dispatch, [setDoubleDown, deductBet, drawOne, stand]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());

@@ -95,11 +95,15 @@ ShallowWrapper {
           tag="div"
         >
           <Badge
-            avatar="./images/dealer.png"
             dealer={true}
             flipped={true}
-            name="Dealer"
-            score={0}
+            player={
+              Object {
+                "avatar": "./images/dealer.png",
+                "name": "Dealer",
+                "score": 0,
+              }
+            }
           />
           <Dealer
             flipped={true}
@@ -136,14 +140,19 @@ ShallowWrapper {
             status={undefined}
           />
           <Badge
-            avatar="./images/default.png"
-            balance={500}
             buyChips={undefined}
-            currentBet={5}
             dealer={false}
             flipped={true}
-            name="Player1"
-            score={undefined}
+            isPlaying={false}
+            player={
+              Object {
+                "avatar": "./images/default.png",
+                "balance": 500,
+                "currentBet": 5,
+                "name": "Player1",
+                "score": undefined,
+              }
+            }
             setBet={undefined}
           />
         </Row>,
@@ -160,11 +169,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Badge
-              avatar="./images/dealer.png"
               dealer={true}
               flipped={true}
-              name="Dealer"
-              score={0}
+              player={
+                Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                }
+              }
             />,
             <Dealer
               flipped={true}
@@ -185,11 +198,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "avatar": "./images/dealer.png",
               "dealer": true,
               "flipped": true,
-              "name": "Dealer",
-              "score": 0,
+              "player": Object {
+                "avatar": "./images/dealer.png",
+                "name": "Dealer",
+                "score": 0,
+              },
             },
             "ref": null,
             "rendered": null,
@@ -261,14 +276,19 @@ ShallowWrapper {
               status={undefined}
             />,
             <Badge
-              avatar="./images/default.png"
-              balance={500}
               buyChips={undefined}
-              currentBet={5}
               dealer={false}
               flipped={true}
-              name="Player1"
-              score={undefined}
+              isPlaying={false}
+              player={
+                Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                }
+              }
               setBet={undefined}
             />,
           ],
@@ -302,14 +322,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "avatar": "./images/default.png",
-              "balance": 500,
               "buyChips": undefined,
-              "currentBet": 5,
               "dealer": false,
               "flipped": true,
-              "name": "Player1",
-              "score": undefined,
+              "isPlaying": false,
+              "player": Object {
+                "avatar": "./images/default.png",
+                "balance": 500,
+                "currentBet": 5,
+                "name": "Player1",
+                "score": undefined,
+              },
               "setBet": undefined,
             },
             "ref": null,
@@ -333,11 +356,15 @@ ShallowWrapper {
             tag="div"
           >
             <Badge
-              avatar="./images/dealer.png"
               dealer={true}
               flipped={true}
-              name="Dealer"
-              score={0}
+              player={
+                Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                }
+              }
             />
             <Dealer
               flipped={true}
@@ -374,14 +401,19 @@ ShallowWrapper {
               status={undefined}
             />
             <Badge
-              avatar="./images/default.png"
-              balance={500}
               buyChips={undefined}
-              currentBet={5}
               dealer={false}
               flipped={true}
-              name="Player1"
-              score={undefined}
+              isPlaying={false}
+              player={
+                Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                }
+              }
               setBet={undefined}
             />
           </Row>,
@@ -398,11 +430,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Badge
-                avatar="./images/dealer.png"
                 dealer={true}
                 flipped={true}
-                name="Dealer"
-                score={0}
+                player={
+                  Object {
+                    "avatar": "./images/dealer.png",
+                    "name": "Dealer",
+                    "score": 0,
+                  }
+                }
               />,
               <Dealer
                 flipped={true}
@@ -423,11 +459,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "avatar": "./images/dealer.png",
                 "dealer": true,
                 "flipped": true,
-                "name": "Dealer",
-                "score": 0,
+                "player": Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                },
               },
               "ref": null,
               "rendered": null,
@@ -499,14 +537,19 @@ ShallowWrapper {
                 status={undefined}
               />,
               <Badge
-                avatar="./images/default.png"
-                balance={500}
                 buyChips={undefined}
-                currentBet={5}
                 dealer={false}
                 flipped={true}
-                name="Player1"
-                score={undefined}
+                isPlaying={false}
+                player={
+                  Object {
+                    "avatar": "./images/default.png",
+                    "balance": 500,
+                    "currentBet": 5,
+                    "name": "Player1",
+                    "score": undefined,
+                  }
+                }
                 setBet={undefined}
               />,
             ],
@@ -540,14 +583,17 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "avatar": "./images/default.png",
-                "balance": 500,
                 "buyChips": undefined,
-                "currentBet": 5,
                 "dealer": false,
                 "flipped": true,
-                "name": "Player1",
-                "score": undefined,
+                "isPlaying": false,
+                "player": Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                },
                 "setBet": undefined,
               },
               "ref": null,
@@ -666,11 +712,15 @@ ShallowWrapper {
           tag="div"
         >
           <Badge
-            avatar="./images/dealer.png"
             dealer={true}
             flipped={false}
-            name="Dealer"
-            score={0}
+            player={
+              Object {
+                "avatar": "./images/dealer.png",
+                "name": "Dealer",
+                "score": 0,
+              }
+            }
           />
           <Dealer
             flipped={false}
@@ -707,14 +757,19 @@ ShallowWrapper {
             status={undefined}
           />
           <Badge
-            avatar="./images/default.png"
-            balance={500}
             buyChips={undefined}
-            currentBet={5}
             dealer={false}
             flipped={true}
-            name="Player1"
-            score={undefined}
+            isPlaying={false}
+            player={
+              Object {
+                "avatar": "./images/default.png",
+                "balance": 500,
+                "currentBet": 5,
+                "name": "Player1",
+                "score": undefined,
+              }
+            }
             setBet={undefined}
           />
         </Row>,
@@ -731,11 +786,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Badge
-              avatar="./images/dealer.png"
               dealer={true}
               flipped={false}
-              name="Dealer"
-              score={0}
+              player={
+                Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                }
+              }
             />,
             <Dealer
               flipped={false}
@@ -756,11 +815,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "avatar": "./images/dealer.png",
               "dealer": true,
               "flipped": false,
-              "name": "Dealer",
-              "score": 0,
+              "player": Object {
+                "avatar": "./images/dealer.png",
+                "name": "Dealer",
+                "score": 0,
+              },
             },
             "ref": null,
             "rendered": null,
@@ -832,14 +893,19 @@ ShallowWrapper {
               status={undefined}
             />,
             <Badge
-              avatar="./images/default.png"
-              balance={500}
               buyChips={undefined}
-              currentBet={5}
               dealer={false}
               flipped={true}
-              name="Player1"
-              score={undefined}
+              isPlaying={false}
+              player={
+                Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                }
+              }
               setBet={undefined}
             />,
           ],
@@ -873,14 +939,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "avatar": "./images/default.png",
-              "balance": 500,
               "buyChips": undefined,
-              "currentBet": 5,
               "dealer": false,
               "flipped": true,
-              "name": "Player1",
-              "score": undefined,
+              "isPlaying": false,
+              "player": Object {
+                "avatar": "./images/default.png",
+                "balance": 500,
+                "currentBet": 5,
+                "name": "Player1",
+                "score": undefined,
+              },
               "setBet": undefined,
             },
             "ref": null,
@@ -904,11 +973,15 @@ ShallowWrapper {
             tag="div"
           >
             <Badge
-              avatar="./images/dealer.png"
               dealer={true}
               flipped={false}
-              name="Dealer"
-              score={0}
+              player={
+                Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                }
+              }
             />
             <Dealer
               flipped={false}
@@ -945,14 +1018,19 @@ ShallowWrapper {
               status={undefined}
             />
             <Badge
-              avatar="./images/default.png"
-              balance={500}
               buyChips={undefined}
-              currentBet={5}
               dealer={false}
               flipped={true}
-              name="Player1"
-              score={undefined}
+              isPlaying={false}
+              player={
+                Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                }
+              }
               setBet={undefined}
             />
           </Row>,
@@ -969,11 +1047,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Badge
-                avatar="./images/dealer.png"
                 dealer={true}
                 flipped={false}
-                name="Dealer"
-                score={0}
+                player={
+                  Object {
+                    "avatar": "./images/dealer.png",
+                    "name": "Dealer",
+                    "score": 0,
+                  }
+                }
               />,
               <Dealer
                 flipped={false}
@@ -994,11 +1076,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "avatar": "./images/dealer.png",
                 "dealer": true,
                 "flipped": false,
-                "name": "Dealer",
-                "score": 0,
+                "player": Object {
+                  "avatar": "./images/dealer.png",
+                  "name": "Dealer",
+                  "score": 0,
+                },
               },
               "ref": null,
               "rendered": null,
@@ -1070,14 +1154,19 @@ ShallowWrapper {
                 status={undefined}
               />,
               <Badge
-                avatar="./images/default.png"
-                balance={500}
                 buyChips={undefined}
-                currentBet={5}
                 dealer={false}
                 flipped={true}
-                name="Player1"
-                score={undefined}
+                isPlaying={false}
+                player={
+                  Object {
+                    "avatar": "./images/default.png",
+                    "balance": 500,
+                    "currentBet": 5,
+                    "name": "Player1",
+                    "score": undefined,
+                  }
+                }
                 setBet={undefined}
               />,
             ],
@@ -1111,14 +1200,17 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "avatar": "./images/default.png",
-                "balance": 500,
                 "buyChips": undefined,
-                "currentBet": 5,
                 "dealer": false,
                 "flipped": true,
-                "name": "Player1",
-                "score": undefined,
+                "isPlaying": false,
+                "player": Object {
+                  "avatar": "./images/default.png",
+                  "balance": 500,
+                  "currentBet": 5,
+                  "name": "Player1",
+                  "score": undefined,
+                },
                 "setBet": undefined,
               },
               "ref": null,

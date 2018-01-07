@@ -19,9 +19,11 @@ export default class PlayField extends Component {
       <Container className="PlayField_main">
         <Row>
           <Badge
-            name={dealer.name}
-            avatar={dealer.avatar}
-            score={dealer.score}
+            player={{
+              name: dealer.name,
+              avatar: dealer.avatar,
+              score: dealer.score
+            }}
             dealer={true}
             flipped={!this.props.turn.playersTurn}
           />
@@ -34,11 +36,14 @@ export default class PlayField extends Component {
         <Row>
           <Player hands={player.hands} status={player.status[index]} />
           <Badge
-            name={player.name}
-            avatar={player.avatar}
-            score={player.score[index]}
-            balance={player.balance}
-            currentBet={player.currentBet}
+            player={{
+              name: player.name,
+              avatar: player.avatar,
+              score: player.score[index],
+              balance: player.balance,
+              currentBet: player.currentBet
+            }}
+            isPlaying={this.props.turn.isPlaying}
             buyChips={this.props.buyChips}
             setBet={this.props.setBet}
             dealer={false}

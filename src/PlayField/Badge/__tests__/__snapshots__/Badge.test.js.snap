@@ -5,13 +5,18 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Badge
-    avatar="../images/default.png"
-    balance={null}
-    currentBet={5}
     dealer={true}
     flipped={false}
-    name="Lester"
-    score={21}
+    isPlaying={false}
+    player={
+      Object {
+        "avatar": "../images/default.png",
+        "balance": null,
+        "currentBet": 5,
+        "name": "Lester",
+        "score": 21,
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -124,6 +129,7 @@ ShallowWrapper {
           >
             <div
               className="PlayField_Badge_bet-controls"
+              style={Object {}}
             >
               <button
                 disabled={true}
@@ -347,6 +353,7 @@ ShallowWrapper {
             >
               <div
                 className="PlayField_Badge_bet-controls"
+                style={Object {}}
               >
                 <button
                   disabled={true}
@@ -410,6 +417,7 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="PlayField_Badge_bet-controls"
+                  style={Object {}}
                 >
                   <button
                     disabled={true}
@@ -470,6 +478,7 @@ ShallowWrapper {
                     </button>,
                   ],
                   "className": "PlayField_Badge_bet-controls",
+                  "style": Object {},
                 },
                 "ref": null,
                 "rendered": Array [
@@ -641,6 +650,7 @@ ShallowWrapper {
             >
               <div
                 className="PlayField_Badge_bet-controls"
+                style={Object {}}
               >
                 <button
                   disabled={true}
@@ -864,6 +874,7 @@ ShallowWrapper {
               >
                 <div
                   className="PlayField_Badge_bet-controls"
+                  style={Object {}}
                 >
                   <button
                     disabled={true}
@@ -927,6 +938,7 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="PlayField_Badge_bet-controls"
+                    style={Object {}}
                   >
                     <button
                       disabled={true}
@@ -987,6 +999,7 @@ ShallowWrapper {
                       </button>,
                     ],
                     "className": "PlayField_Badge_bet-controls",
+                    "style": Object {},
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1069,13 +1082,18 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Badge
-    avatar="../images/default.png"
-    balance={500}
-    currentBet={5}
     dealer={false}
     flipped={false}
-    name="Lester"
-    score={21}
+    isPlaying={true}
+    player={
+      Object {
+        "avatar": "../images/default.png",
+        "balance": 500,
+        "currentBet": 5,
+        "name": "Lester",
+        "score": 21,
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1189,6 +1207,11 @@ ShallowWrapper {
           >
             <div
               className="PlayField_Badge_bet-controls"
+              style={
+                Object {
+                  "visibility": "hidden",
+                }
+              }
             >
               <button
                 disabled={true}
@@ -1413,6 +1436,11 @@ ShallowWrapper {
             >
               <div
                 className="PlayField_Badge_bet-controls"
+                style={
+                  Object {
+                    "visibility": "hidden",
+                  }
+                }
               >
                 <button
                   disabled={true}
@@ -1476,6 +1504,11 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="PlayField_Badge_bet-controls"
+                  style={
+                    Object {
+                      "visibility": "hidden",
+                    }
+                  }
                 >
                   <button
                     disabled={true}
@@ -1536,6 +1569,9 @@ ShallowWrapper {
                     </button>,
                   ],
                   "className": "PlayField_Badge_bet-controls",
+                  "style": Object {
+                    "visibility": "hidden",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1708,6 +1744,11 @@ ShallowWrapper {
             >
               <div
                 className="PlayField_Badge_bet-controls"
+                style={
+                  Object {
+                    "visibility": "hidden",
+                  }
+                }
               >
                 <button
                   disabled={true}
@@ -1932,6 +1973,11 @@ ShallowWrapper {
               >
                 <div
                   className="PlayField_Badge_bet-controls"
+                  style={
+                    Object {
+                      "visibility": "hidden",
+                    }
+                  }
                 >
                   <button
                     disabled={true}
@@ -1995,6 +2041,11 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="PlayField_Badge_bet-controls"
+                    style={
+                      Object {
+                        "visibility": "hidden",
+                      }
+                    }
                   >
                     <button
                       disabled={true}
@@ -2055,6 +2106,9 @@ ShallowWrapper {
                       </button>,
                     ],
                     "className": "PlayField_Badge_bet-controls",
+                    "style": Object {
+                      "visibility": "hidden",
+                    },
                   },
                   "ref": null,
                   "rendered": Array [
