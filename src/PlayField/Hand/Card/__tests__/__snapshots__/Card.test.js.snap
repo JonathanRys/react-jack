@@ -20,7 +20,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "PlayField__Card__card-face ",
+      "className": "PlayField_Card_card-face ",
     },
     "ref": null,
     "rendered": null,
@@ -32,7 +32,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "PlayField__Card__card-face ",
+        "className": "PlayField_Card_card-face ",
       },
       "ref": null,
       "rendered": null,
@@ -69,7 +69,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "PlayField__Card__card-face SA",
+      "className": "PlayField_Card_card-face SA",
     },
     "ref": null,
     "rendered": null,
@@ -81,7 +81,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "PlayField__Card__card-face SA",
+        "className": "PlayField_Card_card-face SA",
       },
       "ref": null,
       "rendered": null,
@@ -118,7 +118,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "PlayField__Card__card-face SA",
+      "className": "PlayField_Card_card-face SA",
     },
     "ref": null,
     "rendered": null,
@@ -130,7 +130,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "PlayField__Card__card-face SA",
+        "className": "PlayField_Card_card-face SA",
       },
       "ref": null,
       "rendered": null,

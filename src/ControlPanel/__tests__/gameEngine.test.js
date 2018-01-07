@@ -453,12 +453,8 @@ describe("Test gameEngine", () => {
   });
 
   it("passes a special test", () => {
+    // This test is here for testing edge cases in the event of strange behavior
     const testProps = { ...mockProps };
-    testProps.player.busted[0] = false;
-    testProps.player.playerStands[0] = true;
-    testProps.player.hasBlackjack[0] = false;
-    testProps.player.hands = [["H3", "DJ"]]; // 13
-    testProps.player.score[0] = 13;
 
     testProps.player = {
       balance: 495,

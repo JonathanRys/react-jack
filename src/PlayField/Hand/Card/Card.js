@@ -5,7 +5,6 @@ import "./card.css";
 
 export default class Card extends Component {
   shouldComponentUpdate(nextProps) {
-    console.log("props in Card:", nextProps);
     if (
       this.props.faceUp === nextProps.faceUp &&
       this.props.card === nextProps.card
@@ -17,7 +16,7 @@ export default class Card extends Component {
   render() {
     return (
       <div
-        className={`PlayField__Card__card-face ${
+        className={`PlayField_Card_card-face ${
           this.props.faceUp ? this.props.card : ""
         }`}
       />
