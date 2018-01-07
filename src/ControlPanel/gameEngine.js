@@ -1,6 +1,4 @@
 export default function gameEngine(nextProps) {
-  let outcome = "";
-
   const index = nextProps.player.handIndex;
   const dealersTurn =
     nextProps.player.playerStands[index] ||
@@ -48,6 +46,7 @@ export default function gameEngine(nextProps) {
         return "Bust";
       } else if (nextProps.player.hasBlackjack[index]) {
         nextProps.stop();
+        nextProps.winBet(2.5);
         return "Blackjack";
       }
       // Draw a card
@@ -58,20 +57,19 @@ export default function gameEngine(nextProps) {
       nextProps.stop();
       // Score the player's hand
       if (playerScore > 21) {
-        outcome = "Bust";
+        return "Bust";
       } else if (playerScore === dealerScore) {
-        outcome = "Push";
         nextProps.winBet();
+        return "Push";
       } else if (nextProps.player.hasBlackjack[index]) {
-        outcome = "Blackjack";
         nextProps.winBet(2.5);
+        return "Blackjack";
       } else if (dealerScore > 21 || playerScore > dealerScore) {
-        outcome = "Won";
         nextProps.winBet(2);
+        return "Won";
       } else {
-        outcome = "Lost";
+        return "Lost";
       }
-      return outcome;
     }
   } else {
     // The turn has ended, awaiting user input

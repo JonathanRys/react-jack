@@ -282,8 +282,7 @@ describe("Test gameEngine", () => {
       expect(testProps.nextPlayer).not.toHaveBeenCalled();
 
       expect(testProps.stop).toHaveBeenCalled();
-
-      expect(testProps.winBet).not.toHaveBeenCalled();
+      expect(testProps.winBet).toHaveBeenCalledWith(2.5);
     });
   });
 
@@ -300,6 +299,7 @@ describe("Test gameEngine", () => {
       testProps.turn.isPlaying = true;
       testProps.turn.playersTurn = 0;
       testProps.stop = jest.fn();
+      testProps.winBet = jest.fn();
 
       gameEngine(testProps);
       expect(testProps.dealerTurn).not.toHaveBeenCalled();
