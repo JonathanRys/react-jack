@@ -2,7 +2,7 @@
 
 ### A single-player blackjack game built using React and Redux
 
-To run, clone the repo, cd into it and type
+To get up and running, clone the repo, cd into it and type
 ```
 $ npm install
 ```
