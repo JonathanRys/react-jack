@@ -6,6 +6,7 @@ import "./hand.css";
 import Card from "./Card/Card";
 
 export default function Hand({ hand, dealer, status, handFlipped }) {
+  console.log("STATUS:", status);
   return (
     <div
       className="PlayField_Hand"
@@ -18,7 +19,9 @@ export default function Hand({ hand, dealer, status, handFlipped }) {
           faceUp={!(dealer && key) || handFlipped}
         />
       ))}
-      <div className="Playfield_Hand_status">{!dealer ? status : ""}</div>
+      <div className="Playfield_Hand_status">
+        {!dealer || handFlipped ? status : ""}
+      </div>
     </div>
   );
 }
