@@ -11,6 +11,11 @@ export default function Hand({ hand, dealer, status, handFlipped }) {
       className="PlayField_Hand"
       style={{ margin: "auto", display: "inline-block" }}
     >
+      <div className="Playfield_Hand_status">
+        <div className="Playfield_Hand_statusText">
+          {!dealer || handFlipped ? status : ""}
+        </div>
+      </div>
       {hand.map((card, key) => (
         <Card
           key={`card-face-${key}`}
@@ -18,11 +23,6 @@ export default function Hand({ hand, dealer, status, handFlipped }) {
           faceUp={!(dealer && key) || handFlipped}
         />
       ))}
-      <div className="Playfield_Hand_status">
-        <div className="Playfield_Hand_statusText">
-          {!dealer || handFlipped ? status : ""}
-        </div>
-      </div>
     </div>
   );
 }

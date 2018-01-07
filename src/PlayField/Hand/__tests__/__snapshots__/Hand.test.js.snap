@@ -27,6 +27,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="Playfield_Hand_status"
+        >
+          <div
+            className="Playfield_Hand_statusText"
+          />
+        </div>,
         Array [
           <Card
             card="SA"
@@ -37,13 +44,6 @@ ShallowWrapper {
             faceUp={true}
           />,
         ],
-        <div
-          className="Playfield_Hand_status"
-        >
-          <div
-            className="Playfield_Hand_statusText"
-          />
-        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -53,30 +53,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "card-face-0",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SA",
-          "faceUp": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "card-face-1",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SJ",
-          "faceUp": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -102,6 +78,30 @@ ShallowWrapper {
         },
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": "card-face-0",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SA",
+          "faceUp": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "card-face-1",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SJ",
+          "faceUp": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -112,6 +112,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="Playfield_Hand_status"
+          >
+            <div
+              className="Playfield_Hand_statusText"
+            />
+          </div>,
           Array [
             <Card
               card="SA"
@@ -122,13 +129,6 @@ ShallowWrapper {
               faceUp={true}
             />,
           ],
-          <div
-            className="Playfield_Hand_status"
-          >
-            <div
-              className="Playfield_Hand_statusText"
-            />
-          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -138,30 +138,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "card-face-0",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SA",
-            "faceUp": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "card-face-1",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SJ",
-            "faceUp": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -186,6 +162,30 @@ ShallowWrapper {
             "type": "div",
           },
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-0",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SA",
+            "faceUp": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-1",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SJ",
+            "faceUp": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",
@@ -228,6 +228,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="Playfield_Hand_status"
+        >
+          <div
+            className="Playfield_Hand_statusText"
+          >
+            
+          </div>
+        </div>,
         Array [
           <Card
             card="SA"
@@ -238,15 +247,6 @@ ShallowWrapper {
             faceUp={false}
           />,
         ],
-        <div
-          className="Playfield_Hand_status"
-        >
-          <div
-            className="Playfield_Hand_statusText"
-          >
-            
-          </div>
-        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -256,30 +256,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "card-face-0",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SA",
-          "faceUp": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "card-face-1",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SJ",
-          "faceUp": false,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -307,6 +283,30 @@ ShallowWrapper {
         },
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": "card-face-0",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SA",
+          "faceUp": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "card-face-1",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SJ",
+          "faceUp": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -317,6 +317,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="Playfield_Hand_status"
+          >
+            <div
+              className="Playfield_Hand_statusText"
+            >
+              
+            </div>
+          </div>,
           Array [
             <Card
               card="SA"
@@ -327,15 +336,6 @@ ShallowWrapper {
               faceUp={false}
             />,
           ],
-          <div
-            className="Playfield_Hand_status"
-          >
-            <div
-              className="Playfield_Hand_statusText"
-            >
-              
-            </div>
-          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -345,30 +345,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "card-face-0",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SA",
-            "faceUp": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "card-face-1",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SJ",
-            "faceUp": false,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -395,6 +371,30 @@ ShallowWrapper {
             "type": "div",
           },
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-0",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SA",
+            "faceUp": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-1",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SJ",
+            "faceUp": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",
@@ -437,6 +437,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="Playfield_Hand_status"
+        >
+          <div
+            className="Playfield_Hand_statusText"
+          />
+        </div>,
         Array [
           <Card
             card="SA"
@@ -447,13 +454,6 @@ ShallowWrapper {
             faceUp={true}
           />,
         ],
-        <div
-          className="Playfield_Hand_status"
-        >
-          <div
-            className="Playfield_Hand_statusText"
-          />
-        </div>,
       ],
       "className": "PlayField_Hand",
       "style": Object {
@@ -463,30 +463,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "card-face-0",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SA",
-          "faceUp": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "card-face-1",
-        "nodeType": "class",
-        "props": Object {
-          "card": "SJ",
-          "faceUp": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -512,6 +488,30 @@ ShallowWrapper {
         },
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": "card-face-0",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SA",
+          "faceUp": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "card-face-1",
+        "nodeType": "class",
+        "props": Object {
+          "card": "SJ",
+          "faceUp": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -522,6 +522,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="Playfield_Hand_status"
+          >
+            <div
+              className="Playfield_Hand_statusText"
+            />
+          </div>,
           Array [
             <Card
               card="SA"
@@ -532,13 +539,6 @@ ShallowWrapper {
               faceUp={true}
             />,
           ],
-          <div
-            className="Playfield_Hand_status"
-          >
-            <div
-              className="Playfield_Hand_statusText"
-            />
-          </div>,
         ],
         "className": "PlayField_Hand",
         "style": Object {
@@ -548,30 +548,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "card-face-0",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SA",
-            "faceUp": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "card-face-1",
-          "nodeType": "class",
-          "props": Object {
-            "card": "SJ",
-            "faceUp": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -596,6 +572,30 @@ ShallowWrapper {
             "type": "div",
           },
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-0",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SA",
+            "faceUp": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "card-face-1",
+          "nodeType": "class",
+          "props": Object {
+            "card": "SJ",
+            "faceUp": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

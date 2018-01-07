@@ -4,10 +4,10 @@
 }
 
 .Playfield_Hand_status {
-  bottom: 75px;
   color: red;
   font-family: "OldStamper", Arial, sans-serif;
   font-size: 2.5em;
+  margin-top: -50px;
   width: 94%;
   position: absolute;
 }
