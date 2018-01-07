@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Profile
     avatar="./images/default.png"
+    changed={false}
     name="Lester"
     setAvatar={[MockFunction]}
     setName={[MockFunction]}
@@ -93,6 +94,7 @@ ShallowWrapper {
         </FormGroup>,
         <Button
           color="secondary"
+          disabled={true}
           onClick={[Function]}
           tag="button"
         >
@@ -309,6 +311,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Change",
           "color": "secondary",
+          "disabled": true,
           "onClick": [Function],
           "tag": "button",
         },
@@ -396,6 +399,7 @@ ShallowWrapper {
           </FormGroup>,
           <Button
             color="secondary"
+            disabled={true}
             onClick={[Function]}
             tag="button"
           >
@@ -612,6 +616,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Change",
             "color": "secondary",
+            "disabled": true,
             "onClick": [Function],
             "tag": "button",
           },

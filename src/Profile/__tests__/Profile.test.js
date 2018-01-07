@@ -11,7 +11,8 @@ const mockProps = {
   name: "Lester",
   avatar: "./images/default.png",
   setName: jest.fn(),
-  setAvatar: jest.fn()
+  setAvatar: jest.fn(),
+  changed: false
 };
 
 describe("Test Profile component", () => {

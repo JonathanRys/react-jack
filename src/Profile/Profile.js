@@ -11,21 +11,26 @@ export default class Profile extends Component {
 
     this.state = {
       playerName: props.name,
-      playerAvatar: props.avatar
+      playerAvatar: props.avatar,
+      changed: false
     };
   }
 
   onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value, changed: true });
   };
 
   onClick = () => {
     this.props.setName(this.state.playerName);
     this.props.setAvatar(this.state.playerAvatar);
+    this.setState({ changed: false });
   };
 
   avatarOnClick = e => {
-    this.setState({ playerAvatar: e.target.getAttribute("src") });
+    this.setState({
+      playerAvatar: e.target.getAttribute("src"),
+      changed: true
+    });
   };
 
   render() {
@@ -76,7 +81,9 @@ export default class Profile extends Component {
             src="./images/female.png"
           />
         </FormGroup>
-        <Button onClick={this.onClick}>Change</Button>
+        <Button disabled={!this.state.changed} onClick={this.onClick}>
+          Change
+        </Button>
       </Form>
     );
   }
