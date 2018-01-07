@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Badge
     avatar="../images/default.png"
-    balance={500}
+    balance={null}
     currentBet={5}
     dealer={true}
     flipped={false}
@@ -100,7 +100,7 @@ ShallowWrapper {
             xs="6"
           >
             Balance: $
-            500
+            0
           </Col>
           <Col
             className="PlayField_Badge_betting-main"
@@ -323,7 +323,7 @@ ShallowWrapper {
               xs="6"
             >
               Balance: $
-              500
+              0
             </Col>,
             <Col
               className="PlayField_Badge_betting-main"
@@ -382,7 +382,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "Balance: $",
-                500,
+                0,
               ],
               "lg": "4",
               "tag": "div",
@@ -398,7 +398,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               "Balance: $",
-              500,
+              0,
             ],
             "type": [Function],
           },
@@ -617,7 +617,7 @@ ShallowWrapper {
               xs="6"
             >
               Balance: $
-              500
+              0
             </Col>
             <Col
               className="PlayField_Badge_betting-main"
@@ -840,7 +840,7 @@ ShallowWrapper {
                 xs="6"
               >
                 Balance: $
-                500
+                0
               </Col>,
               <Col
                 className="PlayField_Badge_betting-main"
@@ -899,7 +899,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "Balance: $",
-                  500,
+                  0,
                 ],
                 "lg": "4",
                 "tag": "div",
@@ -915,7 +915,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 "Balance: $",
-                500,
+                0,
               ],
               "type": [Function],
             },
@@ -1165,7 +1165,7 @@ ShallowWrapper {
             xs="6"
           >
             Balance: $
-            500
+            500.00
           </Col>
           <Col
             className="PlayField_Badge_betting-main"
@@ -1389,7 +1389,7 @@ ShallowWrapper {
               xs="6"
             >
               Balance: $
-              500
+              500.00
             </Col>,
             <Col
               className="PlayField_Badge_betting-main"
@@ -1448,7 +1448,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "Balance: $",
-                500,
+                "500.00",
               ],
               "lg": "4",
               "tag": "div",
@@ -1464,7 +1464,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               "Balance: $",
-              500,
+              "500.00",
             ],
             "type": [Function],
           },
@@ -1684,7 +1684,7 @@ ShallowWrapper {
               xs="6"
             >
               Balance: $
-              500
+              500.00
             </Col>
             <Col
               className="PlayField_Badge_betting-main"
@@ -1908,7 +1908,7 @@ ShallowWrapper {
                 xs="6"
               >
                 Balance: $
-                500
+                500.00
               </Col>,
               <Col
                 className="PlayField_Badge_betting-main"
@@ -1967,7 +1967,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "Balance: $",
-                  500,
+                  "500.00",
                 ],
                 "lg": "4",
                 "tag": "div",
@@ -1983,7 +1983,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 "Balance: $",
-                500,
+                "500.00",
               ],
               "type": [Function],
             },

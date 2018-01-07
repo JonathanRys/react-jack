@@ -37,6 +37,16 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "DEALER_TAKE_CARD", payload: "test" });
   });
 
+  it("tests stand action creator", () => {
+    const result = actions.stand();
+    expect(result).toEqual({ type: "STAND" });
+  });
+
+  it("tests setDoubleDown action creator", () => {
+    const result = actions.setDoubleDown();
+    expect(result).toEqual({ type: "SET_DOUBLE_DOWN" });
+  });
+
   it("tests buyChips action creator", () => {
     const result = actions.buyChips("test");
     expect(result).toEqual({ type: "BUY_CHIPS", payload: "test" });

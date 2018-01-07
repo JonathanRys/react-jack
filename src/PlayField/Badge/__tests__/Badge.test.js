@@ -25,6 +25,7 @@ describe("Test Badge component", () => {
   it("renders Badge for dealer", () => {
     const testProps = { ...mockProps };
     testProps.dealer = true;
+    testProps.balance = null;
 
     const component = shallow(<Badge {...testProps} />);
     expect(component).toMatchSnapshot();

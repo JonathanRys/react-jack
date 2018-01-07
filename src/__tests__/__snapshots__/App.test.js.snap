@@ -59,6 +59,9 @@ ShallowWrapper {
           false,
         ],
         "currentBet": 5,
+        "doubledDown": Array [
+          false,
+        ],
         "handIndex": 0,
         "hands": Array [
           Array [],
@@ -165,6 +168,9 @@ ShallowWrapper {
             false,
           ],
           "currentBet": 5,
+          "doubledDown": Array [
+            false,
+          ],
           "handIndex": 0,
           "hands": Array [
             Array [],

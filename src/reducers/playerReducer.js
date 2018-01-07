@@ -13,6 +13,7 @@ const initialState = {
   status: [null],
   score: [0],
   busted: [false],
+  doubledDown: [false],
   hasBlackjack: [false],
   hasInsurance: [false],
   splitHand: false,
@@ -62,6 +63,15 @@ export default function playerReducer(state = initialState, action) {
           ...state.playerStands.slice(0, index),
           true,
           ...state.playerStands.slice(index + 1)
+        ]
+      };
+    case "SET_DOUBLE_DOWN":
+      return {
+        ...state,
+        doubledDown: [
+          ...state.doubledDown.slice(0, index),
+          true,
+          ...state.doubledDown.slice(index + 1)
         ]
       };
     case "BUY_CHIPS":

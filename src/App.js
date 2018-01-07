@@ -14,7 +14,8 @@ import {
   setName,
   setAvatar,
   setStatus,
-  clearHands
+  clearHands,
+  setDoubleDown
 } from "./actions/playerActions";
 import {
   takeCard,
@@ -87,7 +88,7 @@ const mapDispatchToProps = dispatch => {
       // the player store is configured to accept multiple hands though
     },
     doubleDownOnClick: () => {
-      dispatchAll(dispatch, [drawOne, stand]);
+      dispatchAll(dispatch, [setDoubleDown, drawOne, stand]);
     },
     buyInsuranceOnClick: () => {
       dispatch(setInsured());

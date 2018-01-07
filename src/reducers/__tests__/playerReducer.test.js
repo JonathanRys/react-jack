@@ -70,6 +70,14 @@ describe("Test playerReducer reducer", () => {
     );
   });
 
+  it("sets doubledDown correctly", () => {
+    const store = createStore(playerReducer);
+    store.dispatch({ type: "SET_DOUBLE_DOWN" });
+    expect(store.getState().doubledDown[store.getState().handIndex]).toEqual(
+      true
+    );
+  });
+
   it("credit given amount to player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "BUY_CHIPS", payload: { newChips: 500 } });
@@ -115,6 +123,7 @@ describe("Test playerReducer reducer", () => {
       busted: [false],
       hasBlackjack: [false],
       hasInsurance: [false],
+      doubledDown: [false],
       splitHand: false,
       playerStands: [false]
     });

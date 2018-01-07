@@ -125,7 +125,6 @@ ControlPanel.propTypes = {
   hitOnClick: PropTypes.func.isRequired,
   standOnClick: PropTypes.func.isRequired,
   winBet: PropTypes.func.isRequired,
-  loseBet: PropTypes.func.isRequired,
   splitOnClick: PropTypes.func.isRequired,
   doubleDownOnClick: PropTypes.func.isRequired,
   buyInsuranceOnClick: PropTypes.func.isRequired,

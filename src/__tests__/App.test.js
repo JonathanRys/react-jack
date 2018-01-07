@@ -99,8 +99,11 @@ describe("Test the App component", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);
 
+    expect(store.getState().player.doubledDown[0]).toEqual(false);
+    expect(store.getState().deck.drawnCard).toEqual(null);
     expect(store.getState().turn.playersTurn).toEqual(1);
     component.props().doubleDownOnClick();
+    expect(store.getState().player.doubledDown[0]).toEqual(true);
     expect(store.getState().deck.drawnCard).not.toEqual(null);
     expect(store.getState().turn.playersTurn).toEqual(1);
   });

@@ -21,6 +21,7 @@ export default {
     busted: [false],
     hasBlackjack: [false],
     hasInsurance: [false],
+    doubledDown: [false],
     splitHand: false,
     playerStands: [false]
   },

@@ -31,6 +31,10 @@ export function stand() {
   return { type: "STAND" };
 }
 
+export function setDoubleDown() {
+  return { type: "SET_DOUBLE_DOWN" };
+}
+
 export function buyChips(payload) {
   return { type: "BUY_CHIPS", payload: payload };
 }

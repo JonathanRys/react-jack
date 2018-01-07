@@ -38,7 +38,7 @@ export default class Badge extends Component {
           style={this.props.dealer ? { display: "none" } : { display: "flex" }}
         >
           <Col xs="6" lg="4">
-            Balance: ${this.props.balance}
+            Balance: ${this.props.balance ? this.props.balance.toFixed(2) : 0}
           </Col>
           <Col
             xs="6"
