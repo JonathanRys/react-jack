@@ -89,8 +89,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(stand());
     },
     splitOnClick: () => {
-      // Not sure what to do here yet
-      // the player store is configured to accept multiple hands though
+      // the player store is configured to accept multiple hands
       dispatch(setSplitHand());
     },
     doubleDownOnClick: () => {
