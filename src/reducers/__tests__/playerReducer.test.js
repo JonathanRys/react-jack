@@ -58,7 +58,15 @@ describe("Test playerReducer reducer", () => {
     );
   });
 
-  it("sets playerStands correctly", () => {
+  it("increment the handIndex correctly", () => {
+    const store = createStore(playerReducer);
+    store.dispatch({ type: "NEXT_HAND" });
+    expect(store.getState().handIndex).toEqual(1);
+    store.dispatch({ type: "NEXT_HAND" });
+    expect(store.getState().handIndex).toEqual(0);
+  });
+
+  it("calls STAND correctly", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "STAND" });
     expect(store.getState().playerStands[store.getState().handIndex]).toEqual(
@@ -70,7 +78,7 @@ describe("Test playerReducer reducer", () => {
     );
   });
 
-  it("sets doubledDown correctly", () => {
+  it("calls SET_DOUBLE_DOWN correctly", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "SET_DOUBLE_DOWN" });
     expect(store.getState().doubledDown[store.getState().handIndex]).toEqual(

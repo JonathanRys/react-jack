@@ -50,6 +50,7 @@ ShallowWrapper {
       "giveDealerCard": [Function],
       "hitOnClick": [Function],
       "keepDealing": [Function],
+      "nextHand": [Function],
       "nextPlayer": [Function],
       "play": [Function],
       "player": Object {
@@ -159,6 +160,7 @@ ShallowWrapper {
         "giveDealerCard": [Function],
         "hitOnClick": [Function],
         "keepDealing": [Function],
+        "nextHand": [Function],
         "nextPlayer": [Function],
         "play": [Function],
         "player": Object {

@@ -37,6 +37,11 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "DEALER_TAKE_CARD", payload: "test" });
   });
 
+  it("tests nextHand action creator", () => {
+    const result = actions.nextHand();
+    expect(result).toEqual({ type: "NEXT_HAND" });
+  });
+
   it("tests stand action creator", () => {
     const result = actions.stand();
     expect(result).toEqual({ type: "STAND" });

@@ -27,6 +27,10 @@ export function dealerTakeCard(payload) {
   return { type: "DEALER_TAKE_CARD", payload: payload };
 }
 
+export function nextHand() {
+  return { type: "NEXT_HAND" };
+}
+
 export function stand() {
   return { type: "STAND" };
 }

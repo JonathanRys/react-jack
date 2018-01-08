@@ -48,6 +48,11 @@ export default function playerReducer(state = initialState, action) {
         }),
         ...newCards
       };
+    case "NEXT_HAND":
+      return {
+        ...state,
+        handIndex: (state.handIndex + 1) % 2
+      };
     case "CLEAR_HANDS":
       return {
         ...initialState,

@@ -54,6 +54,10 @@ export default function gameEngine(nextProps) {
       nextProps.hitOnClick();
       return null;
     } else {
+      // Check for split hands
+      // if (nextProps.player.splitHand) {
+      // nextProps.nextHand()
+      //} else {
       // Stop playing
       nextProps.stop();
 

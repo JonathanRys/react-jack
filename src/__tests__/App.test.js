@@ -87,6 +87,16 @@ describe("Test the App component", () => {
     expect(store.getState().deck.drawnCard).not.toEqual(null);
   });
 
+  it("player nextHand on click", () => {
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
+
+    component.props().nextHand();
+    expect(store.getState().player.handIndex).toEqual(1);
+    component.props().nextHand();
+    expect(store.getState().player.handIndex).toEqual(0);
+  });
+
   it("player stands on click", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);

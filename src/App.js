@@ -15,6 +15,7 @@ import {
   setAvatar,
   setStatus,
   clearHands,
+  nextHand,
   setDoubleDown
 } from "./actions/playerActions";
 import {
@@ -79,6 +80,9 @@ const mapDispatchToProps = dispatch => {
     },
     hitOnClick: () => {
       dispatch(drawOne());
+    },
+    nextHand: () => {
+      dispatch(nextHand());
     },
     standOnClick: () => {
       dispatch(stand());
