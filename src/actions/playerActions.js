@@ -39,6 +39,10 @@ export function setDoubleDown() {
   return { type: "SET_DOUBLE_DOWN" };
 }
 
+export function setSplitHand() {
+  return { type: "SET_SPLIT_HAND" };
+}
+
 export function buyChips(payload) {
   return { type: "BUY_CHIPS", payload: payload };
 }

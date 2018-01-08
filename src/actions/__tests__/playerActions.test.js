@@ -52,6 +52,11 @@ describe("Test player-based actions", () => {
     expect(result).toEqual({ type: "SET_DOUBLE_DOWN" });
   });
 
+  it("tests setSplitHand action creator", () => {
+    const result = actions.setSplitHand();
+    expect(result).toEqual({ type: "SET_SPLIT_HAND" });
+  });
+
   it("tests buyChips action creator", () => {
     const result = actions.buyChips("test");
     expect(result).toEqual({ type: "BUY_CHIPS", payload: "test" });

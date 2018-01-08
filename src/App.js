@@ -16,7 +16,8 @@ import {
   setStatus,
   clearHands,
   nextHand,
-  setDoubleDown
+  setDoubleDown,
+  setSplitHand
 } from "./actions/playerActions";
 import {
   takeCard,
@@ -90,6 +91,7 @@ const mapDispatchToProps = dispatch => {
     splitOnClick: () => {
       // Not sure what to do here yet
       // the player store is configured to accept multiple hands though
+      dispatch(setSplitHand());
     },
     doubleDownOnClick: () => {
       dispatchAll(dispatch, [setDoubleDown, deductBet, drawOne, stand]);

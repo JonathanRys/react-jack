@@ -79,6 +79,8 @@ export default function playerReducer(state = initialState, action) {
           ...state.doubledDown.slice(index + 1)
         ]
       };
+    case "SET_SPLIT_HAND":
+      return { ...state, splitHand: true };
     case "BUY_CHIPS":
       return { ...state, balance: state.balance + action.payload.newChips };
     case "SET_BET":

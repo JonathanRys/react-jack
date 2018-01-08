@@ -118,6 +118,15 @@ describe("Test the App component", () => {
     expect(store.getState().turn.playersTurn).toEqual(1);
   });
 
+  it("player splits on click", () => {
+    const store = createStore(rootReducer);
+    const component = shallow(<App store={store} />);
+
+    expect(store.getState().player.splitHand).toEqual(false);
+    component.props().splitOnClick();
+    expect(store.getState().player.splitHand).toEqual(true);
+  });
+
   it("buys insurance on click", () => {
     const store = createStore(rootReducer);
     const component = shallow(<App store={store} />);

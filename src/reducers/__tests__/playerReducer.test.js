@@ -86,6 +86,12 @@ describe("Test playerReducer reducer", () => {
     );
   });
 
+  it("calls SET_SPLIT_HAND correctly", () => {
+    const store = createStore(playerReducer);
+    store.dispatch({ type: "SET_SPLIT_HAND" });
+    expect(store.getState().splitHand).toEqual(true);
+  });
+
   it("credit given amount to player's balance", () => {
     const store = createStore(playerReducer);
     store.dispatch({ type: "BUY_CHIPS", payload: { newChips: 500 } });
