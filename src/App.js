@@ -17,9 +17,7 @@ import {
   clearHands,
   nextHand,
   setDoubleDown,
-  setSplitHand
-} from "./actions/playerActions";
-import {
+  setSplitHand,
   takeCard,
   dealerTakeCard,
   stand,
