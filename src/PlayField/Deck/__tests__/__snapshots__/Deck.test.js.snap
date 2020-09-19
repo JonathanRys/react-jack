@@ -2,6 +2,7 @@
 
 exports[`Test Deck component  1`] = `
 ShallowWrapper {
+  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Deck />,
   Symbol(enzyme.__renderer__): Object {
@@ -60,8 +61,6 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__providerValues__): undefined,
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

@@ -2,6 +2,7 @@
 
 exports[`Test Hand component matches the snapshot 1`] = `
 ShallowWrapper {
+  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Player
     hands={
@@ -22,23 +23,7 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": "hand-0",
-    "nodeType": "function",
-    "props": Object {
-      "dealer": false,
-      "hand": Array [
-        "SA",
-        "SJ",
-      ],
-      "status": undefined,
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+  Symbol(enzyme.__node__): Array [
     Object {
       "instance": null,
       "key": "hand-0",
@@ -55,6 +40,26 @@ ShallowWrapper {
       "rendered": null,
       "type": [Function],
     },
+  ],
+  Symbol(enzyme.__nodes__): Array [
+    Array [
+      Object {
+        "instance": null,
+        "key": "hand-0",
+        "nodeType": "function",
+        "props": Object {
+          "dealer": false,
+          "hand": Array [
+            "SA",
+            "SJ",
+          ],
+          "status": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
@@ -79,8 +84,6 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__providerValues__): undefined,
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
