@@ -2,7 +2,6 @@
 
 exports[`Test Profile component sets new player name 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Profile
     avatar="./images/default.png"
@@ -13,15 +12,17 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
         <FormGroup
@@ -46,7 +47,6 @@ ShallowWrapper {
             id="playerName"
             name="playerName"
             onChange={[Function]}
-            tag="p"
             type="text"
             value="Lester"
           />
@@ -131,7 +131,6 @@ ShallowWrapper {
               id="playerName"
               name="playerName"
               onChange={[Function]}
-              tag="p"
               type="text"
               value="Lester"
             />,
@@ -168,7 +167,6 @@ ShallowWrapper {
               "id": "playerName",
               "name": "playerName",
               "onChange": [Function],
-              "tag": "p",
               "type": "text",
               "value": "Lester",
             },
@@ -326,7 +324,7 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <FormGroup
@@ -351,7 +349,6 @@ ShallowWrapper {
               id="playerName"
               name="playerName"
               onChange={[Function]}
-              tag="p"
               type="text"
               value="Lester"
             />
@@ -436,7 +433,6 @@ ShallowWrapper {
                 id="playerName"
                 name="playerName"
                 onChange={[Function]}
-                tag="p"
                 type="text"
                 value="Lester"
               />,
@@ -473,7 +469,6 @@ ShallowWrapper {
                 "id": "playerName",
                 "name": "playerName",
                 "onChange": [Function],
-                "tag": "p",
                 "type": "text",
                 "value": "Lester",
               },
@@ -632,8 +627,28 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
 }
 `;

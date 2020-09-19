@@ -2,7 +2,6 @@
 
 exports[`Test Hand component matches the snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Player
     hands={
@@ -16,43 +15,72 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Array [
-    <Hand
-      dealer={false}
-      hand={
-        Array [
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "hand-0",
+    "nodeType": "function",
+    "props": Object {
+      "dealer": false,
+      "hand": Array [
+        "SA",
+        "SJ",
+      ],
+      "status": undefined,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "hand-0",
+      "nodeType": "function",
+      "props": Object {
+        "dealer": false,
+        "hand": Array [
           "SA",
           "SJ",
-        ]
-      }
-      status={undefined}
-    />,
-  ],
-  Symbol(enzyme.__nodes__): Array [
-    Array [
-      <Hand
-        dealer={false}
-        hand={
-          Array [
-            "SA",
-            "SJ",
-          ]
-        }
-        status={undefined}
-      />,
-    ],
+        ],
+        "status": undefined,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
